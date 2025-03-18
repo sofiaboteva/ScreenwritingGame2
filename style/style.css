@@ -1,0 +1,28 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  display: flex; /* flexbox layout to center child elements. */
+  justify-content: center; /* Center child elements horizontally in the flex container. */
+  align-items: center; /* Center child elements vertically in the flex container. */
+  height: 100vh; /* Set the height of the body to be 100% of the viewport height. */
+  background-image: url("/assets/img/screenwriter.png");
+  background-position: center;
+  background-repeat: no-repeat; /* Ensure the background image does not repeat. */
+  background-color: black; /* Background color for areas not covered by the image. */
+}
+
+#game-container {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+canvas {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  /* Keeps the aspect ratio */
+}

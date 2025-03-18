@@ -1,0 +1,3420 @@
+{
+    "start": {
+        "chapterId": "djStart",
+        "character": "InnerVoice",
+        "text": "Where do you start?",
+        "aspect": "hierarchisation, freelance",
+        "leftAnswer": {
+            "text": "Rent a Room",
+            "outcome": "You’ve rented a room with a breathtaking ocean view, but without a car, you can’t reach a single studio in town.",
+            "effect": {
+                "money": -20,
+                "relationships": -10,
+                "ego": 10,
+                "skills": 0
+            },
+            "nextQuestion": "bartender"
+        },
+        "rightAnswer": {
+            "text": "Buy a Car",
+            "outcome": "You’re now living out of your car, but hey, you can zip around any part of LA with ease.",
+            "effect": {
+                "money": -10,
+                "relationships": 10,
+                "ego": -10
+            },
+            "nextQuestion": "bartender"
+        }
+    },
+    "bartender": {
+        "chapterId": "djStart",
+        "character": "InnerVoice",
+        "text": "You have some savings, but they won’t last forever. You’ve been offered a job at a bar. Will you take it?",
+        "aspect": "hierarchisation",
+        "leftAnswer": {
+            "text": "Yes",
+            "outcome": "You’re now a bartender. You’re so exhausted that there’s almost no time left to write.",
+            "effect": {
+                "money": 10,
+                "relationships": 0,
+                "ego": -10,
+                "skills": -10,
+                "addPerk": "bartender"
+            },
+            "nextQuestion": "breakinginintro",
+            "nextChapter": "breakingin1"
+        },
+        "rightAnswer": {
+            "text": "No",
+            "outcome": "You can dedicate yourself to creativity all day, but careful – funds don’t last forever.",
+            "effect": {
+                "money": -10,
+                "relationships": 0,
+                "ego": 10,
+                "skills": 10
+            },
+            "nextQuestion": "breakinginintro",
+            "nextChapter": "breakingin1"
+        }
+    },
+    "breakinginintro": {
+        "chapterId": "breakingin1",
+        "character": "InnerVoice",
+        "text": "You’ve been in LA for three months, and you’re still a nobody. Shocking! Time to prove what you’re made of.",
+        "comment": "No real choice",
+        "leftAnswer": {
+            "text": "Right!",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": 0,
+                "skills": 0
+            },
+            "nextQuestion": "pitchspec"
+        },
+        "rightAnswer": {
+            "text": "Ok...",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": 0,
+                "skills": 0
+            },
+            "nextQuestion": "pitchspec"
+        }
+    },
+    "pitchspec": {
+        "chapterId": "breakingin1",
+        "character": "InnerVoice",
+        "text": "Will you pitch or spec your first movie?",
+        "aspect": "freelance",
+        "leftAnswer": {
+            "text": "Pitch",
+            "outcome": "Nobody’s listening to a newbie like you. After countless rejections, you just write a spec script anyway.",
+            "effect": {
+                "money": 0,
+                "relationships": -10,
+                "ego": -10,
+                "skills": 0
+            },
+            "nextQuestion": "firstmovietheme"
+        },
+        "rightAnswer": {
+            "text": "Spec",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": 0
+            },
+            "nextQuestion": "firstmovietheme"
+        }
+    },
+    "firstmovietheme": {
+        "chapterId": "breakingin1",
+        "character": "InnerVoice",
+        "text": "What will it be about? ",
+        "aspect": "balance, standardisation",
+        "leftAnswer": {
+            "text": "A meaningful, personal theme, but not very trendy",
+            "outcome": "You write the script in a week. Super niche, but you love it.",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": 10,
+                "skills": 10
+            },
+            "nextQuestion": "advice"
+        },
+        "rightAnswer": {
+            "text": "Hot topic that doesn't spark joy in you",
+            "outcome": "The theme isn’t really your thing, so you keep dozing off mid-sentence, and it takes you six months to finish.",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": -10,
+                "skills": 5
+            },
+            "nextQuestion": "advice"
+        }
+    },
+    "advice": {
+        "chapterId": "breakingin1",
+        "character": "InnerVoice",
+        "text": "So, who are you showing your precious first draft to?",
+        "aspect": "balance, standardisation",
+        "comment": "No real choice",
+        "leftAnswer": {
+            "text": "Hmmm...",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": 0,
+                "skills": 0
+            },
+            "nextQuestion": "advice1"
+        },
+        "rightAnswer": {
+            "text": "Let's see",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": 0,
+                "skills": 0
+            },
+            "nextQuestion": "advice1"
+        }
+    },
+    "advice1": {
+        "chapterId": "breakingin1",
+        "character": "ScreenwritingGuru",
+        "text": "Your old screenwriting teacher, a self-proclaimed 'guru.'",
+        "aspect": "balance, standardisation",
+        "leftAnswer": {
+            "text": "Yes",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": 0,
+                "skills": 0
+            },
+            "nextQuestion": "gurucriticism"
+        },
+        "rightAnswer": {
+            "text": "No",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": 0,
+                "skills": 0
+            },
+            "nextQuestion": "advice2"
+        }
+    },
+    "gurucriticism": {
+        "chapterId": "breakingin1",
+        "character": "Screenwriting Guru",
+        "text": "This is great, but where’s the classic three-act structure? Reread The Hero's Journey and rewrite it!",
+        "aspect": "balance, standardisation, collaboration",
+        "leftAnswer": {
+            "text": "Rewrite it",
+            "outcome": "Now it’s got the perfect structure... but man, it’s boring.",
+            "effect": {
+                "money": 0,
+                "relationships": 10,
+                "ego": -10,
+                "skills": 10
+            },
+            "nextQuestion": "getnoticed"
+        },
+        "rightAnswer": {
+            "text": "Keep it as it is",
+            "outcome": "Plot holes? Maybe. But they’re my plot holes!",
+            "effect": {
+                "money": 0,
+                "relationships": -10,
+                "ego": 10,
+                "skills": 0
+            },
+            "nextQuestion": "getnoticed"
+        }
+    },
+    "advice2": {
+        "chapterId": "breakingin1",
+        "character": "FellowScreenwriter",
+        "text": "An alternative fellow-screenwriter",
+        "aspect": "balance, standardisation, collaboration",
+        "leftAnswer": {
+            "text": "Yes",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": 0,
+                "skills": 0
+            },
+            "nextQuestion": "fellowcriticism"
+        },
+        "rightAnswer": {
+            "text": "No",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": 0,
+                "skills": 0
+            },
+            "nextQuestion": "advice3"
+        }
+    },
+    "fellowcriticism": {
+        "chapterId": "breakingin1",
+        "character": "FellowScreenwriter",
+        "text": "You’re too constrained! Break the narrative chains, throw in some dream sequences and symbolic details.",
+        "aspect": "balance, standardisation, collaboration",
+        "leftAnswer": {
+            "text": "Keep it as is",
+            "outcome": "Plot holes? Maybe. But they’re my plot holes!",
+            "effect": {
+                "money": 0,
+                "relationships": -10,
+                "ego": 10,
+                "skills": 0
+            },
+            "nextQuestion": "getnoticed"
+        },
+        "rightAnswer": {
+            "text": "Rewrite it",
+            "outcome": "Now even you’re not sure what your movie’s about... but it sure looks deep.",
+            "effect": {
+                "money": 0,
+                "relationships": 10,
+                "ego": 5,
+                "skills": 15
+            },
+            "nextQuestion": "getnoticed"
+        }
+    },
+    "advice3": {
+        "chapterId": "breakingin1",
+        "character": "InnerVoice",
+        "text": "Pay for professional script coverage.",
+        "aspect": "balance, standardisation",
+        "leftAnswer": {
+            "text": "Yes",
+            "outcome": "You received valuable insights, but wow, those words didn’t come cheap.",
+            "effect": {
+                "money": -10,
+                "relationships": 0,
+                "ego": -5,
+                "skills": 20
+            },
+            "nextQuestion": "getnoticed"
+        },
+        "rightAnswer": {
+            "text": "No",
+            "outcome": "Why would you need someone’s criticism? Your genius is self-evident — at least, to you.",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": 20,
+                "skills": 0
+            },
+            "nextQuestion": "getnoticed"
+        }
+    },
+    "getnoticed": {
+        "chapterId": "breakingin1",
+        "character": "InnerVoice",
+        "text": "What’s your plan to get your script noticed by producers?",
+        "aspect": "freelance",
+        "leftAnswer": {
+            "text": "Send 100 emails to every production company I know.",
+            "outcome": "You get zero responses, but a year and a half later, you see a trailer for a film with a suspiciously similar storyline.",
+            "effect": {
+                "money": 0,
+                "relationships": -10,
+                "ego": -10,
+                "skills": 0
+            },
+            "nextQuestion": "salarybar, parents",
+            "nextChapter": "dj2"
+        },
+        "rightAnswer": {
+            "text": "Call up a friend who’s a receptionist at one of the studios",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": 0,
+                "skills": 0
+            },
+            "nextQuestion": "friendhelp"
+        }
+    },
+    "friendhelp": {
+        "chapterId": "breakingin1",
+        "character": "FellowScreenwriter",
+        "text": "You didn’t answer my messages for three months, and now you need my help?",
+        "aspect": "freelance",
+        "leftAnswer": {
+            "text": "Go with emails",
+            "outcome": "You get zero responses, but a year and a half later, you see a trailer for a film with a suspiciously similar storyline.",
+            "effect": {
+                "money": 0,
+                "relationships": -10,
+                "ego": -10,
+                "skills": 0
+            },
+            "nextQuestion": "salarybar, parents",
+            "nextChapter": "dj2"
+        },
+        "rightAnswer": {
+            "text": "Let's talk over dinner. It's on me.",
+            "outcome": "\"Thanks for the dinner, but it’s clearly not what the studio is looking for. Feel free to show me your future projects, though.\"",
+            "effect": {
+                "money": -10,
+                "relationships": 10,
+                "ego": 0,
+                "skills": 0
+            },
+            "nextQuestion": "salarybar, parents",
+            "nextChapter": "dj2"
+        }
+    },
+    "salarybar": {
+        "chapterId": "dj2",
+        "character": "InnerVoice",
+        "text": "Your paycheck has arrived! (job: Bartender)",
+        "aspect": "hierarchisation",
+        "requiresPerk": "bartender",
+        "comment": "No real choice.",
+        "leftAnswer": {
+            "text": "About time.",
+            "effect": {
+                "money": 10
+            },
+            "nextQuestion": "keepjobbar"
+        },
+        "rightAnswer": {
+            "text": "Hope it lasts",
+            "effect": {
+                "money": 10
+            },
+            "nextQuestion": "keepjobbar"
+        }
+    },
+    "keepjobbar": {
+        "chapterId": "dj2",
+        "character": "InnerVoice",
+        "text": "Will you keep working in the bar?",
+        "aspect": "hierarchisation",
+        "leftAnswer": {
+            "text": "Yes",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": 0,
+                "skills": 0
+            },
+            "nextQuestion": "moreshifts"
+        },
+        "rightAnswer": {
+            "text": "No!",
+            "outcome": "Terrified of being stuck in the bar forever, you quit with a dramatic monologue.",
+            "effect": {
+                "money": -10,
+                "relationships": 0,
+                "ego": 10,
+                "skills": 10,
+                "removePerk": "bartender"
+            },
+            "nextQuestion": "parents",
+            "nextChapter": "buzzchapter"
+        }
+    },
+    "moreshifts": {
+        "chapterId": "dj2",
+        "character": "InnerVoice",
+        "text": "The bar manager offers you to trade your soul for more shifts and a little extra cash. Do you agree?",
+        "aspect": "hierarchisation",
+        "leftAnswer": {
+            "text": "Yes, please\n",
+            "outcome": "Congratulations — now you’re writing even less!",
+            "effect": {
+                "money": 15,
+                "relationships": 0,
+                "ego": -10,
+                "skills": -15,
+                "addPerk": "moreshifts",
+                "removePerk": "bartender"
+            },
+            "nextQuestion": "buzzintro",
+            "nextChapter": "buzzchapter"
+        },
+        "rightAnswer": {
+            "text": "No!",
+            "outcome": "You tell yourself you’ll only work for one more month and then quit, but do you even believe that yourself?",
+            "effect": {
+                "money": 10,
+                "relationships": 0,
+                "ego": -5,
+                "skills": -10
+            },
+            "nextQuestion": "buzzintro",
+            "nextChapter": "buzzchapter"
+        }
+    },
+    "parents": {
+        "chapterId": "dj2",
+        "character": "Parents",
+        "text": "We’re worried. Let us help with a monthly allowance—just until you find a real job.",
+        "aspect": "hierarchisation",
+        "leftAnswer": {
+            "text": "Thanks, family bank!",
+            "effect": {
+                "money": 10,
+                "relationships": 0,
+                "ego": -10,
+                "skills": 0,
+                "addPerk": "parents"
+            },
+            "nextQuestion": "buzzintro",
+            "nextChapter": "buzzchapter"
+        },
+        "rightAnswer": {
+            "text": "Nope, I'll earn my keep",
+            "effect": {
+                "money": -10,
+                "relationships": 0,
+                "ego": 10,
+                "skills": 0
+            },
+            "nextQuestion": "buzzintro",
+            "nextChapter": "buzzchapter"
+        }
+    },
+    "buzzintro": {
+        "chapterId": "buzzchapter",
+        "character": "InnerVoice",
+        "text": "After a while it becomes clear that nothing is possible without an agent in this world",
+        "aspect": "hierarchisation, freelance",
+        "comment": "No real choice",
+        "leftAnswer": {
+            "text": "Got it.",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": 0,
+                "skills": 0
+            },
+            "nextQuestion": "buzz"
+        },
+        "rightAnswer": {
+            "text": "Oh...",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": 0,
+                "skills": 0
+            },
+            "nextQuestion": "buzz"
+        }
+    },
+    "buzz": {
+        "chapterId": "buzzchapter",
+        "character": "InnerVoice",
+        "text": "You need to create some 'buzz' to get the attention of an agent. How do you do it? ",
+        "aspect": "hierarchisation, freelance, standardisation",
+        "leftAnswer": {
+            "text": "Write for a comedy Youtube-Show",
+            "outcome": "The show is cringe-worthy, but you connect with some talented writers on the team.",
+            "effect": {
+                "money": 10,
+                "relationships": 10,
+                "ego": 0,
+                "skills": 0
+            },
+            "nextQuestion": "screenwritingcompetition"
+        },
+        "rightAnswer": {
+            "text": "Make a dramatic Tiktok about screenwriting career",
+            "outcome": "Original? Sure. If you ignore the other thousand TikToks just like it.",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": -10,
+                "skills": 0
+            },
+            "nextQuestion": "screenwritingcompetition"
+        }
+    },
+    "screenwritingcompetition": {
+        "chapterId": "buzzchapter",
+        "character": "InnerVoice",
+        "text": "A prestigious screenwriting competition is open for submissions, but the entry fee isn’t cheap. Do you take the risk?",
+        "aspect": "freelance",
+        "leftAnswer": {
+            "text": "Submit",
+            "outcome": "Your script makes the shortlist! Suddenly, everyone wants to grab a coffee with you\n",
+            "effect": {
+                "money": -10,
+                "relationships": 10,
+                "ego": 10,
+                "skills": 10
+            },
+            "nextQuestion": "partycrash"
+        },
+        "rightAnswer": {
+            "text": "I’m not paying to be judged",
+            "outcome": "Your wallet’s happy, but watching others win feels like getting left off the group chat.",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": -10,
+                "skills": 0
+            },
+            "nextQuestion": "partycrash"
+        }
+    },
+    "partycrash": {
+        "chapterId": "buzzchapter",
+        "character": "FellowScreenwriter",
+        "text": "Let's crash a Hollywood party!",
+        "aspect": "freelance",
+        "leftAnswer": {
+            "text": "Let's do it! ",
+            "outcome": "You mix up the address and end up crashing a corporate retirement party for a 60-year-old accountant",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": -10,
+                "skills": 0
+            },
+            "nextQuestion": "partycrash2"
+        },
+        "rightAnswer": {
+            "text": "I need to work on my script.",
+            "effect": {
+                "money": 0,
+                "relationships": -10,
+                "ego": 10,
+                "skills": 10
+            },
+            "nextQuestion": "studentfilm"
+        }
+    },
+    "partycrash2": {
+        "chapterId": "buzzchapter",
+        "character": "FellowScreenwriter",
+        "text": "Will we stay?",
+        "aspect": "freelance",
+        "leftAnswer": {
+            "text": "Yes!",
+            "outcome": "You meet a retired tax attorney who now wants to invest in “Hollywood projects.",
+            "effect": {
+                "money": 0,
+                "relationships": 10,
+                "ego": 0,
+                "skills": 0
+            },
+            "nextQuestion": "studentfilm"
+        },
+        "rightAnswer": {
+            "text": "Make a quiet exit",
+            "outcome": "You slip out quietly but not before grabbing some hors d'oeuvres for dinner.",
+            "effect": {
+                "money": 5,
+                "relationships": -10,
+                "ego": 0,
+                "skills": 0
+            },
+            "nextQuestion": "studentfilm"
+        }
+    },
+    "studentfilm": {
+        "chapterId": "buzzchapter",
+        "character": "Director",
+        "text": "I love your short script! Can I film it as my graduation project?",
+        "aspect": "freelance, collaboration",
+        "leftAnswer": {
+            "text": "Graduation film? That's below my level, but whatever",
+            "effect": {
+                "money": 0,
+                "relationships": -10,
+                "ego": 10,
+                "skills": 0
+            },
+            "nextQuestion": "filmbudget"
+        },
+        "rightAnswer": {
+            "text": "Finally, someone is shooting my script, yay!",
+            "effect": {
+                "money": 0,
+                "relationships": 10,
+                "ego": -10,
+                "skills": 0
+            },
+            "nextQuestion": "filmbudget"
+        }
+    },
+    "filmbudget": {
+        "chapterId": "buzzchapter",
+        "character": "Director",
+        "text": "The school can’t finance the film. Turns out spaceship scenes are a bit out of budget.",
+        "aspect": "balance, freelance, collaboration",
+        "leftAnswer": {
+            "text": "I'll invest my own money",
+            "effect": {
+                "money": -20,
+                "relationships": 10,
+                "ego": 10,
+                "skills": 0
+            },
+            "nextQuestion": "fish"
+        },
+        "rightAnswer": {
+            "text": "Okay, I'll turn it to a one-room Covid drama.",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": -10,
+                "skills": 10
+            },
+            "nextQuestion": "fish"
+        }
+    },
+    "fish": {
+        "chapterId": "buzzchapter",
+        "character": "Director",
+        "text": "I loved your story, but I want the protagonist to turn into a fish at the end.",
+        "aspect": "marginalisation, collaboration",
+        "leftAnswer": {
+            "text": "Not sure the story will benefit from it.",
+            "effect": {
+                "money": 0,
+                "relationships": -10,
+                "ego": 5,
+                "skills": 0
+            },
+            "nextQuestion": "opinion"
+        },
+        "rightAnswer": {
+            "text": "Ok, whatever...",
+            "effect": {
+                "money": 0,
+                "relationships": 5,
+                "ego": -10,
+                "skills": 5
+            },
+            "nextQuestion": "nosense"
+        }
+    },
+    "opinion": {
+        "chapterId": "buzzchapter",
+        "character": "Director",
+        "text": "I think the script isn’t quite there yet. What’s your take?",
+        "aspect": "marginalisation, collaboration",
+        "leftAnswer": {
+            "text": "It’s good, but I know we can do better.",
+            "effect": {
+                "money": 0,
+                "relationships": 10,
+                "ego": 0,
+                "skills": 10
+            },
+            "nextQuestion": "missing"
+        },
+        "rightAnswer": {
+            "text": "Why fix perfection?",
+            "effect": {
+                "money": 0,
+                "relationships": -10,
+                "ego": 10,
+                "skills": 0
+            },
+            "nextQuestion": "fish2"
+        }
+    },
+    "missing": {
+        "chapterId": "buzzchapter",
+        "character": "Director",
+        "text": "Great new draft! But I still feel something is missing...",
+        "aspect": "marginalisation, collaboration",
+        "leftAnswer": {
+            "text": "I have no idea...",
+            "effect": {
+                "money": 0,
+                "relationships": -10,
+                "ego": 0,
+                "skills": 0
+            },
+            "nextQuestion": "fish2"
+        },
+        "rightAnswer": {
+            "text": "The fish?..",
+            "effect": {
+                "money": 0,
+                "relationships": 10,
+                "ego": 0,
+                "skills": 5
+            },
+            "nextQuestion": "fish2"
+        }
+    },
+    "fish2": {
+        "chapterId": "buzzchapter",
+        "character": "Director",
+        "text": "Let's still add the fish...",
+        "aspect": "marginalisation, collaboration",
+        "leftAnswer": {
+            "text": "Whatever...",
+            "effect": {
+                "money": 0,
+                "relationships": -10,
+                "ego": 5,
+                "skills": 0
+            },
+            "nextQuestion": "nosense"
+        },
+        "rightAnswer": {
+            "text": "Ok, maybe you're right",
+            "effect": {
+                "money": 0,
+                "relationships": 10,
+                "ego": 0,
+                "skills": 5
+            },
+            "nextQuestion": "nosense"
+        }
+    },
+    "nosense ": {
+        "chapterId": "buzzchapter",
+        "character": "Director",
+        "text": "You know what? The whole fish idea just doesn’t make sense.",
+        "aspect": "marginalisation, collaboration",
+        "leftAnswer": {
+            "text": "I told ya!",
+            "effect": {
+                "money": 0,
+                "relationships": -5,
+                "ego": 10,
+                "skills": 0
+            },
+            "nextQuestion": "tenrewrites"
+        },
+        "rightAnswer": {
+            "text": "Fine, fish deleted.",
+            "effect": {
+                "money": 0,
+                "relationships": 10,
+                "ego": -5,
+                "skills": 0
+            },
+            "nextQuestion": "tenrewrites"
+        }
+    },
+    "tenrewrites": {
+        "chapterId": "buzzchapter",
+        "character": "Director",
+        "text": "After ten rewrites, I’m starting to think the entire story doesn’t make sense.",
+        "aspect": "marginalisation, collaboration",
+        "leftAnswer": {
+            "text": "You don't make sense.\n",
+            "outcome": "Frustrated, the director switches to a new project—a silent documentary about chairs. It wins every major festival award.",
+            "effect": {
+                "money": 0,
+                "relationships": -10,
+                "ego": -10
+            },
+            "nextQuestion": "salarybar2, salarybarmore, salaryparents, firsthollywoodjob2",
+            "nextChapter": "dj3"
+        },
+        "rightAnswer": {
+            "text": "Should we bring back the fish?",
+            "outcome": "The film is a huge festival success, and you share the credits for the fish end everybody liked so much.",
+            "effect": {
+                "money": 0,
+                "relationships": 10,
+                "ego": 10,
+                "skills": 10
+            },
+            "nextQuestion": "salarybar2, salarybarmore, salaryparents, firsthollywoodjob2",
+            "nextChapter": "dj3"
+        }
+    },
+    "salarybar2": {
+        "chapterId": "dj3",
+        "character": "InnerVoice",
+        "text": "Your paycheck has arrived! (job: Bartender)",
+        "aspect": "hierarchisation",
+        "requiresPerk": "bartender",
+        "comment": "No real choice.",
+        "leftAnswer": {
+            "text": "About time.",
+            "effect": {
+                "money": 10
+            },
+            "nextQuestion": "badtiming"
+        },
+        "rightAnswer": {
+            "text": "Hope it lasts",
+            "effect": {
+                "money": 10
+            },
+            "nextQuestion": "badtiming"
+        }
+    },
+    "salarybarmore": {
+        "chapterId": "dj3",
+        "character": "InnerVoice",
+        "text": "Your paycheck has arrived! (job: Bartender)",
+        "aspect": "hierarchisation",
+        "requiresPerk": "moreshifts",
+        "comment": "No real choice.",
+        "leftAnswer": {
+            "text": "About time.",
+            "effect": {
+                "money": 15
+            },
+            "nextQuestion": "badtiming"
+        },
+        "rightAnswer": {
+            "text": "Hope it lasts",
+            "effect": {
+                "money": 15
+            },
+            "nextQuestion": "badtiming"
+        }
+    },
+    "badtiming": {
+        "chapterId": "dj3",
+        "character": "InnerVoice",
+        "text": "You’ve been invited to a last-minute pitching session for your dream project, but your bar shift is at the same time. What do you do?",
+        "aspect": "freelance",
+        "requiresPerk": "bartender",
+        "leftAnswer": {
+            "text": "Call in sick and head to the pitch.",
+            "outcome": "The pitch didn’t go well. And, tired of your lies, your boss fires you without paying your last salary.",
+            "effect": {
+                "money": 0,
+                "relationships": -10,
+                "ego": 5,
+                "skills": 5,
+                "removePerk": "bartender, moreshifts"
+            },
+            "nextQuestion": "firsthollywoodjob"
+        },
+        "rightAnswer": {
+            "text": "Stick to the bar job",
+            "outcome": "Fed up with the job that stole your dream, you quit right after your next paycheck.",
+            "effect": {
+                "money": 10,
+                "relationships": 0,
+                "ego": -10,
+                "skills": 0,
+                "removePerk": "bartender, moreshifts"
+            },
+            "nextQuestion": "firsthollywoodjob"
+        }
+    },
+    "salaryparents": {
+        "chapterId": "dj3",
+        "character": "Parents",
+        "text": "Here’s your monthly check.",
+        "aspect": "hierarchisation, marginalisation",
+        "requiresPerk": "parents",
+        "comment": "No real choice.",
+        "leftAnswer": {
+            "text": "Much appreciated.",
+            "effect": {
+                "money": 10
+            },
+            "nextQuestion": "parents2"
+        },
+        "rightAnswer": {
+            "text": "Don't worry, I'll pay you back eventually",
+            "effect": {
+                "money": 10
+            },
+            "nextQuestion": "parents2"
+        }
+    },
+    "parents2 ": {
+        "chapterId": "dj3",
+        "character": "Parents",
+        "text": "By the way, how’s the search for a ‘real job’ going? You know we won’t be able to support you forever.",
+        "aspect": "hierarchisation, marginalisation",
+        "requiresPerk": "parents",
+        "leftAnswer": {
+            "text": "Having interviews each day, but no luck yet...",
+            "outcome": "They realize you’re lying, but not before sending you one more payment.",
+            "effect": {
+                "money": 10,
+                "relationships": 0,
+                "ego": -10,
+                "skills": 0,
+                "removePerk": "parents"
+            },
+            "nextQuestion": "firsthollywoodjob"
+        },
+        "rightAnswer": {
+            "text": "I’m never going to be a lawyer. Accept it.",
+            "outcome": "Goodbye, family bank.",
+            "effect": {
+                "money": -10,
+                "relationships": 0,
+                "ego": 10,
+                "skills": 0,
+                "removePerk": "parents"
+            },
+            "nextQuestion": "firsthollywoodjob"
+        }
+    },
+    "firsthollywoodjob": {
+        "chapterId": "dj3",
+        "character": "InnerVoice",
+        "text": "But don't worry, you’ve finally landed your first Hollywood job…",
+        "aspect": "hierarchisation",
+        "comment": "No real choice",
+        "leftAnswer": {
+            "text": "What?",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": 0,
+                "skills": 0
+            },
+            "nextQuestion": "producerassistant",
+            "nextChapter": "pachapter"
+        },
+        "rightAnswer": {
+            "text": "How?\n",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": 0,
+                "skills": 0
+            },
+            "nextQuestion": "producerassistant",
+            "nextChapter": "pachapter"
+        }
+    },
+    "firsthollywoodjob2": {
+        "chapterId": "dj3",
+        "character": "InnerVoice",
+        "text": "Congratulations, you’ve finally landed your first Hollywood job…",
+        "aspect": "hierarchisation",
+        "comment": "No real choice",
+        "leftAnswer": {
+            "text": "What?",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": 0,
+                "skills": 0
+            },
+            "nextQuestion": "producerassistant",
+            "nextChapter": "pachapter"
+        },
+        "rightAnswer": {
+            "text": "How?\n",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": 0,
+                "skills": 0
+            },
+            "nextQuestion": "producerassistant",
+            "nextChapter": "pachapter"
+        }
+    },
+    "producerassistant": {
+        "chapterId": "pachapter",
+        "character": "InnerVoice",
+        "text": "...as a producer’s assistant.",
+        "aspect": "hierarchisation",
+        "comment": "No real choice",
+        "leftAnswer": {
+            "text": "Wait, what? ",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": 0,
+                "skills": 0
+            },
+            "nextQuestion": "producerdemand"
+        },
+        "rightAnswer": {
+            "text": "Oh, no...",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": 0,
+                "skills": 0
+            },
+            "nextQuestion": "producerdemand"
+        }
+    },
+    "producerdemand": {
+        "chapterId": "pachapter",
+        "character": "Producer",
+        "text": "I know it’s 10 PM, but here’s a quick list of things for tomorrow morning. Shouldn’t take you more than 3 hours!\"",
+        "aspect": "hierarchisation",
+        "leftAnswer": {
+            "text": "On it, boss!",
+            "outcome": "You power through another sleepless night. The producer sends you another 'quick' list at 8 AM, because 'you’re so reliable'!",
+            "effect": {
+                "money": 0,
+                "relationships": 10,
+                "ego": -10,
+                "skills": 0
+            },
+            "nextQuestion": "bagels"
+        },
+        "rightAnswer": {
+            "text": "Sure, right after I invent a time machine.",
+            "outcome": "The producer  calls you 'difficult,' and gives the tasks to someone else. You finally sleep… for now.",
+            "effect": {
+                "money": 0,
+                "relationships": -10,
+                "ego": 10,
+                "skills": 0
+            },
+            "nextQuestion": "bagels"
+        }
+    },
+    "bagels": {
+        "chapterId": "pachapter",
+        "character": "Producer",
+        "text": "Can you find the best bagels in the city for my afternoon meeting with the studio execs? Thanks!",
+        "aspect": "hierarchisation",
+        "leftAnswer": {
+            "text": "Conduct an in-depth bagel investigation.",
+            "outcome": "You crisscross the city, sampling artisan bagels and delivering a box of perfection, while your script gathers dust.",
+            "effect": {
+                "money": 0,
+                "relationships": 10,
+                "ego": -10,
+                "skills": 0
+            },
+            "nextQuestion": "shooting"
+        },
+        "rightAnswer": {
+            "text": "Bagels from the nearest supermarket will do. I'll work on my script.",
+            "outcome": "The producer and studio execs got food poisoning, but at least you finished a killer scene",
+            "effect": {
+                "money": 0,
+                "relationships": -20,
+                "ego": 10,
+                "skills": 10
+            },
+            "nextQuestion": "shooting"
+        }
+    },
+    "shooting": {
+        "chapterId": "pachapter",
+        "character": "Producer",
+        "text": "The director refuses to shoot the scene as written. Everyone agrees the scene’s great—even our PA. Riiight?",
+        "aspect": "hierarchisation, collaboration, balance",
+        "leftAnswer": {
+            "text": "Right, boss",
+            "outcome": "The execs call the scene offensive—and a little racist. The producer gets fired the next day, and so do you.",
+            "effect": {
+                "money": -10,
+                "relationships": 0,
+                "ego": -10,
+                "skills": 0
+            },
+            "nextQuestion": "toothpaste",
+            "nextChapter": "dj4"
+        },
+        "rightAnswer": {
+            "text": "It’s actually a pretty stupid scene",
+            "outcome": "Director triumphs, the producer is mad.",
+            "effect": {
+                "relationships": -10,
+                "ego": 10,
+                "skills": 10
+            },
+            "nextQuestion": "genius"
+        }
+    },
+    "genius": {
+        "chapterId": "pachapter",
+        "character": "Producer",
+        "text": "Okay, genius. Got a better idea?",
+        "aspect": "hierarchisation, collaboration, balance",
+        "leftAnswer": {
+            "text": "I'm just a PA here",
+            "outcome": "The producer : 'Exactly. So why are you even talking?'\nThe Director despises you, but at least you kept your job.\"",
+            "effect": {
+                "money": 10,
+                "relationships": -10,
+                "ego": -10,
+                "skills": 0
+            },
+            "nextQuestion": "toothpaste",
+            "nextChapter": "dj4"
+        },
+        "rightAnswer": {
+            "text": "To be honest, yes. ",
+            "outcome": "The director loves your idea. The scene is the film’s standout moment, but you’re fired for blowing the budget.\n",
+            "effect": {
+                "money": -20,
+                "relationships": 5,
+                "ego": 10,
+                "skills": 10
+            },
+            "nextQuestion": "toothpaste",
+            "nextChapter": "dj4"
+        }
+    },
+    "toothpaste": {
+        "chapterId": "dj4",
+        "character": "InnerVoice",
+        "text": "A toothpaste brand is looking for a copywriter to whip up some catchy slogans. Will you give it a shot?",
+        "aspect": "hierarchisation",
+        "leftAnswer": {
+            "text": "Absolutely ",
+            "outcome": "The client loves you so much they double your pay 'to support your artistic dream.' Who knew toothpaste could fund the next Aaron Sorkin?",
+            "effect": {
+                "money": 20,
+                "relationships": 0,
+                "ego": 10,
+                "skills": -10,
+                "addPerk": "toothpaste"
+            },
+            "nextQuestion": "toothpaste2"
+        },
+        "rightAnswer": {
+            "text": "I'm not a sell out",
+            "outcome": "You tell yourself true artists don’t compromise, but the instant noodles are starting to taste like regret.",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": -5,
+                "skills": 10
+            },
+            "nextQuestion": "agentmeetingintro",
+            "nextChapter": "agentmeeting"
+        }
+    },
+    "toothpaste2": {
+        "chapterId": "dj4",
+        "character": "InnerVoice",
+        "text": "Now they want more. Do you keep writing toothpaste ads?",
+        "aspect": "hierarchisation",
+        "leftAnswer": {
+            "text": "Yes",
+            "outcome": "You used to see your heroes in your dreams. Now it’s just teeth, endlessly sparkling.",
+            "effect": {
+                "money": 10,
+                "relationships": 0,
+                "ego": -10,
+                "skills": -10
+            },
+            "nextQuestion": "agentmeetingintro",
+            "nextChapter": "agentmeeting"
+        },
+        "rightAnswer": {
+            "text": "No",
+            "outcome": "Finally, you can focus on your screenplay. No teeth, just the good old existential dread.",
+            "effect": {
+                "money": -10,
+                "relationships": 0,
+                "ego": 10,
+                "skills": 10,
+                "removePerk": "toothpaste"
+            },
+            "nextQuestion": "agentmeetingintro",
+            "nextChapter": "agentmeeting"
+        }
+    },
+    "agentmeetingintro": {
+        "chapterId": "agentmeeting",
+        "character": "InnerVoice",
+        "text": "Well, it seems nothing gets done in Hollywood without an agent. Lucky for you, a friend set up a meeting with theirs.",
+        "aspect": "freelance",
+        "comment": "No real choice",
+        "leftAnswer": {
+            "text": "Great! ",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": 0,
+                "skills": 0
+            },
+            "nextQuestion": "prepareformeeting"
+        },
+        "rightAnswer": {
+            "text": "Ok...",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": 0,
+                "skills": 0
+            },
+            "nextQuestion": "prepareformeeting"
+        }
+    },
+    "prepareformeeting": {
+        "chapterId": "agentmeeting",
+        "character": "InnerVoice",
+        "text": "What’s the best way to nail this meeting?",
+        "aspect": "freelance",
+        "leftAnswer": {
+            "text": "Perfect your pitch",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": 10,
+                "skills": 10
+            },
+            "nextQuestion": "looks"
+        },
+        "rightAnswer": {
+            "text": "Research everything about the agent",
+            "effect": {
+                "money": 0,
+                "relationships": 10,
+                "ego": 0,
+                "skills": 0
+            },
+            "nextQuestion": "looks"
+        }
+    },
+    "looks": {
+        "chapterId": "agentmeeting",
+        "character": "InnerVoice",
+        "text": "Time to work on the looks. What’s the move?",
+        "aspect": "freelance",
+        "leftAnswer": {
+            "text": "Get a haircut.",
+            "outcome": "The haircut is so bad, you have to cover it with a wig.",
+            "effect": {
+                "money": -10,
+                "relationships": 0,
+                "ego": 0,
+                "skills": 0,
+                "addPerk": "wig"
+            },
+            "nextQuestion": "outfit"
+        },
+        "rightAnswer": {
+            "text": "Messy hair is a sign of 'writing genius.'",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": 0,
+                "skills": 0
+            },
+            "nextQuestion": "outfit"
+        }
+    },
+    "outfit": {
+        "chapterId": "agentmeeting",
+        "character": "InnerVoice",
+        "text": "Time to pick the outfit.",
+        "aspect": "freelance",
+        "leftAnswer": {
+            "text": "Buy an expensive suit.",
+            "effect": {
+                "money": -10,
+                "relationships": 0,
+                "ego": 0,
+                "skills": 0,
+                "addPerk": "suit"
+            },
+            "nextQuestion": "sweatypalms"
+        },
+        "rightAnswer": {
+            "text": "Stick with my old jeans—I’m a writer after all. ",
+            "effect": {
+                "money": 0,
+                "relationships": -10,
+                "ego": -10,
+                "skills": 0
+            },
+            "nextQuestion": "sweatypalms"
+        }
+    },
+    "sweatypalms": {
+        "chapterId": "agentmeeting",
+        "character": "InnerVoice",
+        "text": "You step into the agent’s office, heart racing and palms sweaty.",
+        "aspect": "freelance",
+        "comment": "No real choice",
+        "leftAnswer": {
+            "text": "Breathe. Just breathe.",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": 0
+            },
+            "nextQuestion": "sitstand"
+        },
+        "rightAnswer": {
+            "text": "Why is it so hot in here?",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": 0,
+                "skills": 0
+            },
+            "nextQuestion": "sitstand"
+        }
+    },
+    "sitstand": {
+        "chapterId": "agentmeeting",
+        "character": "Assistant",
+        "text": "Take a seat, they’ll be with you shortly.",
+        "aspect": "freelance",
+        "comment": "No real choice",
+        "leftAnswer": {
+            "text": "Sit",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": 0
+            },
+            "nextQuestion": "nicewig, brush "
+        },
+        "rightAnswer": {
+            "text": "Stand",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": 0,
+                "skills": 0
+            },
+            "nextQuestion": "nicewig, brush "
+        }
+    },
+    "nicewig": {
+        "chapterId": "agentmeeting",
+        "character": "Assistant",
+        "text": "Nice wig by the way. You're strange, he’ll like it.",
+        "aspect": "freelance",
+        "requiresPerk": "wig",
+        "comment": "No real choice",
+        "leftAnswer": {
+            "text": "Uh… thanks?",
+            "effect": {
+                "money": 0,
+                "relationships": 10,
+                "ego": 10,
+                "skills": 0
+            },
+            "nextQuestion": "suit, jeans"
+        },
+        "rightAnswer": {
+            "text": "Well, that’s reassuring",
+            "effect": {
+                "money": 0,
+                "relationships": 10,
+                "ego": 10,
+                "skills": 0
+            },
+            "nextQuestion": "suit, jeans"
+        }
+    },
+    "brush": {
+        "chapterId": "agentmeeting",
+        "character": "Assistant",
+        "text": "Need a brush?'",
+        "aspect": "freelance",
+        "comment": "No real choice",
+        "leftAnswer": {
+            "text": "No, thanks",
+            "effect": {
+                "money": 0,
+                "relationships": -10,
+                "ego": -10
+            },
+            "nextQuestion": "suit, jeans"
+        },
+        "rightAnswer": {
+            "text": "That bad, hu",
+            "effect": {
+                "money": 0,
+                "relationships": -10,
+                "ego": -10,
+                "skills": 0
+            },
+            "nextQuestion": "suit, jeans"
+        }
+    },
+    "suit": {
+        "chapterId": "agentmeeting",
+        "character": "Assistant",
+        "text": "Wow, a suit! I see you're taking this seriously",
+        "aspect": "freelance",
+        "requiresPerk": "suit",
+        "comment": "No real choice",
+        "leftAnswer": {
+            "text": "Fake it till you make it.",
+            "effect": {
+                "money": 0,
+                "relationships": 10,
+                "ego": 10,
+                "skills": 0
+            },
+            "nextQuestion": "agentsoffice"
+        },
+        "rightAnswer": {
+            "text": "I even ironed it!",
+            "effect": {
+                "money": 0,
+                "relationships": 10,
+                "ego": 10,
+                "skills": 0
+            },
+            "nextQuestion": "agentsoffice"
+        }
+    },
+    "jeans": {
+        "chapterId": "agentmeeting",
+        "character": "Assistant",
+        "text": "Jeans and a t-shirt?' You must really want your script to do all the talking",
+        "aspect": "freelance",
+        "comment": "No real choice",
+        "leftAnswer": {
+            "text": "Hey, at least it’s clean.",
+            "effect": {
+                "money": 0,
+                "relationships": -10,
+                "ego": -10,
+                "skills": 0
+            },
+            "nextQuestion": "agentsoffice"
+        },
+        "rightAnswer": {
+            "text": "Exactly",
+            "effect": {
+                "money": 0,
+                "relationships": -10,
+                "ego": -10,
+                "skills": 0
+            },
+            "nextQuestion": "agentsoffice"
+        }
+    },
+    "agentsoffice": {
+        "chapterId": "agentmeeting",
+        "character": "InnerVoice",
+        "text": "You’re finally ushered into the agent’s office",
+        "aspect": "freelance",
+        "comment": "No real choice",
+        "leftAnswer": {
+            "text": "Showtime.",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": 0,
+                "skills": 0
+            },
+            "nextQuestion": "startmeeting"
+        },
+        "rightAnswer": {
+            "text": "This is it. Stay cool.",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": 0,
+                "skills": 0
+            },
+            "nextQuestion": "startmeeting"
+        }
+    },
+    "startmeeting": {
+        "chapterId": "agentmeeting",
+        "character": "InnerVoice",
+        "text": "How do we start the meeting?\n",
+        "aspect": "freelance",
+        "leftAnswer": {
+            "text": "It’s an honor to meet you.",
+            "outcome": "Nice opening. Now, let’s get down to business.",
+            "effect": {
+                "money": 0,
+                "relationships": 10,
+                "ego": 10,
+                "skills": 0
+            },
+            "nextQuestion": "genremix"
+        },
+        "rightAnswer": {
+            "text": "This moment! I’ve been dreaming of this day forever!",
+            "outcome": "Wow, calm down. We haven’t decided anything yet.",
+            "effect": {
+                "money": 0,
+                "relationships": -10,
+                "ego": -10,
+                "skills": 0
+            },
+            "nextQuestion": "genremix"
+        }
+    },
+    "genremix": {
+        "chapterId": "agentmeeting",
+        "character": "Agent",
+        "text": "I loved your script. It would make a perfect romcom.",
+        "aspect": "freelance, collaboration, standardisation",
+        "leftAnswer": {
+            "text": "Play along and pitch your horror movie as a romcom",
+            "outcome": "Agent: \"Okay, I can see pitching isn’t your strong suit.'",
+            "effect": {
+                "money": 0,
+                "relationships": -10,
+                "ego": -10,
+                "skills": 0
+            },
+            "nextQuestion": "whattodo"
+        },
+        "rightAnswer": {
+            "text": "It’s actually a drama",
+            "outcome": "Ah, my mistake",
+            "effect": {
+                "money": 0,
+                "relationships": 10,
+                "ego": 10,
+                "skills": 0
+            },
+            "nextQuestion": "dramasdontsell"
+        }
+    },
+    "whattodo": {
+        "chapterId": "agentmeeting",
+        "character": "InnerVoice",
+        "text": "What to we do?",
+        "aspect": "freelance, collaboration, standardisation",
+        "leftAnswer": {
+            "text": "Double down and keep pitching.",
+            "outcome": "You stumble through a bizarre pitch about serial-killing soulmates. To your shock, the agent loves it: finally, something fresh!",
+            "effect": {
+                "money": 0,
+                "relationships": 10,
+                "ego": 10,
+                "skills": 10
+            },
+            "nextQuestion": "industry"
+        },
+        "rightAnswer": {
+            "text": "Admit, It’s actually a horror movie.",
+            "outcome": "Agent: \"Why didn’t you just say that? \"",
+            "effect": {
+                "money": 0,
+                "relationships": -10,
+                "ego": -10,
+                "skills": 0
+            },
+            "nextQuestion": "dramasdontsell"
+        }
+    },
+    "dramasdontsell": {
+        "chapterId": "agentmeeting",
+        "character": "Agent",
+        "text": "The thing is, we have enough horror movies...",
+        "aspect": "freelance, collaboration, standardisation",
+        "leftAnswer": {
+            "text": "I can do romcoms, too...",
+            "effect": {
+                "money": 0,
+                "relationships": 10,
+                "ego": -10,
+                "skills": 0
+            },
+            "nextQuestion": "industry"
+        },
+        "rightAnswer": {
+            "text": "But none of them are like mine.",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": 10,
+                "skills": 10
+            },
+            "nextQuestion": "industry"
+        }
+    },
+    "industry": {
+        "chapterId": "agentmeeting",
+        "character": "Agent",
+        "text": "So, do you know anyone in the industry?",
+        "aspect": "freelance",
+        "leftAnswer": {
+            "text": "Random name drop. ",
+            "outcome": "Agent: \"Oh, I’m actually having dinner with them tonight. We’ll talk about you\"",
+            "effect": {
+                "money": 0,
+                "relationships": -10,
+                "ego": -10,
+                "skills": 0
+            },
+            "nextQuestion": "representation"
+        },
+        "rightAnswer": {
+            "text": "Warner Brothers’ receptionist is a great friend of mine.",
+            "outcome": "Agent: \"Cute. Well, everyone starts somewhere. Let’s see what we can do together.\"",
+            "effect": {
+                "money": 0,
+                "relationships": 10,
+                "ego": 0,
+                "skills": 0
+            },
+            "nextQuestion": "representation"
+        }
+    },
+    "representation": {
+        "chapterId": "agentmeeting",
+        "character": "Agent",
+        "text": "Why should I represent you instead of the other hundred writers knocking on my door?",
+        "aspect": "freelance",
+        "leftAnswer": {
+            "text": "I’m the best thing to happen to Hollywood.",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": 10,
+                "skills": 0
+            },
+            "nextQuestion": "toothpastesalary, polishing2",
+            "nextChapter": "dj5"
+        },
+        "rightAnswer": {
+            "text": "I’m not saying you should... Should you?",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": -10,
+                "skills": 0
+            },
+            "nextQuestion": "toothpastesalary, polishing2",
+            "nextChapter": "dj5"
+        }
+    },
+    "toothpastesalary": {
+        "chapterId": "dj5",
+        "character": "InnerVoice",
+        "text": "Your paycheck has arrived! (job: toothpaste copywriter)",
+        "aspect": "hierarchisation",
+        "requiresPerk": "toothpaste",
+        "comment": "No real choice.",
+        "leftAnswer": {
+            "text": "About time.",
+            "effect": {
+                "money": 10
+            },
+            "nextQuestion": "polishing1"
+        },
+        "rightAnswer": {
+            "text": "Hope it lasts",
+            "effect": {
+                "money": 10
+            },
+            "nextQuestion": "polishing1"
+        }
+    },
+    "polishing1": {
+        "chapterId": "dj5",
+        "character": "InnerVoice",
+        "text": "The streaming service asks you to polish a B-movie script. No contract, just a \"trust us.\"  But you’ll have to quit your toothpaste job. Do you take it?",
+        "aspect": "hierarchisation",
+        "leftAnswer": {
+            "text": "Sure.",
+            "outcome": "You deliver the edits, and they ghost you. Lesson learned.",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": -10,
+                "skills": 10,
+                "removePerk": "toothpaste"
+            },
+            "nextQuestion": "landedanagent",
+            "nextChapter": "writingjob"
+        },
+        "rightAnswer": {
+            "text": "No way, I need stability.",
+            "outcome": "You stick to the toothpaste job, but after one month, you’ve had enough and quit on your own.",
+            "effect": {
+                "money": 10,
+                "relationships": 0,
+                "ego": 10,
+                "skills": 0,
+                "removePerk": "toothpaste"
+            },
+            "nextQuestion": "landedanagent",
+            "nextChapter": "writingjob"
+        }
+    },
+    "polishing2": {
+        "chapterId": "dj5",
+        "character": "InnerVoice",
+        "text": "The streaming service asks you to polish a B-movie script. No contract, just a \"trust us.\" Do you take it?",
+        "aspect": "hierarchisation",
+        "leftAnswer": {
+            "text": "Sure.",
+            "outcome": "You deliver the edits, and they ghost you. Lesson learned.",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": -10,
+                "skills": 10
+            },
+            "nextQuestion": "landedanagent",
+            "nextChapter": "writingjob"
+        },
+        "rightAnswer": {
+            "text": "No contract, no deal.",
+            "outcome": "They balk at your terms and walk away.",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": 10,
+                "skills": 0
+            },
+            "nextQuestion": "landedanagent",
+            "nextChapter": "writingjob"
+        }
+    },
+    "landedanagent": {
+        "chapterId": "writingjob",
+        "character": "InnerVoice",
+        "text": "Against all odds, you’ve landed anagent! Time for the big offers to roll in.",
+        "aspect": "freelance",
+        "comment": "No real choice",
+        "leftAnswer": {
+            "text": "Seriously?",
+            "nextQuestion": "nosillygigs"
+        },
+        "rightAnswer": {
+            "text": "I knew I had it in me.",
+            "nextQuestion": "nosillygigs"
+        }
+    },
+    "nosillygigs": {
+        "chapterId": "writingjob",
+        "character": "InnerVoice",
+        "text": "At least now  you’ll never have to take on silly gigs again. Or so you think…",
+        "leftAnswer": {
+            "text": "Wait...",
+            "effect": {
+                "money": 10,
+                "ego": -10
+            },
+            "nextQuestion": "twoprojectsintro",
+            "nextChapter": "\n"
+        },
+        "rightAnswer": {
+            "text": "What?",
+            "effect": {
+                "money": -10,
+                "ego": 10
+            },
+            "nextQuestion": "twoprojectsintro"
+        }
+    },
+    "twoprojectsintro": {
+        "chapterId": "writingjob",
+        "character": "Agent",
+        "text": "I’ve got two projects for you to choose from.",
+        "aspect": "freelance",
+        "comment": "No real choice",
+        "leftAnswer": {
+            "text": "I'm intrigued",
+            "nextQuestion": "twoprojectsintro2"
+        },
+        "rightAnswer": {
+            "text": "Yeah?",
+            "nextQuestion": "twoprojectsintro2"
+        }
+    },
+    "twoprojectsintro2": {
+        "chapterId": "writingjob",
+        "character": "Agent",
+        "text": "An autobiography for a big tech mogul who's about to get canceled.",
+        "aspect": "hierarchisation, balance",
+        "comment": "No real choice",
+        "leftAnswer": {
+            "text": "Oh...",
+            "nextQuestion": "twoprojectsintro3"
+        },
+        "rightAnswer": {
+            "text": "I see...",
+            "nextQuestion": "twoprojectsintro3"
+        }
+    },
+    "twoprojectsintro3": {
+        "chapterId": "writingjob",
+        "character": "Agent",
+        "text": "Or an unpaid ghostwriting internship for a famous screenwriter.",
+        "aspect": "hierarchisation, balance",
+        "comment": "No real choice",
+        "leftAnswer": {
+            "text": "Hmm...",
+            "nextQuestion": "twoprojects"
+        },
+        "rightAnswer": {
+            "text": "Exciting..",
+            "nextQuestion": "twoprojects"
+        }
+    },
+    "twoprojects": {
+        "chapterId": "writingjob",
+        "character": "Agent",
+        "text": "So which one will you choose?",
+        "aspect": "hierarchisation, balance",
+        "leftAnswer": {
+            "text": "Big tech mogul",
+            "outcome": "The mogul gets arrested before you can finish the book. Still, it was a fun and enriching experience—in more ways than one.",
+            "effect": {
+                "money": 20,
+                "relationships": 0,
+                "ego": 10,
+                "skills": 10
+            },
+            "nextQuestion": "lookingforajob",
+            "nextChapter": "dj6"
+        },
+        "rightAnswer": {
+            "text": "Screenwriter",
+            "outcome": "You ghostwrite the entire thing, and the screenwriter closes a deal with a big studio... without ever mentioning your name.",
+            "effect": {
+                "money": -10,
+                "relationships": 0,
+                "ego": -10,
+                "skills": 20
+            },
+            "nextQuestion": "lookingforajob",
+            "nextChapter": "dj6"
+        }
+    },
+    "lookingforajob": {
+        "chapterId": "dj6",
+        "character": "InnerVoice",
+        "text": "Need a day job to survive?",
+        "aspect": "hierarchisation",
+        "leftAnswer": {
+            "text": "Yes",
+            "nextQuestion": "theater"
+        },
+        "rightAnswer": {
+            "text": "No",
+            "nextQuestion": "thepitchintro",
+            "nextChapter": "thepitch"
+        }
+    },
+    "theater": {
+        "chapterId": "dj6",
+        "character": "InnerVoice",
+        "text": "You can write a play for a local theater for a modest fee, or SMM for a tire company that offers a steady pay. Which do you choose?",
+        "aspect": "hierarchisation",
+        "leftAnswer": {
+            "text": "Theater",
+            "outcome": "The experience fuels your creative drive and gives you just enough money to cover one-third of your rent.",
+            "effect": {
+                "money": 5,
+                "relationships": 5,
+                "ego": 10,
+                "skills": 10,
+                "addPerk": "theater"
+            },
+            "nextQuestion": "thepitchintro",
+            "nextChapter": "thepitch"
+        },
+        "rightAnswer": {
+            "text": "Tire company",
+            "outcome": "The paycheck is steady, but writing about tires drains your enthusiasm for storytelling.",
+            "effect": {
+                "money": 10,
+                "ego": -10,
+                "addPerk": "tirecompany"
+            },
+            "nextQuestion": "thepitchintro",
+            "nextChapter": "thepitch"
+        }
+    },
+    "thepitchintro": {
+        "chapterId": "thepitch",
+        "character": "Agent",
+        "text": "Big news! I’ve set up a meeting with a producer for your script. Play it cool, okay? No pressure… just your entire future riding on it.",
+        "aspect": "portfolio",
+        "comment": "No real choice",
+        "leftAnswer": {
+            "text": "Right...",
+            "nextQuestion": "rehearse1"
+        },
+        "rightAnswer": {
+            "text": "Got it",
+            "nextQuestion": "rehearse1"
+        }
+    },
+    "rehearse1": {
+        "chapterId": "thepitch",
+        "character": "InnerVoice",
+        "text": "Time to rehearse our pitch! Who’s the lucky audience? Maybe, your parents?",
+        "aspect": "portfolio, collaboration",
+        "leftAnswer": {
+            "text": "Yes",
+            "outcome": "Wait, who’s actually going to watch this movie?",
+            "effect": {
+                "relationships": -10,
+                "ego": -10,
+                "skills": 5
+            },
+            "nextQuestion": "producerintro"
+        },
+        "rightAnswer": {
+            "text": "No",
+            "nextQuestion": "rehearse2"
+        }
+    },
+    "rehearse2": {
+        "chapterId": "thepitch",
+        "character": "InnerVoice",
+        "text": "Your fellow screenwriter?",
+        "aspect": "portfolio, collaboration",
+        "leftAnswer": {
+            "text": "Yes",
+            "outcome": "Fellow Screenwriter: “You go, girl!”\nWasn't much of a help, but now you feel confident about yourself.",
+            "effect": {
+                "ego": 10,
+                "skills": 5
+            },
+            "nextQuestion": "producerintro"
+        },
+        "rightAnswer": {
+            "text": "No",
+            "nextQuestion": "rehearse3"
+        }
+    },
+    "rehearse3": {
+        "chapterId": "thepitch",
+        "character": "InnerVoice",
+        "text": "Screenwriting guru?",
+        "aspect": "portfolio, collaboration",
+        "leftAnswer": {
+            "text": "Yes",
+            "outcome": "Screenwriting Guru: \"It’s solid. Except for the second act. And maybe the ending. Actually, the first act could use some work too.\"",
+            "effect": {
+                "relationships": 10,
+                "ego": -10,
+                "skills": 10
+            },
+            "nextQuestion": "producerintro"
+        },
+        "rightAnswer": {
+            "text": "No",
+            "outcome": "You choose to trust your instincts. Brave or stupid?",
+            "effect": {
+                "ego": 10,
+                "skills": -10
+            },
+            "nextQuestion": "producerintro"
+        }
+    },
+    "producerintro": {
+        "chapterId": "thepitch",
+        "character": "InnerVoice",
+        "text": "You step into the producer's office, the air thick with power and the faint scent of overpriced cologne.",
+        "aspect": "portfolio",
+        "comment": "No real choice",
+        "leftAnswer": {
+            "text": "Terrifying.",
+            "nextQuestion": "producerstart"
+        },
+        "rightAnswer": {
+            "text": "Thrilling.",
+            "nextQuestion": "producerstart"
+        }
+    },
+    "producerstart": {
+        "chapterId": "thepitch",
+        "character": "Producer",
+        "text": "Alright, let's start. Whenever you're ready.",
+        "aspect": "portfolio",
+        "leftAnswer": {
+            "text": "Here’s the logline—it’s short and sweet.",
+            "outcome": "Producer: \"Okay, I’m intrigued. Keep going.\"",
+            "effect": {
+                "relationships": 10,
+                "ego": 10,
+                "skills": 5
+            },
+            "nextQuestion": "tuningout"
+        },
+        "rightAnswer": {
+            "text": "The story starts with the protagonist waking up in the morning\"",
+            "outcome": "Producer: \"Do I look like I have time to hear an audiobook?\"",
+            "effect": {
+                "relationships": -10,
+                "ego": -10,
+                "skills": -5
+            },
+            "nextQuestion": "tuningout"
+        }
+    },
+    "tuningout": {
+        "chapterId": "thepitch",
+        "character": "InnerVoice",
+        "text": "Uh-oh, they’re tuning out mid-pitch. How do we save this?",
+        "aspect": "portfolio",
+        "leftAnswer": {
+            "text": "Keep pitching. ",
+            "outcome": "The producer falls asleep. Maybe sleep meditation is your true calling?",
+            "effect": {
+                "relationships": -10,
+                "ego": -10,
+                "skills": -5
+            },
+            "nextQuestion": "starring"
+        },
+        "rightAnswer": {
+            "text": "Turn up the drama and act it out!",
+            "outcome": "You leap onto the table, twist your ankle, but wow the producer with your passion.",
+            "effect": {
+                "relationships": 10,
+                "ego": 10,
+                "skills": 10
+            },
+            "nextQuestion": "starring"
+        }
+    },
+    "starring": {
+        "chapterId": "thepitch",
+        "character": "Producer",
+        "text": "Now who do you see starring in this?",
+        "aspect": "portfolio, collaboration",
+        "leftAnswer": {
+            "text": "Timothée Chalamet",
+            "effect": {
+                "relationships": 10,
+                "ego": 10
+            },
+            "nextQuestion": "thepitchend"
+        },
+        "rightAnswer": {
+            "text": "Someone fresh and unknown.",
+            "outcome": "Right, because selling a no-name is so easy.",
+            "effect": {
+                "relationships": -10,
+                "ego": -10
+            },
+            "nextQuestion": "thepitchend"
+        }
+    },
+    "thepitchend": {
+        "chapterId": "thepitch",
+        "character": "InnerVoice",
+        "text": "They said it wouldn’t happen, but you just signed your first feature film contract.",
+        "aspect": "portfolio",
+        "comment": "No real choice",
+        "leftAnswer": {
+            "text": "Pinch me.",
+            "nextQuestion": "theatersalary, tirecompanysalary, lendmoney",
+            "nextChapter": "dj7"
+        },
+        "rightAnswer": {
+            "text": "Woohoo!",
+            "nextQuestion": "theatersalary, tirecompanysalary, lendmoney",
+            "nextChapter": "dj7"
+        }
+    },
+    "theatersalary": {
+        "chapterId": "dj7",
+        "character": "InnerVoice",
+        "text": "Your paycheck has arrived! (job: writing for a theater)",
+        "aspect": "hierarchisation",
+        "requiresPerk": "theater",
+        "comment": "No real choice.",
+        "leftAnswer": {
+            "text": "About time.",
+            "effect": {
+                "money": 5
+            },
+            "nextQuestion": "theater2"
+        },
+        "rightAnswer": {
+            "text": "Hope it lasts",
+            "effect": {
+                "money": 5
+            },
+            "nextQuestion": "theater2"
+        }
+    },
+    "theater2": {
+        "chapterId": "dj7",
+        "character": "InnerVoice",
+        "text": "The theater offers you to write another play. With a feature film script already on your plate, will you take on the extra work?",
+        "aspect": "hierarchisation",
+        "leftAnswer": {
+            "text": "I can juggle both.",
+            "outcome": "Well, let’s see how you’ll handle it.",
+            "effect": {
+                "money": 5,
+                "ego": 10,
+                "skills": 5
+            },
+            "nextQuestion": "lendmoney"
+        },
+        "rightAnswer": {
+            "text": "Focus on the film",
+            "effect": {
+                "money": -5,
+                "removePerk": "theater"
+            },
+            "nextQuestion": "lendmoney"
+        }
+    },
+    "tirecompanysalary": {
+        "chapterId": "dj7",
+        "character": "InnerVoice",
+        "text": "Your paycheck has arrived! (job: SMM for a tirecompany)",
+        "requiresPerk": "tirecompany",
+        "leftAnswer": {
+            "text": "About time.",
+            "effect": {
+                "money": 10
+            },
+            "nextQuestion": "tirecompany2"
+        },
+        "rightAnswer": {
+            "text": "Hope it lasts",
+            "effect": {
+                "money": 10
+            },
+            "nextQuestion": "tirecompany2"
+        }
+    },
+    "tirecompany2": {
+        "chapterId": "dj7",
+        "character": "InnerVoice",
+        "text": "With a feature film script already on your plate, will you keep on working for a tire company?",
+        "aspect": "hierarchisation",
+        "comment": "Reconsider salary scores",
+        "leftAnswer": {
+            "text": "I can juggle both.",
+            "outcome": "Well, let’s see how you’ll handle it.",
+            "effect": {
+                "money": 10,
+                "ego": -10
+            },
+            "nextQuestion": "lendmoney"
+        },
+        "rightAnswer": {
+            "text": "Focus on the film",
+            "effect": {
+                "money": -10,
+                "ego": 10,
+                "removePerk": "tirecompany"
+            },
+            "nextQuestion": "lendmoney"
+        }
+    },
+    "lendmoney": {
+        "chapterId": "dj7",
+        "character": "Fellow Screenwriter",
+        "text": "I've heard you're a big writer now… Can you lend me some money?",
+        "comment": "Don't forget to add paying back card",
+        "leftAnswer": {
+            "text": "Sure.",
+            "outcome": "Fellow Screenwriter: \"Thanks, you saved me! I'll pay you back as soon as I can.\" ",
+            "effect": {
+                "money": -10,
+                "relationships": 10,
+                "addPerk": "loan"
+            },
+            "nextQuestion": "advancepaymentintro",
+            "nextChapter": "firstdraft"
+        },
+        "rightAnswer": {
+            "text": "Not so big, sorry.",
+            "outcome": "You can tell they won’t be texting you anytime soon.",
+            "effect": {
+                "relationships": -10
+            },
+            "nextQuestion": "advancepaymentintro",
+            "nextChapter": "firstdraft"
+        }
+    },
+    "advancepaymentintro ": {
+        "chapterId": "firstdraft",
+        "character": "Producer",
+        "text": "Congrats! You just received an advance payment for your script",
+        "aspect": "portfolio",
+        "comment": "No real choice",
+        "leftAnswer": {
+            "text": "Well, that’s new.",
+            "effect": {
+                "money": 15
+            },
+            "nextQuestion": "advancepayment"
+        },
+        "rightAnswer": {
+            "text": "I'm rich!",
+            "effect": {
+                "money": 15
+            },
+            "nextQuestion": "advancepayment "
+        }
+    },
+    "advancepayment": {
+        "chapterId": "firstdraft",
+        "character": "InnerVoice",
+        "text": "What will you do with the money?",
+        "aspect": "portfolio",
+        "leftAnswer": {
+            "text": "Celebrate! I deserve it.",
+            "nextQuestion": "advancepayment2"
+        },
+        "rightAnswer": {
+            "text": "Save it for later.",
+            "outcome": "Smart move. Unfortunately, responsible decisions don’t spark much inspiration.",
+            "effect": {
+                "money": 10,
+                "ego": -10
+            },
+            "nextQuestion": "timetowrite"
+        }
+    },
+    "advancepayment2": {
+        "chapterId": "firstdraft",
+        "character": "InnerVoice",
+        "text": "How?",
+        "aspect": "portfolio",
+        "leftAnswer": {
+            "text": "Throw a big party",
+            "outcome": "The party was a blast. But were those connections really worth all the broken furniture?",
+            "effect": {
+                "money": -15,
+                "relationships": 10
+            },
+            "nextQuestion": "timetowrite"
+        },
+        "rightAnswer": {
+            "text": "Spa day",
+            "outcome": "You emerge refreshed and glowing",
+            "effect": {
+                "money": -10,
+                "ego": 10
+            },
+            "nextQuestion": "timetowrite"
+        }
+    },
+    "timetowrite": {
+        "chapterId": "firstdraft",
+        "character": "InnerVoice",
+        "text": "But now it's time to write...",
+        "aspect": "collaboration, balance",
+        "comment": "No real choice",
+        "leftAnswer": {
+            "text": "Ugh, already?",
+            "nextQuestion": "fourweeks"
+        },
+        "rightAnswer": {
+            "text": "Fine, fine...",
+            "nextQuestion": "fourweeks"
+        }
+    },
+    "fourweeks": {
+        "chapterId": "firstdraft",
+        "character": "Producer",
+        "text": "You’ve got four weeks. Don’t make me regret this.",
+        "aspect": "portfolio, collaboration, balance",
+        "leftAnswer": {
+            "text": "No pressure, huh?",
+            "nextQuestion": "emptypage"
+        },
+        "rightAnswer": {
+            "text": "Gulp.",
+            "nextQuestion": "emptypage"
+        }
+    },
+    "emptypage": {
+        "chapterId": "firstdraft",
+        "character": "InnerVoice",
+        "text": "It’s just you and the empty page now. Terrifying, isn’t it?",
+        "aspect": "balance, collaboration",
+        "leftAnswer": {
+            "text": "Yes.",
+            "effect": {
+                "ego": -10
+            },
+            "nextQuestion": "fear"
+        },
+        "rightAnswer": {
+            "text": "No.",
+            "effect": {
+                "ego": 10,
+                "skills": 5
+            },
+            "nextQuestion": "emptypage2"
+        }
+    },
+    "emptypage2": {
+        "chapterId": "firstdraft",
+        "character": "InnerVoice",
+        "text": "If it’s not scary, then why have you been staring at the blank page for five days?",
+        "aspect": "balance, collaboration",
+        "comment": "No real choice",
+        "leftAnswer": {
+            "text": "Uhhh...",
+            "nextQuestion": "fear"
+        },
+        "rightAnswer": {
+            "text": "Well...",
+            "nextQuestion": "fear"
+        }
+    },
+    "fear": {
+        "chapterId": "firstdraft",
+        "character": "InnerVoice",
+        "text": "You seem frozen with fear. Seriously, are you even good enough for this? Can you handle this story?",
+        "aspect": "balance, collaboration",
+        "leftAnswer": {
+            "text": "Time for some self-reflection.",
+            "outcome": "You spiral into self-loathing and doubt. Now you're too paralyzed to even open your laptop.",
+            "effect": {
+                "ego": -15
+            },
+            "nextQuestion": "firstscene"
+        },
+        "rightAnswer": {
+            "text": "Ignore it and push forward",
+            "outcome": "You hammer out some ideas. They’re rough. They’re ugly. But  at least you're moving somewhere.",
+            "effect": {
+                "ego": 10,
+                "skills": 10
+            },
+            "nextQuestion": "firstscene"
+        }
+    },
+    "firstscene": {
+        "chapterId": "firstdraft",
+        "character": "InnerVoice",
+        "text": "You’ve written the first scene, but is it any good? What if it’s terrible? Maybe you should rewrite it?",
+        "aspect": "balance, collaboration",
+        "leftAnswer": {
+            "text": "Rewrite it.",
+            "outcome": "You’ve rewritten the same scene six times. It’s perfect. Or maybe it’s worse? Who can tell anymore?",
+            "effect": {
+                "ego": -10
+            },
+            "nextQuestion": "week"
+        },
+        "rightAnswer": {
+            "text": "Move forward",
+            "outcome": "The scene might not be perfect, but better mediocre progress than polished procrastination.",
+            "effect": {
+                "ego": 10,
+                "skills": 10
+            },
+            "nextQuestion": "week"
+        }
+    },
+    "week": {
+        "chapterId": "firstdraft",
+        "character": "InnerVoice",
+        "text": "A week has passed. You’ve written 5 pages out of 120. What’s the plan for today?",
+        "aspect": "balance, collaboration",
+        "leftAnswer": {
+            "text": "Just type words",
+            "outcome": "You write two pages of not-so-great text. But hey, at least it's something, right? Right?..",
+            "effect": {
+                "ego": 5,
+                "skills": 10
+            },
+            "nextQuestion": "tenpages"
+        },
+        "rightAnswer": {
+            "text": "Seek inspiration",
+            "nextQuestion": "inspiration"
+        }
+    },
+    "inspiration": {
+        "chapterId": "firstdraft",
+        "character": "InnerVoice",
+        "text": "How do you plan to find it?",
+        "aspect": "balance, collaboration",
+        "leftAnswer": {
+            "text": "Go for a walk",
+            "outcome": "Strolling the sidewalks of LA, you spot a homeless man and a dead crow. Not exactly a creative epiphany.",
+            "effect": {
+                "ego": -10
+            },
+            "nextQuestion": "tenpages"
+        },
+        "rightAnswer": {
+            "text": "Ask for help",
+            "nextQuestion": "inspirationhelp"
+        }
+    },
+    "inspirationhelp": {
+        "chapterId": "firstdraft",
+        "character": "InnerVoice",
+        "text": "Who will you ask for help?",
+        "aspect": "balance, collaboration, innovation",
+        "leftAnswer": {
+            "text": "Your fellow screenwriter",
+            "nextQuestion": "spiritualreset"
+        },
+        "rightAnswer": {
+            "text": "Your screenwriting teacher",
+            "nextQuestion": "mckee"
+        }
+    },
+    "spiritualreset": {
+        "chapterId": "firstdraft",
+        "character": "FellowScreenwriter",
+        "text": "You need a spiritual reset. Let’s hit up Ayahuasca. It’ll be life-changing. Are you in?",
+        "aspect": "balance, collaboration, innovation",
+        "leftAnswer": {
+            "text": "Let's go!",
+            "outcome": "The trip was transformative. You saw the entire movie in your head. Too bad none of it stuck when you came back.",
+            "effect": {
+                "relationships": 10,
+                "ego": -10,
+                "skills": -10
+            },
+            "nextQuestion": "tenpages"
+        },
+        "rightAnswer": {
+            "text": "No, thanks",
+            "outcome": "You stay home and write. No breakthroughs, but you’re one page closer to a draft.",
+            "effect": {
+                "relationships": -10,
+                "ego": 10,
+                "skills": 10
+            },
+            "nextQuestion": "tenpages"
+        }
+    },
+    "mckee": {
+        "chapterId": "firstdraft",
+        "character": "ScreenwritingGuru",
+        "text": "McKee’s in town, and his masterclass will blow your mind. You’ll finally crack your story. Are you coming?",
+        "aspect": "balance, collaboration, innovation",
+        "leftAnswer": {
+            "text": "No",
+            "outcome": "You stay home and write. No breakthroughs, but you’re one page closer to a draft.",
+            "effect": {
+                "relationships": -10,
+                "ego": 10,
+                "skills": 10
+            },
+            "nextQuestion": "tenpages"
+        },
+        "rightAnswer": {
+            "text": "Yes",
+            "outcome": "Your wallet’s considerably thinner, but you’ve mastered the art of perfectly boring storytelling.",
+            "effect": {
+                "money": -10,
+                "relationships": 10,
+                "ego": -5,
+                "skills": 15
+            },
+            "nextQuestion": "tenpages"
+        }
+    },
+    "tenpages": {
+        "chapterId": "firstdraft",
+        "character": "InnerVoice",
+        "text": "Two weeks in, and you've managed a grand total of 10 pages. What's the plan for today?",
+        "aspect": "balance, collaboration, innovation",
+        "leftAnswer": {
+            "text": "Just type words",
+            "outcome": "It’s one of those days. You manage to hammer out half a page, but it’s clunky and uninspired. You hope tomorrow will be better.",
+            "effect": {
+                "ego": -10,
+                "skills": 5
+            },
+            "nextQuestion": "deadline"
+        },
+        "rightAnswer": {
+            "text": "Seek inspiration from movies",
+            "outcome": "You dive into a movie marathon and feel electrified by the artistry. But wait—how did it get to 2 a.m. already? Not a single new word written.",
+            "effect": {
+                "ego": 10,
+                "skills": -5
+            },
+            "nextQuestion": "deadline"
+        }
+    },
+    "deadline": {
+        "chapterId": "firstdraft",
+        "character": "InnerVoice",
+        "text": "Deadline’s tomorrow, and you’ve got half a draft. What’s the plan, genius?",
+        "aspect": "balance, collaboration, innovation",
+        "leftAnswer": {
+            "text": "Ask for an extension",
+            "outcome": "The producer grants you a week but makes it painfully clear they’re not impressed.",
+            "effect": {
+                "relationships": -15,
+                "ego": 10,
+                "skills": -10
+            },
+            "nextQuestion": "burnout1, burnout2, payback",
+            "nextChapter": "dj8"
+        },
+        "rightAnswer": {
+            "text": "Pull an all-nighter on caffeine",
+            "outcome": "Fueled by enough caffeine to kill a small horse, you churn out 60 more shaky pages. They’ll need rewriting, but you’ve met the deadline.",
+            "effect": {
+                "relationships": 10,
+                "ego": -10,
+                "skills": 20
+            },
+            "nextQuestion": "burnout1, burnout2, payback",
+            "nextChapter": "dj8"
+        }
+    },
+    "burnout1": {
+        "chapterId": "dj8",
+        "character": "InnerVoice",
+        "text": "Congratulations! Your attempt to do it all has backfired spectacularly. You’re burned out, missed the theater deadline, and got fired.",
+        "aspect": "hierarchisation",
+        "requiresPerk": "theater",
+        "comment": "No real choise",
+        "leftAnswer": {
+            "text": "Wait... ",
+            "effect": {
+                "ego": -10,
+                "removePerk": "theater"
+            },
+            "nextQuestion": "payback, movein"
+        },
+        "rightAnswer": {
+            "text": "What...",
+            "effect": {
+                "ego": -10,
+                "removePerk": "theater"
+            },
+            "nextQuestion": "payback, movein"
+        }
+    },
+    "burnout2": {
+        "chapterId": "dj8",
+        "character": "InnerVoice",
+        "text": "Congratulations! Your attempt to do it all has backfired spectacularly. You’re burned out, missed the tire company deadline, and got fired.",
+        "aspect": "hierarchisation",
+        "requiresPerk": "tirecompany",
+        "comment": "No real choise",
+        "leftAnswer": {
+            "text": "Wait... ",
+            "effect": {
+                "ego": -10,
+                "removePerk": "tirecompany"
+            },
+            "nextQuestion": "payback, movein"
+        },
+        "rightAnswer": {
+            "text": "What...",
+            "effect": {
+                "ego": -10,
+                "removePerk": "tirecompany"
+            },
+            "nextQuestion": "payback, movein"
+        }
+    },
+    "payback": {
+        "chapterId": "dj8",
+        "character": "FellowScreenwriter",
+        "text": "Hey! Remember that money you lent me? Here’s half. I’ll get you the rest soon, Ok?",
+        "aspect": "hierarchisation",
+        "requiresPerk": "loan",
+        "leftAnswer": {
+            "text": "Fine",
+            "outcome": "You take what you can get. Will the rest ever come? Who knows.",
+            "effect": {
+                "money": 5,
+                "relationships": 10,
+                "ego": -10
+            },
+            "nextQuestion": "movein"
+        },
+        "rightAnswer": {
+            "text": "Nope. I want all of it. Now.",
+            "outcome": "They reluctantly hand over the rest.",
+            "effect": {
+                "money": 10,
+                "relationships": -10,
+                "ego": 10,
+                "removePerk": "loan"
+            },
+            "nextQuestion": "movein"
+        }
+    },
+    "movein": {
+        "chapterId": "dj8",
+        "character": "InnerVoice",
+        "text": "Your partner invites you to move in so you won’t have to pay rent anymore. You were about to break up with them, but now…\n",
+        "leftAnswer": {
+            "text": "Move in",
+            "outcome": "Who knew living with someone you don’t love is so unbearable? You pay the rent with your self-esteem.",
+            "effect": {
+                "money": 5,
+                "ego": -10,
+                "addPerk": "partner"
+            },
+            "nextQuestion": "producersnotesintro",
+            "nextChapter": "producersnotes"
+        },
+        "rightAnswer": {
+            "text": "Break up.",
+            "outcome": "You've got no electricity, but at least you’re free and independent.",
+            "effect": {
+                "money": -5,
+                "ego": 10
+            },
+            "nextQuestion": "producersnotesintro",
+            "nextChapter": "producersnotes"
+        }
+    },
+    "producersnotesintro": {
+        "chapterId": "producersnotes",
+        "character": "Producer",
+        "text": "I've read your draft, and I’ve got notes. Lots of them.",
+        "aspect": "balance, collaboration",
+        "comment": "No real choise",
+        "leftAnswer": {
+            "text": "Oh no",
+            "nextQuestion": "moretension"
+        },
+        "rightAnswer": {
+            "text": "Here we go...",
+            "nextQuestion": "moretension"
+        }
+    },
+    "moretension": {
+        "chapterId": "producersnotes",
+        "character": "Producer",
+        "text": "The script’s good, but it needs more tension.",
+        "aspect": "balance, collaboration",
+        "leftAnswer": {
+            "text": "You’re right",
+            "outcome": "You nod enthusiastically, but in fact, you're clueless about what they meant. Now you’re stuck.",
+            "effect": {
+                "relationships": 10,
+                "ego": -10
+            },
+            "nextQuestion": "intenseending"
+        },
+        "rightAnswer": {
+            "text": "Can you clarify?",
+            "nextQuestion": "ghostlover"
+        }
+    },
+    "ghostlover": {
+        "chapterId": "producersnotes",
+        "character": "Producer",
+        "text": "I mean... What if the ghost is also the protagonist's mom's lover? Think of the inner drama!",
+        "aspect": "balance, collaboration",
+        "leftAnswer": {
+            "text": "It doesn’t make any sense.",
+            "outcome": "The producer: \"No imagination, huh? Maybe you're not cut out for this after all.\"",
+            "effect": {
+                "relationships": -10,
+                "ego": -10
+            },
+            "nextQuestion": "intenseending"
+        },
+        "rightAnswer": {
+            "text": "I'll think about it.",
+            "outcome": "The producer beams, satisfied you’re open to their brilliance, not knowing you'll file it under \"ideas to ignore forever\".",
+            "effect": {
+                "relationships": 10,
+                "ego": 10,
+                "skills": 10
+            },
+            "nextQuestion": "intenseending"
+        }
+    },
+    "intenseending": {
+        "chapterId": "producersnotes",
+        "character": "Producer",
+        "text": "The ending is too intense. Audiences prefer happy endings, you know?",
+        "aspect": "balance, collaboration",
+        "leftAnswer": {
+            "text": "Sure, I agree (you don't)",
+            "effect": {
+                "relationships": 10,
+                "ego": -10
+            },
+            "nextQuestion": "christmascomedy"
+        },
+        "rightAnswer": {
+            "text": "But I don't",
+            "outcome": "Producer: \"I see, you're not open to new ideas. Well...\"",
+            "effect": {
+                "relationships": -10,
+                "ego": 10,
+                "skills": 10
+            },
+            "nextQuestion": "afternotes"
+        }
+    },
+    "christmascomedy": {
+        "chapterId": "producersnotes",
+        "character": "Producer",
+        "text": "Now that I think of it, what if we turn it into a Christmas comedy? We can have it ready for next year’s holiday season!",
+        "aspect": "balance, collaboration",
+        "leftAnswer": {
+            "text": "Brilliant!",
+            "outcome": "The producer’s ecstatic, but as you think of writing a rom-com with elves and jingle bells, you lose the will to live.",
+            "effect": {
+                "relationships": 10,
+                "ego": -20
+            },
+            "nextQuestion": "afternotes"
+        },
+        "rightAnswer": {
+            "text": "Over my dead body.",
+            "outcome": "Producer: \"I see, you're not open to new ideas. Well...\"",
+            "effect": {
+                "relationships": -10,
+                "ego": 10,
+                "skills": 10
+            },
+            "nextQuestion": "afternotes"
+        }
+    },
+    "afternotes": {
+        "chapterId": "producersnotes",
+        "character": "InnerVoice",
+        "text": "You leave the producer’s office with a head full of notes and a script that's slipping out of your control.",
+        "aspect": "balance, collaboration",
+        "comment": "No real choise",
+        "leftAnswer": {
+            "text": "This is fine. Totally fine.",
+            "nextQuestion": "makeitwork"
+        },
+        "rightAnswer": {
+            "text": "AAAAAAAAA",
+            "nextQuestion": "makeitwork"
+        }
+    },
+    "makeitwork": {
+        "chapterId": "producersnotes",
+        "character": "InnerVoice",
+        "text": "But we can make it work! Right?",
+        "aspect": "balance, collaboration",
+        "leftAnswer": {
+            "text": "Yes!",
+            "effect": {
+                "ego": 10
+            },
+            "nextQuestion": "notesinwriting"
+        },
+        "rightAnswer": {
+            "text": "Not sure... ",
+            "effect": {
+                "ego": -10
+            },
+            "nextQuestion": "notesinwriting"
+        }
+    },
+    "notesinwriting": {
+        "chapterId": "producersnotes",
+        "character": "InnerVoice",
+        "text": "Should you ask for the producer’s notes in writing?",
+        "aspect": "balance, collaboration",
+        "leftAnswer": {
+            "text": "Yes",
+            "nextQuestion": "courtcase"
+        },
+        "rightAnswer": {
+            "text": "No, it’s all clear.",
+            "outcome": "The next day, your scribbled notes make no sense. You vaguely remember something about a raver…or was it a rave?",
+            "effect": {
+                "ego": -10
+            },
+            "nextQuestion": "favscene"
+        }
+    },
+    "courtcase": {
+        "chapterId": "producersnotes",
+        "character": "Producer",
+        "text": "What is this, a court case? My assistant will call you tomorrow with the notes.",
+        "aspect": "balance, collaboration",
+        "leftAnswer": {
+            "text": "I need them in writing.",
+            "outcome": "The assistant emails you a summary riddled with typos, but hey, at least you’ve got evidence of their wild ideas.",
+            "effect": {
+                "relationships": -10,
+                "ego": 10,
+                "skills": 10
+            },
+            "nextQuestion": "favscene"
+        },
+        "rightAnswer": {
+            "text": "Ok, fine.",
+            "outcome": "The assistant calls the next day with a rambling, disorganized monologue. You’re no closer to clarity and even further from inspiration.",
+            "effect": {
+                "ego": -10
+            },
+            "nextQuestion": "favscene"
+        }
+    },
+    "favscene": {
+        "chapterId": "producersnotes",
+        "character": "Producer",
+        "text": "The producer's favourite scene doesn’t fit the new draft at all.",
+        "aspect": "balance, collaboration",
+        "leftAnswer": {
+            "text": "Keep it anyway.",
+            "effect": {
+                "relationships": 10,
+                "ego": -10
+            },
+            "nextQuestion": "newscript"
+        },
+        "rightAnswer": {
+            "text": "Cut it.",
+            "effect": {
+                "relationships": -10,
+                "ego": 10,
+                "skills": 10
+            },
+            "nextQuestion": "newscript"
+        }
+    },
+    "newscript": {
+        "chapterId": "producersnotes",
+        "character": "InnerVoice",
+        "text": "Let’s be real: making all the changes means writing an entirely new script. So, what’s the game plan?",
+        "aspect": "balance, collaboration",
+        "leftAnswer": {
+            "text": "Rewrite everything.",
+            "outcome": "It’s grueling and soul-crushing, but the script’s sharper than ever.",
+            "effect": {
+                "ego": -10,
+                "skills": 20
+            },
+            "nextQuestion": "movein2, teaching",
+            "nextChapter": "dj9"
+        },
+        "rightAnswer": {
+            "text": "Minor tweaks will do.",
+            "outcome": "You slap on a few changes just enough to look convincing. Here’s hoping the producer doesn’t dig too deep.",
+            "effect": {
+                "ego": -10,
+                "skills": -10
+            },
+            "nextQuestion": "movein2, teaching",
+            "nextChapter": "dj9"
+        }
+    },
+    "movein2": {
+        "chapterId": "dj9",
+        "character": "InnerVoice",
+        "text": "Will you keep living with your partner?",
+        "aspect": "hierarchisation",
+        "requiresPerk": "partner",
+        "leftAnswer": {
+            "text": "Yes.",
+            "outcome": "Within a month, your partner realizes you don’t love them and makes you move out.",
+            "effect": {
+                "money": 5,
+                "ego": -20,
+                "removePerk": "partner"
+            },
+            "nextQuestion": "teaching"
+        },
+        "rightAnswer": {
+            "text": "No.",
+            "outcome": "You've got no electricity, but at least you’re free and independent",
+            "effect": {
+                "money": -5,
+                "ego": 10
+            },
+            "nextQuestion": "teaching"
+        }
+    },
+    "teaching": {
+        "chapterId": "dj9",
+        "character": "InnerVoice",
+        "text": "A film school offers you to teach a screenwriting master-class.",
+        "aspect": "hierarchisation",
+        "leftAnswer": {
+            "text": "Why not? I know my stuff. ",
+            "outcome": "The students doubt your youth at first but soon come to appreciate your insights.",
+            "effect": {
+                "money": 10,
+                "ego": 10,
+                "addPerk": "teaching"
+            },
+            "nextQuestion": "directorsnotesintro",
+            "nextChapter": "directorsnotes"
+        },
+        "rightAnswer": {
+            "text": "Who am I to teach anybody?",
+            "outcome": "The job went to your mate, who hasn’t written anything since their questionable short film in school",
+            "effect": {
+                "money": -5,
+                "ego": 10
+            },
+            "nextQuestion": "directorsnotesintro",
+            "nextChapter": "directorsnotes"
+        }
+    },
+    "directorsnotesintro": {
+        "chapterId": "directorsnotes",
+        "character": "InnerVoice",
+        "text": "Five drafts later, the script seems done… or so you thought. The Director and The Star step in, and of course, they each have their own vision.",
+        "aspect": "balance, collaboration",
+        "comment": "No real choice",
+        "leftAnswer": {
+            "text": "Oh, come on.",
+            "nextQuestion": "dialoguecut"
+        },
+        "rightAnswer": {
+            "text": "Of course they do.",
+            "nextQuestion": "dialoguecut"
+        }
+    },
+    "dialoguecut": {
+        "chapterId": "directorsnotes",
+        "character": "Director",
+        "text": "Let’s cut this dialogue – you know, the one you love – and replace it with a long, silent panoramic shot\"",
+        "aspect": "balance, collaboration",
+        "comment": "Reconsider scores",
+        "leftAnswer": {
+            "text": "Who needs these words anyway?",
+            "outcome": "That dialogue explained a lot, and now the next three scenes make zero sense. But the Director calls it ‘abstract storytelling.’",
+            "effect": {
+                "skills": -10
+            },
+            "nextQuestion": "lines"
+        },
+        "rightAnswer": {
+            "text": "Only over my dead body.",
+            "outcome": "The Director grumbles but lets it stay — for now. You’re walking a thin line between visionary and problematic.\n",
+            "effect": {
+                "relationships": -10,
+                "ego": 10
+            },
+            "nextQuestion": "lines"
+        }
+    },
+    "lines": {
+        "chapterId": "directorsnotes",
+        "character": "TheStar",
+        "text": "I should say those powerful lines you gave my daughter. They’ll hit harder coming from me.",
+        "aspect": "balance, collaboration",
+        "leftAnswer": {
+            "text": "But these are her only lines...",
+            "effect": {
+                "relationships": -10,
+                "ego": 10,
+                "skills": 10
+            },
+            "nextQuestion": "younger"
+        },
+        "rightAnswer": {
+            "text": "You're right, you rock.",
+            "effect": {
+                "relationships": 10,
+                "ego": -10,
+                "skills": -10
+            },
+            "nextQuestion": "younger"
+        }
+    },
+    "younger ": {
+        "chapterId": "directorsnotes",
+        "character": "TheStar",
+        "text": "I feel like my heroine should be ten years younger. I just don’t feel like a 38-year-old.",
+        "aspect": "balance, collaboration",
+        "leftAnswer": {
+            "text": "But you are 38.",
+            "outcome": "The Star is insulted and threatens to quit. The Producer begs you to do whatever she wants to keep her.",
+            "effect": {
+                "relationships": -10
+            },
+            "nextQuestion": "musical"
+        },
+        "rightAnswer": {
+            "text": "Sure.",
+            "outcome": "The heroine is now ten years older than her daughter. Let’s hope no one notices.",
+            "effect": {
+                "relationships": 10,
+                "ego": -10,
+                "skills": 10
+            },
+            "nextQuestion": "younger2"
+        }
+    },
+    "younger2": {
+        "chapterId": "directorsnotes",
+        "character": "Director",
+        "text": "Why is the mother now ten years older than her daughter? Actually, I think she should be her grandmother.",
+        "aspect": "balance, collaboration",
+        "leftAnswer": {
+            "text": "I’ll change it back.",
+            "outcome": "The Star is insulted and threatens to quit. The Producer begs you to do whatever she wants to keep her.",
+            "effect": {
+                "relationships": -10
+            },
+            "nextQuestion": "musical"
+        },
+        "rightAnswer": {
+            "text": "Maybe the daughter was adopted?",
+            "outcome": "The Director thinks that adds an interesting twist. The Star thanks you, and the Producer looks relieved.",
+            "effect": {
+                "relationships": 10,
+                "ego": 10,
+                "skills": 10
+            },
+            "nextQuestion": "carnival"
+        }
+    },
+    "musical": {
+        "chapterId": "directorsnotes",
+        "character": "TheStar",
+        "text": "I’ve been working on my vocals. Can we add a scene where I sing? It’ll be emotional!",
+        "aspect": "balance, collaboration",
+        "comment": "Reconsider scores",
+        "leftAnswer": {
+            "text": "It’s not a musical.",
+            "outcome": "The Star quits, calling you 'impossible to work with.' One second later, you’re fired.",
+            "effect": {
+                "money": -10,
+                "relationships": -20
+            },
+            "nextQuestion": "strike",
+            "nextChapter": "strikes"
+        },
+        "rightAnswer": {
+            "text": "Sure.",
+            "outcome": "The Director loves the singing, and now your dramatic horror is a musical.",
+            "effect": {
+                "relationships": 10,
+                "ego": -10,
+                "skills": -10
+            },
+            "nextQuestion": "carnival"
+        }
+    },
+    "carnival": {
+        "chapterId": "directorsnotes",
+        "character": "Director",
+        "text": "Let’s add a massive carnival scene at the end, with fireworks and hundreds of dancers in costumes.",
+        "aspect": "balance, collaboration",
+        "comment": "Reconsider scores",
+        "leftAnswer": {
+            "text": "But that makes no sense.",
+            "outcome": "The Director quits, calling you 'impossible to work with.' One second later, you’re fired.",
+            "effect": {
+                "money": -10,
+                "relationships": -20
+            },
+            "nextQuestion": "strike",
+            "nextChapter": "strikes"
+        },
+        "rightAnswer": {
+            "text": "Alright.",
+            "outcome": "The Director is happy, but the Producer...",
+            "effect": {
+                "relationships": 10
+            },
+            "nextQuestion": "budget"
+        }
+    },
+    "budget": {
+        "chapterId": "directorsnotes",
+        "character": "Producer",
+        "text": "What have I told you about scenes like that? Are you trying to bankrupt me?",
+        "aspect": "balance, collaboration",
+        "comment": "No real choice",
+        "leftAnswer": {
+            "text": "Oh...",
+            "nextQuestion": "directorsnotesoutro"
+        },
+        "rightAnswer": {
+            "text": "But... ",
+            "nextQuestion": "directorsnotesoutro"
+        }
+    },
+    "directorsnotesoutro": {
+        "chapterId": "directorsnotes",
+        "character": "InnerVoice",
+        "text": "Eventually, it becomes clear to everyone: the script is a mess. Of course, everybody blames you. Congratulations, you're fired.",
+        "aspect": "balance, collaboration",
+        "leftAnswer": {
+            "text": "What?",
+            "nextQuestion": "strike",
+            "nextChapter": "strikes"
+        },
+        "rightAnswer": {
+            "text": "How?",
+            "nextQuestion": "strike",
+            "nextChapter": "strikes"
+        }
+    },
+    "strikesintro": {
+        "chapterId": "strikes",
+        "character": "InnerVoice",
+        "text": "Studios are raking in profits, but writers see little of it. The union declares a strike.",
+        "comment": "No real choice",
+        "leftAnswer": {
+            "text": "Well, here we go.",
+            "nextQuestion": "strike"
+        },
+        "rightAnswer": {
+            "text": "Cool. Just what I needed.",
+            "nextQuestion": "strike"
+        }
+    },
+    "strike": {
+        "chapterId": "strikes",
+        "character": "Producer",
+        "text": "I’ve got a project for you — a movie with A-list stars and a big studio budget. No one has to know.",
+        "aspect": "hierarchisation, marginalisation",
+        "comment": "Immediate death!!!",
+        "leftAnswer": {
+            "text": "Let's do that.",
+            "outcome": "Whispers spread faster than you thought. The union blacklists you, and every door in Hollywood slams shut. Your career is over.",
+            "ending": "strikeending"
+        },
+        "rightAnswer": {
+            "text": "I'm not a scab",
+            "outcome": "The union appreciates your dedication.",
+            "nextQuestion": "strike2"
+        }
+    },
+    "strike2": {
+        "chapterId": "strikes",
+        "character": "InnerVoice",
+        "text": "How will you survive during the strike, then?",
+        "aspect": "hierarchisation, marginalisation",
+        "comment": "Reconsider scores",
+        "leftAnswer": {
+            "text": "Live off savings.",
+            "outcome": "You tighten your belt and stay home. After weeks of isolation, you start talking to your houseplants, but you’ve finished a spec you had been putting off for ages.",
+            "effect": {
+                "money": -10,
+                "relationships": -10,
+                "ego": 10,
+                "skills": 10
+            },
+            "nextQuestion": "moviepremiereintro",
+            "nextChapter": "moviepremiere"
+        },
+        "rightAnswer": {
+            "text": "Work in a cafe.",
+            "outcome": "During one of your shifts, you randomly meet a famous producer. After a quick chat, they suggest meeting once the strike is over.",
+            "effect": {
+                "money": 10,
+                "relationships": 10,
+                "ego": -10
+            },
+            "nextQuestion": "moviepremiereintro",
+            "nextChapter": "moviepremiere"
+        }
+    },
+    "moviepremiereintro": {
+        "chapterId": "moviepremiere",
+        "character": "InnerVoice",
+        "text": "The day has finally come. It’s the premiere of your first movie—the one you were fired from two years ago... But that’s all in the past. Now, it’s time to enjoy the moment.",
+        "aspect": "hierarchisation",
+        "leftAnswer": {
+            "text": "Well, well, well.",
+            "nextQuestion": "premieredate"
+        },
+        "rightAnswer": {
+            "text": "Yay… I think?",
+            "nextQuestion": "premieredate"
+        }
+    },
+    "premieredate": {
+        "chapterId": "moviepremiere",
+        "character": "TheStar",
+        "text": "Come with me to the premiere. I never thought I’d end up going with you, but my date canceled. At least you’ll get your moment of fame.",
+        "aspect": "hierarchisation, marginalisation",
+        "leftAnswer": {
+            "text": "I can shine on my own.",
+            "effect": {
+                "relationships": -10,
+                "ego": 10
+            },
+            "nextQuestion": "fame"
+        },
+        "rightAnswer": {
+            "text": "Won't miss this chance.",
+            "effect": {
+                "relationships": 10
+            },
+            "nextQuestion": "fame"
+        }
+    },
+    "fame": {
+        "character": "InnerVoice",
+        "text": "Flashes from the cameras light up the red carpet. Is it what the fame tastes like?",
+        "leftAnswer": {
+            "text": "I should’ve worn sunglasses.",
+            "nextQuestion": "redcarpet"
+        },
+        "rightAnswer": {
+            "text": "It's something new.",
+            "nextQuestion": "redcarpet"
+        }
+    },
+    "redcarpet": {
+        "chapterId": "moviepremiere",
+        "character": "ThePhotographer",
+        "text": "Excuse me, could you step aside? I’m taking a photo of the crew… and I don’t know who you are.",
+        "aspect": "hierarchisation, marginalisation",
+        "leftAnswer": {
+            "text": "Sure, no problem...",
+            "outcome": "You step aside with a polite smile. Fame was fleeting; now you're invisible again.",
+            "effect": {
+                "relationships": -10,
+                "ego": -10
+            },
+            "nextQuestion": "screening"
+        },
+        "rightAnswer": {
+            "text": "I’m the writer. Want me to spell it out for you?",
+            "outcome": "The Photographer apologizes awkwardly and takes an extra shot with you just in case.",
+            "effect": {
+                "relationships": 10,
+                "ego": 10
+            },
+            "nextQuestion": "screening"
+        }
+    },
+    "screening": {
+        "chapterId": "moviepremiere",
+        "character": "InnerVoice",
+        "text": "The lights dim, and the movie begins. It’s far from the story you imagined, half of it isn’t even yours. Honestly, you don’t even like it.  Still, your name is in the credits. ",
+        "aspect": "hierarchisation, marginalisation",
+        "comment": "No real choice",
+        "leftAnswer": {
+            "text": "Not how I pictured this.",
+            "nextQuestion": "credit"
+        },
+        "rightAnswer": {
+            "text": "So… congrats?",
+            "nextQuestion": "credit"
+        }
+    },
+    "credit": {
+        "chapterId": "moviepremiere",
+        "character": "FellowScreenwriter",
+        "text": "The movie is brilliant—especially that heartbreaking monologue in the third act. Pure genius!\n(You didn’t write it. Do you take the credit?)",
+        "aspect": "hierarchisation, marginalisation",
+        "leftAnswer": {
+            "text": "Angels whispered it to me.",
+            "outcome": "\nFellow Screenwriter: ‘We should totally write something together!’",
+            "effect": {
+                "relationships": 10,
+                "ego": -10
+            },
+            "nextQuestion": "symbol"
+        },
+        "rightAnswer": {
+            "text": "Actually, I didn’t write it",
+            "outcome": "Fellow Screenwriter: ‘Who wrote it, then? I should absolutely meet them!’",
+            "effect": {
+                "relationships": -10
+            },
+            "nextQuestion": "symbol"
+        }
+    },
+    "symbol": {
+        "chapterId": "moviepremiere",
+        "character": "Journalist",
+        "text": "The use of fog in the film seems to symbolize the veil of ignorance that shrouds society. Would you agree?\"\n(You'd never thought of it this way)",
+        "leftAnswer": {
+            "text": "Absolutely.",
+            "outcome": "The Journalist nods, satisfied. You smile, though you think this analysis is cheap.",
+            "effect": {
+                "relationships": 10,
+                "ego": -10
+            },
+            "nextQuestion": "afterpartyintro"
+        },
+        "rightAnswer": {
+            "text": "Sometimes a fog is just a fog.",
+            "outcome": "The journalist sighs in disappointment.",
+            "effect": {
+                "relationships": -10,
+                "ego": 10
+            },
+            "nextQuestion": "afterpartyintro"
+        }
+    },
+    "afterpartyintro": {
+        "chapterId": "moviepremiere",
+        "character": "InnerVoice",
+        "text": "The afterparty buzzes behind you, but out here under the night sky, it’s quiet. Your agent joins you with a glass of champagne, a rare moment of calm after the chaos of the premiere.",
+        "leftAnswer": {
+            "text": "Quite a night, huh?",
+            "nextQuestion": "sequel"
+        },
+        "rightAnswer": {
+            "text": "Hey.",
+            "nextQuestion": "sequel"
+        }
+    },
+    "sequel": {
+        "chapterId": "moviepremiere",
+        "character": "Agent",
+        "text": "Actually, the executive just asked me if you'd be interested in a sequel. He's ready to close the deal right away.",
+        "leftAnswer": {
+            "text": "Not like I have anything better to do.",
+            "effect": {
+                "money": 20,
+                "relationships": 10,
+                "ego": -10,
+                "skills": 10
+            },
+            "nextQuestion": "plans"
+        },
+        "rightAnswer": {
+            "text": "Never again.",
+            "effect": {
+                "relationships": -10,
+                "ego": 10
+            },
+            "nextQuestion": "plans"
+        }
+    },
+    "plans": {
+        "chapterId": "moviepremiere",
+        "character": "Agent",
+        "text": "So, what’s next for you? Are you thinking about another screenplay, or taking a break?",
+        "leftAnswer": {
+            "text": "Going right back to work.",
+            "effect": {
+                "money": 20,
+                "relationships": 10,
+                "skills": 10
+            },
+            "nextQuestion": "plans2"
+        },
+        "rightAnswer": {
+            "text": "A break. Just bought a ticket to Hawaii.",
+            "effect": {
+                "money": -10,
+                "relationships": -10,
+                "ego": 10,
+                "skills": -10
+            },
+            "nextQuestion": "theend"
+        }
+    },
+    "plans2": {
+        "chapterId": "moviepremiere",
+        "character": "Agent",
+        "text": "And what will it be?",
+        "leftAnswer": {
+            "text": "Write and direct my own screenplay.",
+            "outcome": "Agent: \"Ambitious. Just make sure you’ve got enough savings to survive the process.\"",
+            "effect": {
+                "money": -20,
+                "ego": 10,
+                "skills": 20
+            },
+            "ending": "theend1, theend2, theend3"
+        },
+        "rightAnswer": {
+            "text": "Don't know yet.",
+            "outcome": "Agent: \"Take your time. Just don’t take too long, Hollywood forgets quickly.\"",
+            "effect": {
+                "relationships": -10,
+                "ego": -10
+            },
+            "nextQuestion": "theend",
+            "ending": "theend1, theend2, theend3"
+        }
+    },
+    "theend": {
+        "chapterId": "moviepremiere",
+        "character": "InnerVoice",
+        "text": "It was a fun night. But have you truly made it? Not yet. The journey ahead is long and full uncertainty. But as you drift to sleep, your dreams reveal glimpses of your future.",
+        "comment": "No real choice",
+        "leftAnswer": {
+            "text": "Let’s find out."
+        },
+        "rightAnswer": {
+            "text": "Let’s find out."
+        }
+    }
+}

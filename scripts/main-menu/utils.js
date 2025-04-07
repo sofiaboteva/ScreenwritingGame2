@@ -1,14 +1,18 @@
 // This script sets up the background for the whole game
 import { appContext } from "/scripts/context/ApplicationContext.js";
+import { Background } from "../../assets/img/backgrounds/backgrounds.js";
 
-
-export function createBackground() {
+export function createBackground(backgroundId = Background.DEFAULT) {
+  console.log("Creating background with ID:", backgroundId); // Debug log
+  
+  // Add the background sprite
   add([
-    sprite("screenwriter", { width: width(), anchor: "bottom" }),
+    sprite(backgroundId),
     pos(width() / 2, height() / 2),
     anchor("center")
   ]);
 
+  // Add the semi-transparent black overlay for text readability
   add([
     rect(appContext.CENTRAL_WIDTH, appContext.CENTRAL_HEIGHT, { radius: 4 }),
     pos(width() / 2, height() / 2),

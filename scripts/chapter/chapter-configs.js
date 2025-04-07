@@ -23,6 +23,7 @@ import { strikes } from "/assets/chapters/strikes.js";
 import { moviepremiere } from "/assets/chapters/moviepremiere.js";
 import { agentmeeting } from "../../assets/chapters/agentmeeting.js";
 import { tutorial } from "../../assets/chapters/tutorial.js";
+import { Background } from "/assets/img/backgrounds/backgrounds.js"; // Import background images
 
 // Defines identifiers for each chapter
 
@@ -53,6 +54,7 @@ export const ChapterId = {
 // Defines the sequence of chapters in the game, their questions and their first questions
 
 export const CHAPTER_CONFIG_LIST = [
+
   {
     id: ChapterId.TUTORIAL,
     questions: tutorial,
@@ -61,101 +63,121 @@ export const CHAPTER_CONFIG_LIST = [
   {
     id: ChapterId.START,
     questions: chapterStart,
-    firstQuestionIds: ["start"]
+    firstQuestionIds: ["start"],
+    background: Background.LA
   },
   {
     id: ChapterId.BREAKING_IN1,
     questions: breakingIn1,
-    firstQuestionIds: ["breakinginintro"]
+    firstQuestionIds: ["breakinginintro"],
+    background: Background.LA
   },
   {
     id: ChapterId.DJ2,
     questions: dj2,
-    firstQuestionIds: ["salarybar", "parents"]
+    firstQuestionIds: ["salarybar", "parents"],
+    background: Background.LA
   },
   {
     id: ChapterId.BUZZCHAPTER,
     questions: buzzChapter,
-    firstQuestionIds: ["buzzintro"]
+    firstQuestionIds: ["buzzintro"],
+    background: Background.PARTY
   },
   {
     id: ChapterId.DJ3,
     questions: dj3,
-    firstQuestionIds: ["salarybar2", "salarybarmore", "salaryparents", "firsthollywoodjob2"]
+    firstQuestionIds: ["salarybar2", "salarybarmore", "salaryparents", "firsthollywoodjob2"],
+    background: Background.LA
   },
   {
     id: ChapterId.PACHAPTER,
     questions: pachapter,
-    firstQuestionIds: ["producerassistant"]
+    firstQuestionIds: ["producerassistant"],
+    background: Background.STUDIO
   },
   {
     id: ChapterId.DJ4,
     questions: dj4,
-    firstQuestionIds: ["toothpaste"]
+    firstQuestionIds: ["toothpaste"],
+    background: Background.LA
   },
   {
     id: ChapterId.AGENTMEETING,
     questions: agentmeeting,
-    firstQuestionIds: ["agentmeetingintro"]
+    firstQuestionIds: ["agentmeetingintro"],
+    background: Background.AGENT_OFFICE
   },
   {
     id: ChapterId.DJ5,
     questions: dj5,
-    firstQuestionIds: ["polishing1", "polishing2"]
+    firstQuestionIds: ["polishing1", "polishing2"],
+    background: Background.LA
   },
   {
     id: ChapterId.WRITINGJOB,
     questions: writingjob,
-    firstQuestionIds: ["landedanagent"]
+    firstQuestionIds: ["landedanagent"],
+    background: Background.AGENT_OFFICE
   },
   {
     id: ChapterId.DJ6,
     questions: dj6,
-    firstQuestionIds: ["lookingforajob"]
+    firstQuestionIds: ["lookingforajob"],
+    background: Background.LA
   },
   {
     id: ChapterId.THEPITCH,
     questions: thepitch,
-    firstQuestionIds: ["thepitchintro"]
+    firstQuestionIds: ["thepitchintro"],
+    background: Background.PRODUCERS_OFFICE
   },
   {
     id: ChapterId.DJ7,
     questions: dj7,
-    firstQuestionIds: ["theater2", "tirecompany2", "lendmoney"]
+    firstQuestionIds: ["theater2", "tirecompany2", "lendmoney"],
+    background: Background.LA
   },
   {
     id: ChapterId.FIRSTDRAFT,
     questions: firstdraft,
-    firstQuestionIds: ["advancepaymentintro"]
+    firstQuestionIds: ["advancepaymentintro"],
+    background: Background.WRITERS_ROOM
   },
   {
     id: ChapterId.DJ8,
     questions: dj8,
-    firstQuestionIds: ["burnout1", "burnout2", "payback", "movein"]
+    firstQuestionIds: ["burnout1", "burnout2", "payback", "movein"],
+    background: Background.LA
   },
   {
     id: ChapterId.PRODUCERSNOTES,
     questions: producersnotes,
-    firstQuestionIds: ["producersnotesintro"]
+    firstQuestionIds: ["producersnotesintro"],
+    background: Background.PRODUCERS_OFFICE
   },
   {
     id: ChapterId.DJ9,
     questions: dj9,
-    firstQuestionIds: ["movein2", "teaching"]
+    firstQuestionIds: ["movein2", "teaching"],
+    background: Background.LA
   },
   {
     id: ChapterId.DIRECTORSNOTES,
     questions: directorsnotes,
-    firstQuestionIds: ["directorsnotesintro"]
+    firstQuestionIds: ["directorsnotesintro"],
+    background: Background.STUDIO
   },
   {
     id: ChapterId.STRIKES,
     questions: strikes,
-    firstQuestionIds: ["strikesintro"]
+    firstQuestionIds: ["strikesintro"],
+    background: Background.STRIKES
   },
   {
     id: ChapterId.MOVIEPREMIERE,
     questions: moviepremiere,
-    firstQuestionIds: ["moviepremiereintro"]
-  },
+    firstQuestionIds: ["moviepremiereintro"],
+    background: Background.STUDIO
+  }
 ];

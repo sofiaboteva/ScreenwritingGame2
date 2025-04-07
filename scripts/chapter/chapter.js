@@ -36,7 +36,9 @@ export class Chapter {
 
     // Set up the game scene with all necessary components
     scene(sceneConfig.id, () => {
-      createBackground();
+      console.log("Chapter scene config:", sceneConfig); // Debug log
+      console.log("Using background:", sceneConfig.background); // Debug log
+      createBackground(sceneConfig.background);
 
       this.#answerCard = new Card();
 

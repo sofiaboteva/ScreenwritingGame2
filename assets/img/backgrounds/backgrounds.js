@@ -8,7 +8,8 @@ export const Background = {
   TEST: 'test',
   LA: 'la',
   PARTY: 'party',
-  STRIKES: 'strikes'
+  STRIKES: 'strikes',
+  PREMIERE: 'premiere'
 };
 
 export function loadBackgrounds() {
@@ -22,4 +23,5 @@ export function loadBackgrounds() {
   loadSprite(Background.PRODUCERS_OFFICE, "/assets/img/backgrounds/producersoffice.png");
   loadSprite(Background.TEST, "/assets/img/backgrounds/test.png");
   loadSprite(Background.STRIKES, "/assets/img/backgrounds/strikefaded.png");
+  loadSprite(Background.PREMIERE, "/assets/img/backgrounds/premierefaded.png");
 } 

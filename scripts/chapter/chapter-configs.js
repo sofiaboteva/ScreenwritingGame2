@@ -178,6 +178,6 @@ export const CHAPTER_CONFIG_LIST = [
     id: ChapterId.MOVIEPREMIERE,
     questions: moviepremiere,
     firstQuestionIds: ["moviepremiereintro"],
-    background: Background.STUDIO
+    background: Background.PREMIERE
   }
 ];

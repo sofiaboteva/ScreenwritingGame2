@@ -1,5 +1,5 @@
 // This script sets up the background for the whole game
-import { appContext } from "/scripts/context/ApplicationContext.js";
+import { appContext } from "../context/ApplicationContext.js";
 import { Background } from "../../assets/img/backgrounds/backgrounds.js";
 
 export function createBackground(backgroundId = Background.DEFAULT) {

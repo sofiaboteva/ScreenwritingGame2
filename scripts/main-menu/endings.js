@@ -1,7 +1,8 @@
 // This script creates the endings page (reachable from the main menu)
 import { MainMenuScenes } from "./main-menu-scenes.js";
 import { createBackground } from "./utils.js";
-import { playerContext } from "/scripts/context/player-context.js";
+import { playerContext } from "../context/player-context.js";
+
 
    // Links the endings to the display text
   const endingDisplayText = {

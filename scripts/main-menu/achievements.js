@@ -1,7 +1,7 @@
 import { SoundId } from "../../assets/sounds/sounds.js";
 import { MainMenuScenes } from "./main-menu-scenes.js";
 import { createBackground } from "./utils.js";
-import { appContext } from "/scripts/context/ApplicationContext.js";
+import { appContext } from "../context/ApplicationContext.js";
 
 export const createAchievements = () => {
   const MENU_BUTTON_WIDTH = 300;

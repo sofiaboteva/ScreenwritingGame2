@@ -1,7 +1,7 @@
 // This script manages the interactive card interface
 
-import { appContext } from "/scripts/context/ApplicationContext.js";
-import { eventBus, EVENTS } from "/scripts/chapter/event-bus.js";
+import { appContext } from "../context/ApplicationContext.js";
+import { eventBus, EVENTS } from "../chapter/event-bus.js";
 import { SoundId } from "../../assets/sounds/sounds.js";
 
 // Defines the possible answer directions for the card 

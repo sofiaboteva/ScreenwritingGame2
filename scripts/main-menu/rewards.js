@@ -1,6 +1,6 @@
 import { MainMenuScenes } from "./main-menu-scenes.js";
 import { createBackground } from "./utils.js";
-import { playerContext } from "/scripts/context/player-context.js";
+import { playerContext } from "../context/player-context.js";
 
 // Links the rewards to the display text
 const rewardDisplayText = {

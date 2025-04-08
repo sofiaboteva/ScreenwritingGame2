@@ -2,7 +2,7 @@
 
 import { playerContext } from "../context/player-context.js";
 import { IndicatorSprite } from "./sprites.js";
-import { appContext } from "/scripts/context/ApplicationContext.js";
+import { appContext } from "../context/ApplicationContext.js";
 
 const ICON_WIDTH = 60;
 const ICON_HEIGHT = 60;

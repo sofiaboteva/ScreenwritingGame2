@@ -4,7 +4,7 @@ import { SoundId } from "../../assets/sounds/sounds.js";
 import { resetScores } from "../context/player-context.js";
 import { MainMenuScenes } from "./main-menu-scenes.js";
 import { createBackground } from "./utils.js";
-import { appContext } from "/scripts/context/ApplicationContext.js";
+import { appContext } from "../context/ApplicationContext.js";
 
 export const createStart = () => {
   const GAME_TITLE_TEXT_SIZE = 30;

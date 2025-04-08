@@ -6,8 +6,8 @@ export const SoundId = {
 }
 
 export function loadSounds() {
-  loadSound(SoundId.BUTTON_CLICK, '/assets/sounds/button-click.mp3');
-  loadSound(SoundId.CARD_ACCEPT, '/assets/sounds/card-accept.mp3');
-  loadSound(SoundId.CARD_FLIP, '/assets/sounds/card-flip.mp3');
-  loadSound(SoundId.OUTBOUNDING_ENDING, '/assets/sounds/outbounding-ending.mp3');
+  loadSound(SoundId.BUTTON_CLICK, 'assets/sounds/button-click.mp3');
+  loadSound(SoundId.CARD_ACCEPT, 'assets/sounds/card-accept.mp3');
+  loadSound(SoundId.CARD_FLIP, 'assets/sounds/card-flip.mp3');
+  loadSound(SoundId.OUTBOUNDING_ENDING, 'assets/sounds/outbounding-ending.mp3');
 }

@@ -4,11 +4,11 @@ import { loadSounds } from "./sounds/sounds.js";
 import { loadBackgrounds } from "./img/backgrounds/backgrounds.js";
 
 export function loadAssets() {
-  loadFont("myfont", "/assets/XTypewriter-Regular.ttf");
+  loadFont("myfont", "assets/XTypewriter-Regular.ttf");
 
-  loadSprite("character", "/assets/img/character.png");
-  loadSprite("outcome", "/assets/img/cards/outcome.png");
-  loadSprite("back", "/assets/img/cards/cardback.png");
+  loadSprite("character", "assets/img/character.png");
+  loadSprite("outcome", "assets/img/cards/outcome.png");
+  loadSprite("back", "assets/img/cards/cardback.png");
 
   loadIndicators();
   loadCharacters();

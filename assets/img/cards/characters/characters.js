@@ -29,16 +29,16 @@ export const CharacterName = {
 }
 
 export function loadCharacters() {
-  loadSprite(Character.AGENT, "/assets/img/cards/characters/agent.png");
-  loadSprite(Character.ASSISTANT, "/assets/img/cards/characters/assistant.png");
-  loadSprite(Character.DIRECTOR, "/assets/img/cards/characters/director.png");
-  loadSprite(Character.FELLOW_SCREENWRITER, "/assets/img/cards/characters/fellowscreenwriter.png");
-  loadSprite(Character.INNER_VOICE, "/assets/img/cards/characters/innervoice.png");
-  loadSprite(Character.JOURNALIST, "/assets/img/cards/characters/journalist.png");
-  loadSprite(Character.PARENTS, "/assets/img/cards/characters/parents.png");
-  loadSprite(Character.PHOTOGRAPHER, "/assets/img/cards/characters/photographer.png");
-  loadSprite(Character.PRODUCER, "/assets/img/cards/characters/producer.png");
-  loadSprite(Character.SCREENWRITING_GURU, "/assets/img/cards/characters/screenwritingguru.png");
-  loadSprite(Character.THE_STAR, "/assets/img/cards/characters/thestar.png");
-  loadSprite(Character.HOLLYWOOD_GATEKEEPER, "/assets/img/cards/characters/hollywoodgatekeeper.png");
+  loadSprite(Character.AGENT, "assets/img/cards/characters/agent.png");
+  loadSprite(Character.ASSISTANT, "assets/img/cards/characters/assistant.png");
+  loadSprite(Character.DIRECTOR, "assets/img/cards/characters/director.png");
+  loadSprite(Character.FELLOW_SCREENWRITER, "assets/img/cards/characters/fellowscreenwriter.png");
+  loadSprite(Character.INNER_VOICE, "assets/img/cards/characters/innervoice.png");
+  loadSprite(Character.JOURNALIST, "assets/img/cards/characters/journalist.png");
+  loadSprite(Character.PARENTS, "assets/img/cards/characters/parents.png");
+  loadSprite(Character.PHOTOGRAPHER, "assets/img/cards/characters/photographer.png");
+  loadSprite(Character.PRODUCER, "assets/img/cards/characters/producer.png");
+  loadSprite(Character.SCREENWRITING_GURU, "assets/img/cards/characters/screenwritingguru.png");
+  loadSprite(Character.THE_STAR, "assets/img/cards/characters/thestar.png");
+  loadSprite(Character.HOLLYWOOD_GATEKEEPER, "assets/img/cards/characters/hollywoodgatekeeper.png");
 }

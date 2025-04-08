@@ -6,7 +6,7 @@ html {
   justify-content: center; /* Center child elements horizontally in the flex container. */
   align-items: center; /* Center child elements vertically in the flex container. */
   height: 100vh; /* Set the height of the body to be 100% of the viewport height. */
-  background-image: url("/assets/img/screenwriter.png");
+  /* background-image: url("/assets/img/screenwriter.png"); */
   background-position: center;
   background-repeat: no-repeat; /* Ensure the background image does not repeat. */
   background-color: black; /* Background color for areas not covered by the image. */

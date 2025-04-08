@@ -6,10 +6,10 @@ kaboom({
 });
 
 // Import question data from external scripts.
-import { Chapter } from "/scripts/chapter/chapter.js";
+import { Chapter } from "./chapter/chapter.js";
 import { createCharacteristicOutboundEnding, EndingId } from "./endings/characteristic-outbound-endings.js";
-import { createMainMenu } from "/scripts/main-menu/main-menu.js";
-import { loadAssets } from "/assets/assets.js";
+import { createMainMenu } from "./main-menu/main-menu.js";
+import { loadAssets } from "../assets/assets.js";
 import { playerContext, resetScores } from "./context/player-context.js";
 import { createExpandedEnding, ExpandedEndingId } from "./endings/expanded-ending.js";
 import { createReplayabilityTeaser } from "./endings/replayability-teaser.js";

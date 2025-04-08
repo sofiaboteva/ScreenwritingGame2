@@ -2,12 +2,12 @@
 // processing of questions, tracks player choices and scores, and manages transitions between questions and chapters.
 // and triggers different endings.
 
-import { playerContext } from "/scripts/context/player-context.js";
-import { createIndicators, createSkillIndicator } from "/scripts/indicators/indicator.js";
-import { eventBus, EVENTS } from "/scripts/chapter/event-bus.js";
+import { playerContext } from "../context/player-context.js";
+import { createIndicators, createSkillIndicator } from "../indicators/indicator.js";
+import { eventBus, EVENTS } from "./event-bus.js";
 import { Card, CardAnswer } from "./card.js";
-import { createBackground } from "/scripts/main-menu/utils.js";
-import { appContext } from "/scripts/context/ApplicationContext.js";
+import { createBackground } from "../main-menu/utils.js";
+import { appContext } from "../context/ApplicationContext.js";
 import { ChapterId } from "./chapter-configs.js";
 import { SoundId } from "../../assets/sounds/sounds.js";
 import { CharacterName } from "../../assets/img/cards/characters/characters.js";

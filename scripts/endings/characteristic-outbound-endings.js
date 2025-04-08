@@ -1,6 +1,6 @@
-import { appContext } from "/scripts/context/ApplicationContext.js";
-import { eventBus, EVENTS } from "/scripts/chapter/event-bus.js";
-import { playerContext } from "/scripts/context/player-context.js";
+import { appContext } from "../context/ApplicationContext.js";
+import { eventBus, EVENTS } from "../chapter/event-bus.js";
+import { playerContext } from "../context/player-context.js";
 import { createBackground } from "../main-menu/utils.js";
 import { Card, CardAnswer } from "../chapter/card.js";
 
@@ -40,7 +40,7 @@ export const endingConfigList = {
   },
   [EndingId.MONEY_LOW]: {
     key: "moneyLow",
-    text: "You’re so broke that you resort to stealing food. You get caught and end up in jail. On the bright side, you’ll have some stories to tell when you get out.",
+    text: "You're so broke that you resort to stealing food. You get caught and end up in jail. On the bright side, you'll have some stories to tell when you get out.",
     leftAnswer: {
       text: "Ok...",
       nextScene: "replayabilityTeaser"
@@ -76,7 +76,7 @@ export const endingConfigList = {
   },
   [EndingId.RELATIONSHIPS_HIGH]: {
     key: "relationshipsHigh",
-    text: "Your desperate bid to please everyone turns you into a doormat. You don't know how to defend your point. Actually, you don’t even know what your point is. Before you knew it, you became famous in Hollywood…as a dogsitter. Now, you post tons of other people’s dogs in a desperate attempt to gain some fleeting fame.",
+    text: "Your desperate bid to please everyone turns you into a doormat. You don't know how to defend your point. Actually, you don't even know what your point is. Before you knew it, you became famous in Hollywood…as a dogsitter. Now, you post tons of other people's dogs in a desperate attempt to gain some fleeting fame.",
     leftAnswer: {
       text: "Ok...",
       nextScene: "replayabilityTeaser"

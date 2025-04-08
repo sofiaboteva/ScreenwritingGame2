@@ -2,28 +2,28 @@
 // their first questions. 
 
 // Import questions for each chapter from chapter files
-import { breakingIn1 } from "/assets/chapters/breaking-in.js";
-import { chapterStart } from "/assets/chapters/djStart.js";
-import { dj2 } from "/assets/chapters/dj2.js";
-import { buzzChapter } from "/assets/chapters/buzzchapter.js";
-import { dj3 } from "/assets/chapters/dj3.js";
-import { dj4 } from "/assets/chapters/dj4.js";
-import { pachapter } from "/assets/chapters/pachapter.js";
-import { dj5 } from "/assets/chapters/dj5.js";
-import { writingjob } from "/assets/chapters/writingjob.js";
-import { dj6 } from "/assets/chapters/dj6.js";
-import { thepitch } from "/assets/chapters/thepitch.js";
-import { dj7 } from "/assets/chapters/dj7.js";
-import { firstdraft } from "/assets/chapters/firstdraft.js";
-import { dj8 } from "/assets/chapters/dj8.js";
-import { dj9 } from "/assets/chapters/dj9.js";
-import { producersnotes } from "/assets/chapters/producersnotes.js";
-import { directorsnotes } from "/assets/chapters/directorsnotes.js";
-import { strikes } from "/assets/chapters/strikes.js";
-import { moviepremiere } from "/assets/chapters/moviepremiere.js";
+import { breakingIn1 } from "../../assets/chapters/breaking-in.js";
+import { chapterStart } from "../../assets/chapters/djStart.js";
+import { dj2 } from "../../assets/chapters/dj2.js";
+import { buzzChapter } from "../../assets/chapters/buzzchapter.js";
+import { dj3 } from "../../assets/chapters/dj3.js";
+import { dj4 } from "../../assets/chapters/dj4.js";
+import { pachapter } from "../../assets/chapters/pachapter.js";
+import { dj5 } from "../../assets/chapters/dj5.js";
+import { writingjob } from "../../assets/chapters/writingjob.js";
+import { dj6 } from "../../assets/chapters/dj6.js";
+import { thepitch } from "../../assets/chapters/thepitch.js";
+import { dj7 } from "../../assets/chapters/dj7.js";
+import { firstdraft } from "../../assets/chapters/firstdraft.js";
+import { dj8 } from "../../assets/chapters/dj8.js";
+import { dj9 } from "../../assets/chapters/dj9.js";
+import { producersnotes } from "../../assets/chapters/producersnotes.js";
+import { directorsnotes } from "../../assets/chapters/directorsnotes.js";
+import { strikes } from "../../assets/chapters/strikes.js";
+import { moviepremiere } from "../../assets/chapters/moviepremiere.js";
 import { agentmeeting } from "../../assets/chapters/agentmeeting.js";
 import { tutorial } from "../../assets/chapters/tutorial.js";
-import { Background } from "/assets/img/backgrounds/backgrounds.js"; // Import background images
+import { Background } from "../../assets/img/backgrounds/backgrounds.js"; // Import background images
 
 // Defines identifiers for each chapter
 

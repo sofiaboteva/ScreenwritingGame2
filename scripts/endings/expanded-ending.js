@@ -1,5 +1,5 @@
 import { SoundId } from "../../assets/sounds/sounds.js";
-import { appContext } from "/scripts/context/ApplicationContext.js";
+import { appContext } from "../context/ApplicationContext.js";
 
 export const ExpandedEndingId = {
   RELATIONSHIPS: 'relationshipsEgoExpanded',

@@ -16,7 +16,7 @@ export const EndingId = {
 export const endingConfigList = {
   [EndingId.EGO_LOW]: {
     key: "egoLow",
-    text: "You don't know how to defend your point. Actually, you don't even know what your point is. You surrender to your parents' wishes and head off to law school.",
+    text: "Can your EGO get any LOWER? You don't know how to defend your point. Actually, you don't even know what your point is. You surrender to your parents' wishes and head off to law school.",
     leftAnswer: {
       text: "Ok...",
       nextScene: "replayabilityTeaser"
@@ -28,7 +28,7 @@ export const endingConfigList = {
   },
   [EndingId.EGO_HIGH]: {
     key: "egoHigh",
-    text: "You lose all your friends and connections, persuaded that your scripts are underrated. You're a genius, but only in your mind. You end up making one-person shows that nobody buys tickets for.",
+    text: "Oops, your EGO GOT TOO HIGH! You lose all your friends and connections, persuaded that your scripts are underrated. You're a genius, but only in your mind. You end up making one-person shows that nobody buys tickets for.",
     leftAnswer: {
       text: "Ok...",
       nextScene: "replayabilityTeaser"
@@ -40,7 +40,7 @@ export const endingConfigList = {
   },
   [EndingId.MONEY_LOW]: {
     key: "moneyLow",
-    text: "You're so broke that you resort to stealing food. You get caught and end up in jail. On the bright side, you'll have some stories to tell when you get out.",
+    text: "You officially have ZERO MONEY. You're so broke that you resort to stealing food. You get caught and end up in jail. On the bright side, you'll have some stories to tell when you get out.",
     leftAnswer: {
       text: "Ok...",
       nextScene: "replayabilityTeaser"
@@ -52,7 +52,7 @@ export const endingConfigList = {
   },
   [EndingId.MONEY_HIGH]: {
     key: "moneyHigh",
-    text: "You're lured by the glitter of money and bid farewell to your artistic dreams. You become a producer, but word on the street is that your bankroll is more mob-connected than your movie plots.",
+    text: "You have SO MUCH MONEY… but it’s never enough. You're lured by the glitter of money and bid farewell to your artistic dreams. You become a producer, but word on the street is that your bankroll is more mob-connected than your movie plots.",
     leftAnswer: {
       text: "Ok...",
       nextScene: "replayabilityTeaser"
@@ -64,7 +64,7 @@ export const endingConfigList = {
   },
   [EndingId.RELATIONSHIPS_LOW]: {
     key: "relationshipsLow",
-    text: "Persuaded your scripts are underrated, you were too focused on your vision, pushing away collaborators, ignoring feedback, and claiming the spotlight. Hollywood prefers team players over divas. You end up making one-person shows that nobody buys tickets for.",
+    text: "Your RELATIONSHIPS score hit ZERO, and so did your social life. People are afraid to deal with you. You end up alone, writing scripts that nobody will ever read and go crazy talking to your characters. At least they listen to you.",
     leftAnswer: {
       text: "Ok...",
       nextScene: "replayabilityTeaser"
@@ -76,7 +76,7 @@ export const endingConfigList = {
   },
   [EndingId.RELATIONSHIPS_HIGH]: {
     key: "relationshipsHigh",
-    text: "Your desperate bid to please everyone turns you into a doormat. You don't know how to defend your point. Actually, you don't even know what your point is. Before you knew it, you became famous in Hollywood…as a dogsitter. Now, you post tons of other people's dogs in a desperate attempt to gain some fleeting fame.",
+    text: "Your RELATIONSHIPS score is SKY-HIGH, and so is your people-pleasing... Before you knew it, you became famous in Hollywood…as a dogsitter. Now, you post tons of other people's dogs in a desperate attempt to gain some fleeting fame.",
     leftAnswer: {
       text: "Ok...",
       nextScene: "replayabilityTeaser"

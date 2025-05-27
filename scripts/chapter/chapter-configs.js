@@ -58,7 +58,7 @@ export const CHAPTER_CONFIG_LIST = [
   {
     id: ChapterId.TUTORIAL,
     questions: tutorial,
-    firstQuestionIds: ["tutorialstart"]
+    firstQuestionIds: ["swipeintro"]
   },
   {
     id: ChapterId.START,

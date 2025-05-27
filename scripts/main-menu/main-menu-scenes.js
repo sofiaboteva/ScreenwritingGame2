@@ -3,7 +3,7 @@ export const MainMenuScenes = {
   START: "start",
   MAIN_MENU: "mainMenu",
   LEVEL_LIST: "levelList",
-  REWARDS: "rewards",
+  INSIGHTS: "insights",
   ENDINGS: "endings",
   ACHIEVEMENTS: "achievements"
 };

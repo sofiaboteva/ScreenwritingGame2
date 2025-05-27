@@ -10,7 +10,8 @@ export const EndingId = {
   MONEY_LOW: "money-low",
   MONEY_HIGH: "money-high",
   RELATIONSHIPS_LOW: "relationships-low",
-  RELATIONSHIPS_HIGH: "relationships-high"
+  RELATIONSHIPS_HIGH: "relationships-high",
+  BLACKLISTED: "blacklisted"
 }
 
 export const endingConfigList = {
@@ -22,8 +23,8 @@ export const endingConfigList = {
       nextScene: "replayabilityTeaser"
     },
     rightAnswer: {
-      text: "Tell me more.",
-      nextScene: "relationshipsEgoExpanded"
+      text: "Tough luck!",
+      nextScene: "replayabilityTeaser"
     }
   },
   [EndingId.EGO_HIGH]: {
@@ -34,8 +35,8 @@ export const endingConfigList = {
       nextScene: "replayabilityTeaser"
     },
     rightAnswer: {
-      text: "Tell me more.",
-      nextScene: "relationshipsEgoExpanded"
+      text: "Tough luck!",
+      nextScene: "replayabilityTeaser"
     }
   },
   [EndingId.MONEY_LOW]: {
@@ -46,20 +47,20 @@ export const endingConfigList = {
       nextScene: "replayabilityTeaser"
     },
     rightAnswer: {
-      text: "Tell me more.",
-      nextScene: "moneyExpanded"
+      text: "Tough luck!",
+      nextScene: "replayabilityTeaser"
     }
   },
   [EndingId.MONEY_HIGH]: {
     key: "moneyHigh",
-    text: "You have SO MUCH MONEY… but it’s never enough. You're lured by the glitter of money and bid farewell to your artistic dreams. You become a producer, but word on the street is that your bankroll is more mob-connected than your movie plots.",
+    text: "You have SO MUCH MONEY… but it's never enough. You're lured by the glitter of money and bid farewell to your artistic dreams. You become a producer, but word on the street is that your bankroll is more mob-connected than your movie plots.",
     leftAnswer: {
       text: "Ok...",
       nextScene: "replayabilityTeaser"
     },
     rightAnswer: {
-      text: "Tell me more.",
-      nextScene: "moneyExpanded"
+      text: "Tough luck!",
+      nextScene: "replayabilityTeaser"
     }
   },
   [EndingId.RELATIONSHIPS_LOW]: {
@@ -70,8 +71,8 @@ export const endingConfigList = {
       nextScene: "replayabilityTeaser"
     },
     rightAnswer: {
-      text: "Tell me more.",
-      nextScene: "relationshipsEgoExpanded"
+      text: "Tough luck!",
+      nextScene: "replayabilityTeaser"
     }
   },
   [EndingId.RELATIONSHIPS_HIGH]: {
@@ -82,8 +83,21 @@ export const endingConfigList = {
       nextScene: "replayabilityTeaser"
     },
     rightAnswer: {
-      text: "Tell me more.",
-      nextScene: "relationshipsEgoExpanded"
+      text: "Tough luck!",
+      nextScene: "replayabilityTeaser"
+    }
+  },
+
+  [EndingId.BLACKLISTED]: {
+    key: "blacklisted",
+    text: "Whispers spread faster than you thought. The union blacklists you, and every door in Hollywood slams shut. Your career is over.",
+    leftAnswer: {
+      text: "What?!",
+      nextScene: "replayabilityTeaser"
+    },
+    rightAnswer: {
+      text: "Wait, I didn't know the rules...",
+      nextScene: "replayabilityTeaser"
     }
   }
 };
@@ -94,9 +108,12 @@ export function createCharacteristicOutboundEnding(endingId) {
   scene(endingConfig.key, () => {
     createBackground();
 
+    playerContext.currentChapter = null;
+    playerContext.currentQuestion = null;
+
     if (!playerContext.unlockedEndings[endingConfig.key]) {
-      playerContext.endingsScore++;
       playerContext.unlockedEndings[endingConfig.key] = true;
+      playerContext.endingsScore++;
 
       add([
         text("New ending unlocked!", {

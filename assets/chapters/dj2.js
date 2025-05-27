@@ -191,7 +191,7 @@ export const dj2 = {
             "text": "No!",
             "outcome": "You tell yourself you’ll only work for one more month and then quit, but do you even believe that yourself?",
             "effect": {
-                "money": 10,
+                "money": 0,
                 "relationships": 0,
                 "ego": -5,
                 "skills": -10

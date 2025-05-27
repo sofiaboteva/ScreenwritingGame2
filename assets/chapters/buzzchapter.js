@@ -158,7 +158,8 @@ export const buzzChapter = {
                 "money": 0,
                 "relationships": 10,
                 "ego": -10,
-                "skills": 0
+                "skills": 0,
+                "unlockInsight": "scriptdevelopment"
             },
             "nextQuestion": "filmbudget"
         }
@@ -174,7 +175,8 @@ export const buzzChapter = {
                 "money": -20,
                 "relationships": 10,
                 "ego": 10,
-                "skills": 0
+                "skills": 0,
+                "unlockInsight": "scriptdevelopment"
             },
             "nextQuestion": "fish"
         },
@@ -278,7 +280,8 @@ export const buzzChapter = {
                 "money": 0,
                 "relationships": -10,
                 "ego": 5,
-                "skills": 0
+                "skills": 0,
+                "unlockInsight": "survivalguide1"
             },
             "nextQuestion": "nosense"
         },
@@ -288,7 +291,8 @@ export const buzzChapter = {
                 "money": 0,
                 "relationships": 10,
                 "ego": 0,
-                "skills": 5
+                "skills": 5,
+                "unlockInsight": "survivalguide1"
             },
             "nextQuestion": "nosense"
         }
@@ -319,6 +323,7 @@ export const buzzChapter = {
             "nextQuestion": "tenrewrites"
         }
     },
+    
     "tenrewrites": {
         "chapterId": "buzzchapter",
         "character": "Director",
@@ -331,7 +336,9 @@ export const buzzChapter = {
                 "money": 0,
                 "relationships": -10,
                 "ego": -10,
-                "skills": 0
+                "skills": 0,
+                "unlockInsight": "auteurtheory"
+
             },
             "nextChapter": "dj3"
         },
@@ -342,7 +349,8 @@ export const buzzChapter = {
                 "money": 0,
                 "relationships": 10,
                 "ego": 10,
-                "skills": 10
+                "skills": 10,
+                "unlockInsight": "auteurtheory"
             },
             "nextChapter": "dj3"
         }

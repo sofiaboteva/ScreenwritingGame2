@@ -17,14 +17,16 @@ export const directorsnotes = {
     "dialoguecut": {
         "chapterId": "directorsnotes",
         "character": "Director",
-        "text": "Let's cut this dialogue – you know, the one you love – and replace it with a long, silent panoramic shot\"",
+        "text": "Let's cut this dialogue – you know, the one you love – and replace it with a long, silent panoramic shot",
         "aspect": "balance, collaboration",
         "comment": "Reconsider scores",
         "leftAnswer": {
             "text": "Who needs these words anyway?",
             "outcome": "That dialogue explained a lot, and now the next three scenes make zero sense. But the Director calls it 'abstract storytelling.'",
             "effect": {
-                "skills": -10
+                "skills": -10,
+                "unlockInsight": "developmenthell"
+
             },
             "nextQuestion": "lines"
         },
@@ -33,7 +35,8 @@ export const directorsnotes = {
             "outcome": "The Director grumbles but lets it stay — for now. You're walking a thin line between visionary and problematic.\n",
             "effect": {
                 "relationships": -10,
-                "ego": 10
+                "ego": 10,
+                "unlockInsight": "developmenthell"
             },
             "nextQuestion": "lines"
         }
@@ -182,10 +185,16 @@ export const directorsnotes = {
         "aspect": "balance, collaboration",
         "leftAnswer": {
             "text": "What?",
+            "effect": {
+                "unlockInsight": "creativecontrol"
+            },
             "nextChapter": "strikes"
         },
         "rightAnswer": {
             "text": "How?",
+            "effect": {
+                "unlockInsight": "creativecontrol"
+            },
             "nextChapter": "strikes"
         }
     },

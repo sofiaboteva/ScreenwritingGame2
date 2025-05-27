@@ -11,7 +11,8 @@ export const pachapter = {
                 "money": 0,
                 "relationships": 0,
                 "ego": 0,
-                "skills": 0
+                "skills": 0,
+                "unlockInsight": "dayjobs"
             },
             "nextQuestion": "producerdemand"
         },
@@ -21,7 +22,8 @@ export const pachapter = {
                 "money": 0,
                 "relationships": 0,
                 "ego": 0,
-                "skills": 0
+                "skills": 0,
+                "unlockInsight": "dayjobs"
             },
             "nextQuestion": "producerdemand"
         }

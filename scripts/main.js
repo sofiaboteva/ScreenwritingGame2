@@ -10,25 +10,18 @@ import { Chapter } from "./chapter/chapter.js";
 import { createCharacteristicOutboundEnding, EndingId } from "./endings/characteristic-outbound-endings.js";
 import { createMainMenu } from "./main-menu/main-menu.js";
 import { loadAssets } from "../assets/assets.js";
-import { playerContext, resetScores } from "./context/player-context.js";
+import { initializeProdPlayer, initializeTestPlayer } from "./context/player-context.js";
 import { createExpandedEnding, ExpandedEndingId } from "./endings/expanded-ending.js";
 import { createReplayabilityTeaser } from "./endings/replayability-teaser.js";
-import { CHAPTER_CONFIG_LIST, ChapterId } from "./chapter/chapter-configs.js";
+import { CHAPTER_CONFIG_LIST } from "./chapter/chapter-configs.js";
 import { MainMenuScenes } from "./main-menu/main-menu-scenes.js";
 import { craeteGoodEnding } from "./endings/good-ending.js";
 
 loadAssets();
 
-resetScores();
-
-// LEVEL MANAGEMENT
-// For testing purposes, all levels are unlocked.
-
-const allLevels = new Set([ChapterId.START, ChapterId.PACHAPTER, ChapterId.THEPITCH, ChapterId.PRODUCERSNOTES]);
-// const defaultStart = new Set([ChapterId.START]);
-playerContext.unlockedLevels = allLevels;
-// playerContext.riskyChoicesMade = 0;
-// playerContext.artisticIntegrityScore = 0;
+// initializeTestPlayer();
+// use this function instead for a prod player
+initializeProdPlayer();
 
 createMainMenu();
 

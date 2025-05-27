@@ -1,9 +1,11 @@
 import { SoundId } from "../../assets/sounds/sounds.js";
 import { appContext } from "../context/ApplicationContext.js";
+import { playerContext } from "../context/player-context.js";
 
 export const ExpandedEndingId = {
   RELATIONSHIPS: 'relationshipsEgoExpanded',
-  MONEY: 'moneyExpanded'
+  MONEY: 'moneyExpanded',
+  MARGINALISATION: 'marginalisationExpanded'
 }
 
 const expandedEndingConfigList = {
@@ -29,7 +31,31 @@ Making a living as a screenwriter isn't easy. While Hollywood screenwriters can 
 
 — Peter Bloore, The Screenplay Business
     `
+  },
+
+  [ExpandedEndingId.MARGINALISATION]: {
+    heading: "The Marginalised Author",
+    text: `
+The position of the screenwriter in the film industry has historically been marginalised, meaning that they’re often overlooked — and yes, that can seriously hurt their ego. This marginalisation shows up in many ways: ambiguous status of screenwriter, loss of creative control during development, little recognition for the writer’s artistic input, and the fact that the title of "main creator" usually goes to the director. In Hollywood, it’s even worse, thanks to the rewriting system and a complicated credit structure that rarely reflects who actually did the work.
+Below, we’ll break all that down — so if you’re curious, keep reading!
+Ambiguous status of screenwriter : an artist or a craftsman ? 
+Back in the early days of cinema, screenplays were barely a thing. Most films were improvised on the spot, with directors, actors, and crew just winging it. What passed for a “script” was usually a few scribbled notes — more like reminders than actual plans. The result? Chaos. Props vanished and reappeared mid-scene, costumes changed for no reason, and characters magically teleported around the screen.
+Then came Thomas Harper Ince (1820-1994), who decided enough was enough. He brought order to the madness, introducing structured scripts that broke scenes down shot by shot. The screenplay became the central document for production — full of technical details like lighting, costumes, camera angles, props, and sound cues.
+But here’s the twist: the more technical the script became, the harder it was to see it as a work of art. And that’s the heart of the screenwriter’s identity crisis — are they an artist shaping stories, or just a cog in the production machine?
+Auteur Theory: The Director as Main Artist (and the Writer as… what exactly?)
+One major reason screenwriters got pushed to the sidelines was the rise of auteur theory — a critical movement in film that emerged in 1950s France, championed by director François Truffaut and critic André Bazin. Their idea? Auteur theory established a lasting dominance of the director as the primary creator of the film.
+This vision took off worldwide, reshaping how people studied, critiqued, and taught cinema. Suddenly, the screenplay was seen as nothing more than a blueprint — something to build from, not something of artistic value in itself.
+Sure, auteur theory helped cinema gain recognition as a serious and independent art form, but it came at the cost of diminishing the collaborative nature of filmmaking and the role of the screenwriter. Bazin famously said: “The director writes in film.” Oh really? Then… what exactly is the screenwriter doing?
+Loss of creative control
+In recent years, things have shifted a little — especially in quality television, where the showrunner, usually both a screenwriter and a producer, has become the key creative figure. In academia as well, there’s been a growing number of studies focusing on screenwriting and the role of screenwriters.
+But in cinema, power still rests firmly with directors (in auteur cinema) and producers (in Hollywood). As for screenwriters? Once the contract is signed, they legally lose control over their own scripts.
+In Hollywood, this lack of control goes even further thanks to rewriting — a system where new writers are brought onto a project to deliver yet another draft of the script. In other words: if you're working on a Hollywood film, there's a 99.9% chance you'll be fired. And bizarrely, that’s even considered a good sign — it means the project is moving forward and more likely to get greenlit.
+Still, for screenwriters, it’s often a painful experience. Especially because the Hollywood credit system doesn’t always reflect actual contribution. For example, it’s not uncommon for the second and fourth writers, who did most of the heavy lifting, to go uncredited — while the first and third get the official recognition.
+So yes. You may write the heart of the story… and never see your name on screen.
+    `
   }
+
+
 };
 
 export const createExpandedEnding = (endingId) => {
@@ -39,6 +65,11 @@ export const createExpandedEnding = (endingId) => {
   const BUTTON_HEIGHT = 50;
   const endingConfig = expandedEndingConfigList[endingId];
   scene(endingId, () => {
+
+    // reset save after ending
+    playerContext.currentChapter = null;
+    playerContext.currentQuestion = null;
+
     add([
       sprite("screenwriter", { width: width(), anchor: "bottom" }),
       pos(width() / 2, height() / 2),

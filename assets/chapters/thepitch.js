@@ -2,26 +2,32 @@ export const thepitch = {
     "thepitchintro": {
         "chapterId": "thepitch",
         "character": "Agent",
-        "text": "Big news! I’ve set up a meeting with a producer for your script. Play it cool, okay? No pressure… just your entire future riding on it.",
+        "text": "Big news! I've set up a meeting with a producer for your script. Play it cool, okay? No pressure… just your entire future riding on it.",
         "aspect": "portfolio",
         "comment": "No real choice",
         "leftAnswer": {
             "text": "Right...",
+            "effect": {
+                "unlockInsight": "writerenterpreneur"
+            },
             "nextQuestion": "rehearse1"
         },
         "rightAnswer": {
             "text": "Got it",
+            "effect": {
+                "unlockInsight": "writerenterpreneur"
+            },
             "nextQuestion": "rehearse1"
         }
     },
     "rehearse1": {
         "chapterId": "thepitch",
         "character": "InnerVoice",
-        "text": "Time to rehearse our pitch! Who’s the lucky audience? Maybe, your parents?",
+        "text": "Time to rehearse our pitch! Who's the lucky audience? Maybe, your parents?",
         "aspect": "portfolio, collaboration",
         "leftAnswer": {
             "text": "Yes",
-            "outcome": "Wait, who’s actually going to watch this movie?",
+            "outcome": "Wait, who's actually going to watch this movie?",
             "effect": {
                 "relationships": -10,
                 "ego": -10,
@@ -41,7 +47,7 @@ export const thepitch = {
         "aspect": "portfolio, collaboration",
         "leftAnswer": {
             "text": "Yes",
-            "outcome": "Fellow Screenwriter: “You go, girl!”\nWasn't much of a help, but now you feel confident about yourself.",
+            "outcome": "Fellow Screenwriter: \"You go, girl!\"\nWasn't much of a help, but now you feel confident about yourself.",
             "effect": {
                 "ego": 10,
                 "skills": 5
@@ -60,7 +66,7 @@ export const thepitch = {
         "aspect": "portfolio, collaboration",
         "leftAnswer": {
             "text": "Yes",
-            "outcome": "Screenwriting Guru: \"It’s solid. Except for the second act. And maybe the ending. Actually, the first act could use some work too.\"",
+            "outcome": "Screenwriting Guru: \"It's solid. Except for the second act. And maybe the ending. Actually, the first act could use some work too.\"",
             "effect": {
                 "relationships": 10,
                 "ego": -10,
@@ -99,8 +105,8 @@ export const thepitch = {
         "text": "Alright, let's start. Whenever you're ready.",
         "aspect": "portfolio",
         "leftAnswer": {
-            "text": "Here’s the logline—it’s short and sweet.",
-            "outcome": "Producer: \"Okay, I’m intrigued. Keep going.\"",
+            "text": "Here's the logline—it's short and sweet.",
+            "outcome": "Producer: \"Okay, I'm intrigued. Keep going.\"",
             "effect": {
                 "relationships": 10,
                 "ego": 10,
@@ -109,7 +115,7 @@ export const thepitch = {
             "nextQuestion": "tuningout"
         },
         "rightAnswer": {
-            "text": "The story starts with the protagonist waking up in the morning\"",
+            "text": "\"The story starts with the protagonist waking up in the morning\"",
             "outcome": "Producer: \"Do I look like I have time to hear an audiobook?\"",
             "effect": {
                 "relationships": -10,
@@ -122,7 +128,7 @@ export const thepitch = {
     "tuningout": {
         "chapterId": "thepitch",
         "character": "InnerVoice",
-        "text": "Uh-oh, they’re tuning out mid-pitch. How do we save this?",
+        "text": "Uh-oh, they're tuning out mid-pitch. How do we save this?",
         "aspect": "portfolio",
         "leftAnswer": {
             "text": "Keep pitching. ",
@@ -171,7 +177,7 @@ export const thepitch = {
     "thepitchend": {
         "chapterId": "thepitch",
         "character": "InnerVoice",
-        "text": "They said it wouldn’t happen, but you just signed your first feature film contract.",
+        "text": "They said it wouldn't happen, but you just signed your first feature film contract.",
         "aspect": "portfolio",
         "comment": "No real choice",
         "leftAnswer": {

@@ -10,7 +10,8 @@ export const breakingIn1 = {
                 "money": 0,
                 "relationships": 0,
                 "ego": 0,
-                "skills": 0
+                "skills": 0,
+                "unlockInsight": "goldenageend"
             },
             "nextQuestion": "pitchspec"
         },
@@ -20,7 +21,8 @@ export const breakingIn1 = {
                 "money": 0,
                 "relationships": 0,
                 "ego": 0,
-                "skills": 0
+                "skills": 0,
+                "unlockInsight": "goldenageend"
             },
             "nextQuestion": "pitchspec"
         }
@@ -63,7 +65,9 @@ export const breakingIn1 = {
                 "money": 0,
                 "relationships": 0,
                 "ego": 10,
-                "skills": 10
+                "skills": 10,
+                "unlockInsight": "doublestandards"
+
             },
             "nextQuestion": "advice"
         },
@@ -74,7 +78,8 @@ export const breakingIn1 = {
                 "money": 0,
                 "relationships": 0,
                 "ego": -10,
-                "skills": 5
+                "skills": 5,
+                "unlockInsight": "doublestandards"
             },
             "nextQuestion": "advice"
         }
@@ -109,7 +114,7 @@ export const breakingIn1 = {
     "advice1": {
         "chapterId": "breakingin1",
         "character": "screenwritingguru",
-        "text": "Your old screenwriting teacher, a self-proclaimed 'guru.'",
+        "text": "Your old screenwriting teacher, a self-proclaimed 'guru'.",
         "aspect": "balance, standardisation",
         "leftAnswer": {
             "text": "Yes",

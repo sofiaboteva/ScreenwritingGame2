@@ -55,6 +55,6 @@ def csv_to_nested_json(csv_file_path, json_file_path):
 
 if __name__ == "__main__":
     # Example usage
-    csv_file_path = 'tutorial.csv'  # Path to your input CSV file
-    json_file_path = 'Tutorial.json'  # Path to your output JSON file
+    csv_file_path = 'Tutorial2604.csv'  # Path to your input CSV file
+    json_file_path = 'Tutorial2604.json'  # Path to your output JSON file
     csv_to_nested_json(csv_file_path, json_file_path) 

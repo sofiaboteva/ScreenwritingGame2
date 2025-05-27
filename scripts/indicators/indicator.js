@@ -55,9 +55,9 @@ function createIndicator(spriteName, position, initValue = 0) {
   const colors = {
     neutral_fill: rgb(255, 255, 255),
     neutral_cover: rgb(110, 110, 110),
-    bright_fill: rgb(255, 255, 255),
+    bright_fill: rgb(102, 255, 0), // when the score is increasing
     bright_cover: rgb(180, 180, 180),
-    dark_fill: rgb(150, 150, 150),
+    dark_fill: rgb(238,75,43), // when the score is decreasing
     dark_cover: rgb(70, 70, 70)
   };
   const { x: xPos, y: yPos } = position;
@@ -153,6 +153,13 @@ export function createIndicators() {
 export function createSkillIndicator(initialSkill) {
   const MAX_BAR_WIDTH = 300;
   const FILL_COLOR = rgb(250, 250, 250);
+  const flashSpeed = 1;
+
+  const colors = {
+    neutral: rgb(250, 250, 250),
+    bright: rgb(102, 255, 0), // when the score is increasing
+    dark: rgb(238, 75, 43)    // when the score is decreasing
+  };
 
   const calculateFillWidth = (skillValue) => {
     const MAX_SKILL_VALUE = 300;
@@ -174,15 +181,33 @@ export function createSkillIndicator(initialSkill) {
   const fill = add([
     rect(calculateFillWidth(initialSkill), 30),
     pos((window.innerWidth - MAX_BAR_WIDTH) / 2, window.innerHeight - 50),
-    anchor("left")
+    anchor("left"),
+    opacity(0.3)
   ]);
-  fill.color = FILL_COLOR;
+  fill.color = colors.neutral;
 
-  // Updates the indicator based on the score
+  function flash(direction) {
+    let progress = 0;
+    let isBrightening = true;
+    onUpdate(() => {
+      if (isBrightening) {
+        progress += dt() * flashSpeed;
+        fill.color = direction === "up" ? colors.bright : colors.dark;
 
-  function updateFill(newValue) {
+        if (progress >= 1) {
+          progress = 0;
+          fill.color = colors.neutral;
+          isBrightening = false;
+        }
+      }
+    });
+  }
 
+  function updateFill(newValue, direction) {
     fill.width = calculateFillWidth(newValue);
+    if (direction) {
+      flash(direction);
+    }
   }
 
   return { updateFill };

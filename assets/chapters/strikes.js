@@ -16,21 +16,19 @@ export const strikes = {
     "strike": {
         "chapterId": "strikes",
         "character": "Producer",
-        "text": "I’ve got a project for you — a movie with A-list stars and a big studio budget. No one has to know.",
+        "text": "I've got a project for you — a movie with A-list stars and a big studio budget. No one has to know.",
         "aspect": "hierarchisation, marginalisation",
         "comment": "Immediate death!!!",
         "leftAnswer": {
             "text": "Let's do that.",
-            "outcome": "Whispers spread faster than you thought. The union blacklists you, and every door in Hollywood slams shut. Your career is over.",
-            "effect": {
-                "money": -200,
-                "relationships": -200,
-                "ego": -200,
-                "nextQuestion": "strike2"
-            }
+            "nextScene": "blacklisted"
         },
         "rightAnswer": {
             "text": "I'm not a scab",
+            "effect": {
+                "relationships": 10,
+                "unlockInsight": "wga"
+            },
             "outcome": "The union appreciates your dedication.",
             "nextQuestion": "strike2"
         }
@@ -43,7 +41,7 @@ export const strikes = {
         "comment": "Reconsider scores",
         "leftAnswer": {
             "text": "Live off savings.",
-            "outcome": "You tighten your belt and stay home. After weeks of isolation, you start talking to your houseplants, but you’ve finished a spec you had been putting off for ages.\n",
+            "outcome": "You tighten your belt and stay home. After weeks of isolation, you start talking to your houseplants, but you've finished a spec you had been putting off for ages.\n",
             "effect": {
                 "money": -10,
                 "relationships": -10,

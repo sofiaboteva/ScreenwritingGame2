@@ -3,7 +3,6 @@ export const Background = {
   AGENT_OFFICE: 'agentoffice',
   STUDIO: 'studio',
   WRITERS_ROOM: 'writersroom',
-  COFFEE_SHOP: 'coffee_shop',
   PRODUCERS_OFFICE: 'producersoffice',
   TEST: 'test',
   LA: 'la',
@@ -19,7 +18,6 @@ export function loadBackgrounds() {
   loadSprite(Background.AGENT_OFFICE, "assets/img/backgrounds/agentofficefaded.png");
   loadSprite(Background.STUDIO, "assets/img/backgrounds/studio.png");
   loadSprite(Background.WRITERS_ROOM, "assets/img/backgrounds/writersroom2.png");
-  loadSprite(Background.COFFEE_SHOP, "assets/img/backgrounds/coffee_shop.png");
   loadSprite(Background.PRODUCERS_OFFICE, "assets/img/backgrounds/producersoffice.png");
   loadSprite(Background.TEST, "assets/img/backgrounds/test.png");
   loadSprite(Background.STRIKES, "assets/img/backgrounds/strikefaded.png");

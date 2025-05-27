@@ -9,6 +9,8 @@ export function loadAssets() {
   loadSprite("character", "assets/img/character.png");
   loadSprite("outcome", "assets/img/cards/outcome.png");
   loadSprite("back", "assets/img/cards/cardback.png");
+  loadSprite("sandwitch-menu", "assets/img/icons/sandwitch-menu.png");
+  loadSprite("cancel", "assets/img/icons/cancel.png");
 
   loadIndicators();
   loadCharacters();

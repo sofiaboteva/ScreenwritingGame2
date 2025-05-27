@@ -1,14 +1,15 @@
-import { createAchievements } from "./achievements.js";
-import { createEndingsPage } from "./endings.js";
-import { createLevelsPage } from "./levels.js";
-import { createRewards } from "./rewards.js";
-import { createStart } from "./start.js";
+import { createAchievements } from "./pages/achievements.js";
+import { createEndingsPage } from "./pages/endings.js";
+import { createInsightsPage } from "./pages/insights/insights-page.js";
+import { createLevelsPage } from "./pages/levels.js";
+import { createStart } from "./pages/start.js";
+
 
 // Initialize all main menu pages
 export const createMainMenu = () => {
   createStart();
   createLevelsPage();
-  createRewards();
+  createInsightsPage();
   createEndingsPage();
   createAchievements();
 }

@@ -217,7 +217,8 @@ export const producersnotes = {
             "outcome": "It’s grueling and soul-crushing, but the script’s sharper than ever.",
             "effect": {
                 "ego": -10,
-                "skills": 20
+                "skills": 20,
+                "unlockInsight": "survivalguide2"
             },
             "nextChapter": "dj9"
         },
@@ -226,7 +227,8 @@ export const producersnotes = {
             "outcome": "You slap on a few changes just enough to look convincing. Here’s hoping the producer doesn’t dig too deep.",
             "effect": {
                 "ego": -10,
-                "skills": -10
+                "skills": -10,
+                "unlockInsight": "survivalguide2"
             },
             "nextChapter": "dj9"
         }

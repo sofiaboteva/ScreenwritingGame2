@@ -8,14 +8,16 @@ export const firstdraft = {
         "leftAnswer": {
             "text": "Well, that's new.",
             "effect": {
-                "money": 15
+                "money": 15,
+                "unlockInsight": "salaries"
             },
             "nextQuestion": "advancepayment"
         },
         "rightAnswer": {
             "text": "I'm rich!",
             "effect": {
-                "money": 15
+                "money": 15,
+                "unlockInsight": "salaries"
             },
             "nextQuestion": "advancepayment"
         }
@@ -202,29 +204,42 @@ export const firstdraft = {
             "text": "Go for a walk",
             "outcome": "Strolling the sidewalks of LA, you spot a homeless man and a dead crow. Not exactly a creative epiphany.",
             "effect": {
-                "ego": -10
+                "ego": -10,
             },
             "nextQuestion": "tenpages"
         },
         "rightAnswer": {
             "text": "Ask for help",
-            "nextQuestion": "inspirationhelp"
-        }
-    },
-    "inspirationhelp": {
-        "chapterId": "firstdraft",
-        "character": "InnerVoice",
-        "text": "Who will you ask for help?",
-        "aspect": "balance, collaboration, innovation",
-        "leftAnswer": {
-            "text": "Your fellow screenwriter",
-            "nextQuestion": "spiritualreset"
-        },
-        "rightAnswer": {
-            "text": "Your screenwriting teacher",
             "nextQuestion": "mckee"
         }
     },
+
+    "mckee": {
+        "chapterId": "firstdraft",
+        "character": "ScreenwritingGuru",
+        "text": "McKee's in town, and his masterclass will blow your mind. You'll finally crack your story. Are you coming?",
+        "aspect": "balance, collaboration, innovation",
+        "leftAnswer": {
+            "text": "No",
+            "effect": {
+                "unlockInsight": "screenwritingmanuals"
+            },
+            "nextQuestion": "spiritualreset"
+        },
+        "rightAnswer": {
+            "text": "Yes",
+            "outcome": "Your wallet's considerably thinner, but you've mastered the art of perfectly boring storytelling.",
+            "effect": {
+                "money": -10,
+                "relationships": 10,
+                "ego": -5,
+                "skills": 15,
+                "unlockInsight": "screenwritingmanuals"
+            },
+            "nextQuestion": "spiritualreset"
+        }
+    },
+
     "spiritualreset": {
         "chapterId": "firstdraft",
         "character": "FellowScreenwriter",
@@ -236,7 +251,8 @@ export const firstdraft = {
             "effect": {
                 "relationships": 10,
                 "ego": -10,
-                "skills": -10
+                "skills": -10,
+                "unlockInsight": "ruleskill"
             },
             "nextQuestion": "tenpages"
         },
@@ -246,38 +262,13 @@ export const firstdraft = {
             "effect": {
                 "relationships": -10,
                 "ego": 10,
-                "skills": 10
+                "skills": 10,
+                "unlockInsight": "ruleskill"
             },
             "nextQuestion": "tenpages"
         }
     },
-    "mckee": {
-        "chapterId": "firstdraft",
-        "character": "ScreenwritingGuru",
-        "text": "McKee's in town, and his masterclass will blow your mind. You'll finally crack your story. Are you coming?",
-        "aspect": "balance, collaboration, innovation",
-        "leftAnswer": {
-            "text": "No",
-            "outcome": "You stay home and write. No breakthroughs, but you're one page closer to a draft.",
-            "effect": {
-                "relationships": -10,
-                "ego": 10,
-                "skills": 10
-            },
-            "nextQuestion": "tenpages"
-        },
-        "rightAnswer": {
-            "text": "Yes",
-            "outcome": "Your wallet's considerably thinner, but you've mastered the art of perfectly boring storytelling.",
-            "effect": {
-                "money": -10,
-                "relationships": 10,
-                "ego": -5,
-                "skills": 15
-            },
-            "nextQuestion": "tenpages"
-        }
-    },
+    
     "tenpages": {
         "chapterId": "firstdraft",
         "character": "InnerVoice",

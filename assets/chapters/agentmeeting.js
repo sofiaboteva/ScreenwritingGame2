@@ -11,7 +11,8 @@ export const agentmeeting = {
                 "money": 0,
                 "relationships": 0,
                 "ego": 0,
-                "skills": 0
+                "skills": 0,
+                "unlockInsight": "agentinsight"
             },
             "nextQuestion": "prepareformeeting"
         },
@@ -21,7 +22,8 @@ export const agentmeeting = {
                 "money": 0,
                 "relationships": 0,
                 "ego": 0,
-                "skills": 0
+                "skills": 0,
+                "unlockInsight": "agentinsight"
             },
             "nextQuestion": "prepareformeeting"
         }
@@ -244,7 +246,7 @@ export const agentmeeting = {
     "jeans": {
         "chapterId": "agentmeeting",
         "character": "Assistant",
-        "text": "Jeans and a t-shirt?' You must really want your script to do all the talking",
+        "text": "Jeans and a t-shirt? You must really want your script to do all the talking",
         "aspect": "freelance",
         "comment": "No real choice",
         "leftAnswer": {
@@ -446,7 +448,8 @@ export const agentmeeting = {
                 "ego": 10,
                 "skills": 0
             },
-            "nextChapter": "dj5"
+            "nextChapter": "dj5",
+            "outcome": "Curious to see if that’s true. I’ll be in touch.",
         },
         "rightAnswer": {
             "text": "I'm not saying you should... Should you?",
@@ -456,7 +459,8 @@ export const agentmeeting = {
                 "ego": -10,
                 "skills": 0
             },
-            "nextChapter": "dj5"
+            "nextChapter": "dj5",
+            "outcome": "You’re weird. But maybe that’s what I need. I’ll call you."
         }
     },
 }

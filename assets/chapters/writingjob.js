@@ -2,7 +2,7 @@ export const writingjob = {
     "landedanagent": {
         "chapterId": "writingjob",
         "character": "InnerVoice",
-        "text": "Against all odds, you’ve landed anagent! Time for the big offers to roll in.",
+        "text": "Against all odds, you've landed an agent! Time for the big offers to roll in.",
         "aspect": "freelance",
         "comment": "No real choice",
         "leftAnswer": {
@@ -17,20 +17,18 @@ export const writingjob = {
     "nosillygigs": {
         "chapterId": "writingjob",
         "character": "InnerVoice",
-        "text": "At least now  you’ll never have to take on silly gigs again. Or so you think…",
+        "text": "At least now  you'll never have to take on silly gigs again. Or so you think…",
         "leftAnswer": {
             "text": "Wait... ",
             "effect": {
-                "money": 10,
-                "ego": -10
+                "unlockInsight": "ladder"
             },
             "nextQuestion": "twoprojectsintro"
         },
         "rightAnswer": {
             "text": "What?",
             "effect": {
-                "money": -1,
-                "ego": 10
+                "unlockInsight": "ladder"
             },
             "nextQuestion": "twoprojectsintro"
         }
@@ -38,7 +36,7 @@ export const writingjob = {
     "twoprojectsintro": {
         "chapterId": "writingjob",
         "character": "Agent",
-        "text": "I’ve got two projects for you to choose from.",
+        "text": "I've got two projects for you to choose from.",
         "aspect": "freelance",
         "comment": "No real choice",
         "leftAnswer": {

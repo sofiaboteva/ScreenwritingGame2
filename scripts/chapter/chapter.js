@@ -2,7 +2,7 @@
 // processing of questions, tracks player choices and scores, and manages transitions between questions and chapters.
 // and triggers different endings.
 
-import { playerContext } from "../context/player-context.js";
+import { addPerk, playerContext, removePerk, unlockInsight } from "../context/player-context.js";
 import { createIndicators, createSkillIndicator } from "../indicators/indicator.js";
 import { eventBus, EVENTS } from "./event-bus.js";
 import { Card, CardAnswer } from "./card.js";
@@ -11,6 +11,9 @@ import { appContext } from "../context/ApplicationContext.js";
 import { ChapterId } from "./chapter-configs.js";
 import { SoundId } from "../../assets/sounds/sounds.js";
 import { CharacterName } from "../../assets/img/cards/characters/characters.js";
+import { createLeaveToMenuPopup } from "../elements/leave-to-menu-popup.js";
+import { Icons } from "../shared-elements/icons.js";
+import { createInsightUnlockedPopup } from "./insight-unlocked-popup.js";
 
 // Defines scores thresholds
 const MAX_CHARACTERISTICS_THRESHOLD = 100;
@@ -39,6 +42,9 @@ export class Chapter {
       console.log("Chapter scene config:", sceneConfig); // Debug log
       console.log("Using background:", sceneConfig.background); // Debug log
       createBackground(sceneConfig.background);
+
+      // menu overlay
+      this.#createMenuPopup();
 
       this.#answerCard = new Card();
 
@@ -76,8 +82,22 @@ export class Chapter {
     });
   }
 
+  #hasSavedQuestion(sceneConfig) {
+    return playerContext.currentChapter && sceneConfig.questions[playerContext.currentQuestion];
+  }
+
   // Sets up the first question of the chapter
   #setFirstQuestion(sceneConfig) {
+    // return to saved question
+    if (this.#hasSavedQuestion(sceneConfig)) {
+      const nextQuestion = {
+        id: playerContext.currentQuestion,
+        question: sceneConfig.questions[playerContext.currentQuestion]
+      };
+      this.#setNextQuestionIfFound(nextQuestion);
+      return
+    }
+
     // Check if the first question exists
     if (!sceneConfig.firstQuestionIds?.length || sceneConfig.firstQuestionIds.length === 0) {
       console.error("Failed to set first question, no first question ids provided");
@@ -85,25 +105,24 @@ export class Chapter {
     }
 
     const questions = sceneConfig.firstQuestionIds
-      .map(questionId => sceneConfig.questions[questionId]);
+      .map(questionId => ({ id: questionId, question: sceneConfig.questions[questionId] }));
 
     // Check if the question requires a specific perk
     const questionRequiringPerk = questions
-      .find(question => question.requiresPerk && playerContext.perks.includes(question.requiresPerk));
+      .find(({ id, question }) => question.requiresPerk && playerContext.perks.includes(question.requiresPerk));
 
-    
     // If that question exists, set it as the next question
     if (questionRequiringPerk) {
-      this.#setNextQuestion(questionRequiringPerk);
+      this.#setNextQuestionIfFound(questionRequiringPerk);
       return;
     }
 
     // Fall back to questions that don't require a perk
     const questionWithoutPerk = questions
-      .find(question => !question.requiresPerk);
+      .find(({ id, question }) => !question.requiresPerk);
 
     if (questionWithoutPerk) {
-      this.#setNextQuestion(questionWithoutPerk);
+      this.#setNextQuestionIfFound(questionWithoutPerk);
       return;
     }
 
@@ -111,17 +130,10 @@ export class Chapter {
   }
 
   // Function to move to the next question.
-  #setNextQuestion(nextQuestion) {
-    // If there is reward text, waiting for it to disappear, so that the reward text and question text don't overlap
-    if (playerContext.rewardText) {
-      wait(2, () => {
-        destroy(playerContext.rewardText);
-        playerContext.rewardText = null;
-        this.#loadNextQuestion(nextQuestion);
-      });
-    } else {
-      this.#loadNextQuestion(nextQuestion);
-    }
+  #setNextQuestionIfFound(nextQuestion) {
+    playerContext.currentQuestion = nextQuestion.id;
+    playerContext.currentChapter = nextQuestion.question.chapterId;
+    this.#loadNextQuestion(nextQuestion.question);
   }
 
   // Loads the next question
@@ -169,25 +181,23 @@ export class Chapter {
       wait(0.05, () => {
         // Split by comma and trim whitespace
         const questionIds = answer.nextQuestion.split(',').map(id => id.trim());
-        
+
         // Try to find a question that requires a perk the player has
         const questionWithPerk = questionIds
-          .map(id => this.#questions[id])
-          .find(q => q.requiresPerk && playerContext.perks.includes(q.requiresPerk));
+          .map(id => ({ id, question: this.#questions[id] }))
+          .find(({ id, question }) => question.requiresPerk && playerContext.perks.includes(question.requiresPerk));
 
         if (questionWithPerk) {
-          this.#setNextQuestion(questionWithPerk);
-          return;
+          this.#setNextQuestionIfFound(questionWithPerk);
         }
 
         // Fall back to questions without perk requirements
         const questionWithoutPerk = questionIds
-          .map(id => this.#questions[id])
-          .find(q => !q.requiresPerk);
+          .map(id => ({ id, question: this.#questions[id] }))
+          .find(q => !q.question.requiresPerk);
 
         if (questionWithoutPerk) {
-          this.#setNextQuestion(questionWithoutPerk);
-          return;
+          this.#setNextQuestionIfFound(questionWithoutPerk);
         }
 
         console.error("Failed to find valid next question");
@@ -217,7 +227,10 @@ export class Chapter {
     // (to avoid unlocking scenes that are not chapters)
     const isChapterId = Object.keys(ChapterId).includes(this.#sceneId);
     // If yes, add it to the unlocked levels
-    if (this.#sceneId && isChapterId) {
+    if (isChapterId) {
+      if (playerContext.unlockedLevels === null) {
+        playerContext.unlockedLevels = [];
+      }
       playerContext.unlockedLevels.add(this.#sceneId);
     }
   }
@@ -234,6 +247,7 @@ export class Chapter {
     this.#updateScores(effect);
     this.#updatePerks(effect);
     this.#updateIndicators(playerContext.scores, effect);
+    this.#updateTutorialStatus(effect);
     // this.#updateRiskyChoices(effect);
     // this.#updateArticticIntegrity(answer);
   }
@@ -257,79 +271,42 @@ export class Chapter {
   // Add / remove perk
   #updatePerks(effect) {
     if (effect.addPerk) {
-      playerContext.perks.push(effect.addPerk);
+      addPerk(effect.addPerk);
+    }
+
+    // If the answer unlocks an insight, unlock it and show the popup
+    if (effect.unlockInsight && !playerContext.unlockedInsights.includes(effect.unlockInsight)) {
+      unlockInsight(effect.unlockInsight);
+      // insight unlocked popup
+      createInsightUnlockedPopup(effect.unlockInsight);
     }
 
     if (effect.removePerk) {
       const perksToRemove = effect.removePerk;
-      const index = playerContext.perks.indexOf(perksToRemove);
-      if (index > -1) {
-        playerContext.perks.splice(index, 1);
-      }
+      removePerk(perksToRemove);
+    }
+  }
+
+  // Updates tutorial completion status
+  #updateTutorialStatus(effect) {
+    if (effect.finishTutorial) {
+      playerContext.finishedTutorial = true;
     }
   }
 
   // Updates visual indicators to reflect score changes 
   #updateIndicators(scores, scoreChanges) {
     Object.entries(this.#indicators).forEach(([scoreId, indicator]) => {
-      const scoreChange = scoreChanges[scoreId];
+      const scoreChange = scoreChanges[scoreId] ?? 0;
       if (scoreChange !== 0) {
         indicator.updateFill(scores[scoreId], scoreChange > 0 ? "up" : "down");
       }
     });
 
-    this.#skillIndicator.updateFill(scores.skills);
-  }
-
-  #updateRiskyChoices(effect) {
-    // Counting the number of risky choices made for 'Risk Taker' Reward
-    if (
-      Math.abs(effect.skills) >= RISK_TAKER_THRESHOLD ||
-      Math.abs(effect.ego) >= RISK_TAKER_THRESHOLD ||
-      Math.abs(effect.money) >= RISK_TAKER_THRESHOLD ||
-      Math.abs(effect.relationships) >= RISK_TAKER_THRESHOLD
-    ) {
-      playerContext.riskyChoicesMade++;
-
-      // Checking if the reward should be unlocked
-      if (playerContext.riskyChoicesMade >= 4 && !playerContext.unlockedRewards.riskTaker) {
-        playerContext.unlockedRewards.riskTaker = true;
-        playerContext.rewardText = add([
-          text("Reward unlocked: Risk Taker", {
-            width: width() - appContext.PADDING * 2,
-            wrap: true,
-            size: appContext.TEXT_SIZE,
-            font: "myfont",
-          }),
-
-          pos(this.#questionObj.pos.x, this.#questionObj.pos.y - 70),
-          anchor("center"),
-          color(255, 255, 255),
-        ]);
-      }
-    }
-  }
-
-  #updateArticticIntegrity(answer) {
-    // Counting the number of artistic integrity choices made for 'Artistic Integrity' Reward
-    if (answer.artisticIntegrity) {
-      playerContext.artisticIntegrityScore++;
-    }
-
-    // Checking if the reward should be unlocked
-    if (playerContext.artisticIntegrityScore >= 4 && !playerContext.unlockedRewards.artisticIntegrity) {
-      playerContext.unlockedRewards.artisticIntegrity = true;
-      playerContext.rewardText = add([
-        text("Reward unlocked: Artistic Integrity", {
-          width: width() - appContext.PADDING * 2,
-          wrap: true,
-          size: width() * 0.06,
-          font: "myfont",
-        }),
-        pos(this.#questionObj.pos.x, this.#questionObj.pos.y - 70),
-        anchor("center"),
-        color(255, 255, 255),
-      ]);
+    // Only update skill indicator if skills value changed
+    const skillChange = scoreChanges.skills ?? 0;
+    if (skillChange !== 0) {
+      this.#skillIndicator.updateFill(scores.skills, skillChange > 0 ? "up" : "down");
     }
   }
 
@@ -378,5 +355,20 @@ export class Chapter {
       pos(width() / 2, height() - 100),
       anchor("center")
     ]);
+  }
+
+  #createMenuPopup() {
+    const menuButton = add([
+      sprite(Icons.MENU, {
+        width: 50,
+        height: 50
+      }),
+      area(),
+      pos(width() * 0.05, height() * 0.05),
+      anchor("center")
+    ]);
+    const { toggle } = createLeaveToMenuPopup();
+    menuButton.onClick(() => toggle());
+    onKeyPress("escape", () => toggle());
   }
 }

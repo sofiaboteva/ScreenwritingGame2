@@ -12,6 +12,18 @@ export const createAchievements = () => {
   scene(MainMenuScenes.ACHIEVEMENTS, () => {
     createBackground();
 
+        // Create the heading text
+        add([
+          text("Achievements", {
+            font: "myfont",
+            size: 22,
+            align: "center",
+            width: appContext.CENTRAL_WIDTH - 2 * appContext.GAME_ZONE_PADDING
+          }),
+          anchor("center"),
+          pos(width() / 2, height() * 0.15)
+        ]);
+
     const endingsButton = add([
       rect(MENU_BUTTON_WIDTH, MENU_BUTTON_HEIGHT, { radius: 2 }),
       pos(width() / 2, height() / 4 + (MENU_BUTTON_HEIGHT + appContext.BUTTON_SPACING)),

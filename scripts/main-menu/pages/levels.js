@@ -65,7 +65,7 @@ export function createLevelsPage() {
     ]);
 
     // Create the buttons for each unlocked level  
-    const unlockedLevels = [...playerContext.unlockedLevels.values()];
+    const unlockedLevels = playerContext.unlockedLevels || [];
     Object.entries(levelConfigList).forEach(([chapterId, buttonText], index) => {
       if (unlockedLevels.includes(chapterId)) {
         createLevelButton(buttonText, chapterId, index);

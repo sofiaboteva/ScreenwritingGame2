@@ -59,14 +59,14 @@ export function unlockInsight(insight) {
 export function initializeTestPlayer() {
   playerContext.finishedTutorial = true;
   playerContext.unlockedInsights = Object.keys(insightList);
-  playerContext.unlockedLevels = new Set([ChapterId.START, ChapterId.PACHAPTER, ChapterId.THEPITCH, ChapterId.PRODUCERSNOTES]);
+  playerContext.unlockedLevels = [ChapterId.START, ChapterId.PACHAPTER, ChapterId.THEPITCH, ChapterId.PRODUCERSNOTES];
   resetScores();
 }
 
 export function initializeProdPlayer() {
   playerContext.finishedTutorial = false;
   playerContext.unlockedInsights = [];
-  playerContext.unlockedLevels = new Set([ChapterId.START]);
+  playerContext.unlockedLevels = [ChapterId.START];
   resetScores();
 }
 

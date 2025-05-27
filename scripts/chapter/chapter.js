@@ -225,13 +225,16 @@ export class Chapter {
   #unlockCurrentLevel() {
     // Check if the current scene ID is a valid chapter ID 
     // (to avoid unlocking scenes that are not chapters)
-    const isChapterId = Object.keys(ChapterId).includes(this.#sceneId);
+    const isChapterId = Object.values(ChapterId).includes(this.#sceneId);
     // If yes, add it to the unlocked levels
     if (isChapterId) {
       if (playerContext.unlockedLevels === null) {
         playerContext.unlockedLevels = [];
       }
-      playerContext.unlockedLevels.add(this.#sceneId);
+      // Check if level is not already unlocked to avoid duplicates
+      if (!playerContext.unlockedLevels.includes(this.#sceneId)) {
+        playerContext.unlockedLevels.push(this.#sceneId);
+      }
     }
   }
 

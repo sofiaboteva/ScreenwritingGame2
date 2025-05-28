@@ -193,7 +193,7 @@ export const dj2 = {
             "effect": {
                 "money": 0,
                 "relationships": 0,
-                "ego": -5,
+                "ego": 0,
                 "skills": -10
             },
             "nextChapter": "buzzchapter"

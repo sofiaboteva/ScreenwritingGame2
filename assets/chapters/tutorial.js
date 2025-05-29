@@ -114,10 +114,16 @@ export const tutorial = {
             "comment": "Как-то подсветить скоры?",
             "leftAnswer": {
                 "text": "Got it.",
+                "effect": {
+                    "ego": 10
+                },
                 "nextQuestion": "egoscore"
             },
             "rightAnswer": {
                 "text": "I think I'm having an anxiety attack.",
+                "effect": {
+                    "ego": 10
+                },
                 "nextQuestion": "egoscore"
             }
         },
@@ -128,10 +134,16 @@ export const tutorial = {
             "comment": "Как-то подсветить Эго (можно задействовать мигающий эффект, использованный при смене скоров)",
             "leftAnswer": {
                 "text": "Alright.",
+                "effect": {
+                    "money": 10
+                },
                 "nextQuestion": "relationshipsscore"
             },
             "rightAnswer": {
                 "text": "What does that even mean?",
+                "effect": {
+                    "money": 10
+                },
                 "nextQuestion": "relationshipsscore"
             }
         },
@@ -142,10 +154,16 @@ export const tutorial = {
             "comment": "Как-то подсветить Отношения (можно задействовать мигающий эффект, использованный при смене скоров)",
             "leftAnswer": {
                 "text": "Okay.",
+                "effect": {
+                    "relationships": 10
+                },
                 "nextQuestion": "moneyscore"
             },
             "rightAnswer": {
                 "text": "How do you measure that?",
+                "effect": {
+                    "relationships": 10
+                },
                 "nextQuestion": "moneyscore"
             }
         },
@@ -153,7 +171,7 @@ export const tutorial = {
             "chapterId": "tutorial",
             "character": "HollywoodGatekeeper",
             "text": "The third one is Relationships",
-            "comment": "Как-то подсветить Деньги (можно задействовать мигающий эффект, использованный при смене скоров)",
+          
             "leftAnswer": {
                 "text": "Money is important.",
                 "nextQuestion": "toolow"
@@ -170,18 +188,18 @@ export const tutorial = {
             "leftAnswer": {
                 "text": "Easy.",
                 "effect": {
-                    "money": -45,
-                    "relationships": -45,
-                    "ego": -45
+                    "money": -55,
+                    "relationships": -55,
+                    "ego": -55
                 },
                 "nextQuestion": "toolow2"
             },
             "rightAnswer": {
                 "text": "Right.",
                 "effect": {
-                    "money": -45,
-                    "relationships": -45,
-                    "ego": -45
+                    "money": -55,
+                    "relationships": -55,
+                    "ego": -55
                 },
                 "nextQuestion": "toolow2"
             }
@@ -258,10 +276,17 @@ export const tutorial = {
             "text": "Don't forget: to become a great screenwriter, you need to level up your scriptwriting skills.",
             "leftAnswer": {
                 "text": "Absolutely!",
+                "effect": {
+                    "skills": 100
+                },
                 "nextQuestion": "skillmeter"
             },
             "rightAnswer": {
                 "text": "Got it!",
+                "effect": {
+                    "skills": 100
+                },
+
                 "nextQuestion": "skillmeter"
             }
         },
@@ -275,7 +300,6 @@ export const tutorial = {
             },
             "rightAnswer": {
                 "text": "Let's boost it!",
-
                 "nextQuestion": "maxskill"
             }
         },
@@ -286,14 +310,14 @@ export const tutorial = {
             "leftAnswer": {
                 "text": "I'll do my best!",
                 "effect": {
-                    "skills": 100
+                    "skills": -100
                 },
                 "nextQuestion": "insightintro"
             },
             "rightAnswer": {
                 "text": "Challenge accepted!",
                 "effect": {
-                    "skills": 100
+                    "skills": -100
                 },
                 "nextQuestion": "insightintro"
             }
@@ -304,16 +328,10 @@ export const tutorial = {
             "text": "Oh, and one more thing. As you move through the industry, you'll unlock special Insights.",
             "leftAnswer": {
                 "text": "Insights?",
-                "effect": {
-                    "skills": -100
-                },
                 "nextQuestion": "insightexplain"
             },
             "rightAnswer": {
                 "text": "Sounds mysterious.",
-                "effect": {
-                    "skills": -100
-                },
                 "nextQuestion": "insightexplain"
             }
         },

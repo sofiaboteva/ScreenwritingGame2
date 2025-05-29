@@ -7,8 +7,8 @@ import { setInsightSource } from "../context/player-context.js";
 let popupObj = null;
 
 export const createInsightUnlockedPopup = (unlockedInsightId) => {
-	const POPUP_WIDTH = width() / 6;
-	const POPUP_HEIGHT = 170;
+	const POPUP_WIDTH = width() / 4;
+	const POPUP_HEIGHT = 200;
 	const PADDING = 15;
 
 	if (popupObj) {
@@ -18,7 +18,7 @@ export const createInsightUnlockedPopup = (unlockedInsightId) => {
 	// Create the popup box
 	popupObj = add([
 		rect(POPUP_WIDTH, POPUP_HEIGHT, { radius: 4 }),
-		color(0,0,0),
+		color(139,0,0),
 		pos(width() - 200, 150),
 		anchor("center"),
 		outline(2, rgb(255, 255, 255)),
@@ -28,7 +28,7 @@ export const createInsightUnlockedPopup = (unlockedInsightId) => {
 	popupObj.add([
 		text("You just unlocked a new insight! Click the button to read more", {
 			font: "myfont",
-			size: 16,
+			size: 20,
 			wrap: true,
 			width: POPUP_WIDTH - 2 * PADDING,
 			align: "center"
@@ -39,7 +39,7 @@ export const createInsightUnlockedPopup = (unlockedInsightId) => {
 
 	// Create the button to go to insights page
 	const goToInsightsButton = popupObj.add([
-		rect(150, 60, { radius: 4 }),
+		rect(170, 80, { radius: 4 }),
 		pos(0, 40),
 		anchor("center"),
 		area()
@@ -48,7 +48,7 @@ export const createInsightUnlockedPopup = (unlockedInsightId) => {
 	goToInsightsButton.add([
 		text("Go to insights", {
 			font: "myfont",
-			size: 16,
+			size: 18,
 			align: "center",
 		}),
 		color(0, 0, 0),
@@ -65,7 +65,7 @@ export const createInsightUnlockedPopup = (unlockedInsightId) => {
 	});
 
 	// Destroy the popup after 5 seconds if the player doesn't click the button
-	wait(5, () => {
+	wait(8, () => {
 		destroy(popupObj);
 	})
 }

@@ -11,8 +11,8 @@ import { appContext } from "../context/ApplicationContext.js";
 import { ChapterId } from "./chapter-configs.js";
 import { SoundId } from "../../assets/sounds/sounds.js";
 import { CharacterName } from "../../assets/img/cards/characters/characters.js";
-import { createLeaveToMenuPopup } from "../elements/leave-to-menu-popup.js";
-import { Icons } from "../shared-elements/icons.js";
+import { createLeaveToMenuPopup } from "../components/leave-to-menu-popup.js";
+import { Icons } from "../components/icons.js";
 import { createInsightUnlockedPopup } from "./insight-unlocked-popup.js";
 
 // Defines scores thresholds
@@ -20,6 +20,8 @@ const MAX_CHARACTERISTICS_THRESHOLD = 100;
 const MIN_CHARACTERISTICS_THRESHOLD = 0;
 // const RISK_TAKER_THRESHOLD = 20;
 const QUESTION_TEXT_SIZE = 20;             // Font size for question text
+
+
 
 export class Chapter {
   // Private class properties for managing chapter state

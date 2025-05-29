@@ -2,7 +2,7 @@ import { SoundId } from "../../../assets/sounds/sounds.js";
 import { MainMenuScenes } from "../main-menu-scenes.js";
 import { createBackground } from "../utils.js";
 import { appContext } from "../../context/ApplicationContext.js";
-import { createButton } from "../../shared-elements/menu-button.js";
+import { createButton } from "../../components/menu-button.js";
 import { setInsightSource } from "../../context/player-context.js";
 
 export const createAchievements = () => {

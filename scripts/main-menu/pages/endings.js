@@ -2,7 +2,7 @@
 import { MainMenuScenes } from "../main-menu-scenes.js";
 import { createBackground } from "../utils.js";
 import { playerContext } from "../../context/player-context.js";
-import { createButton } from "../../shared-elements/menu-button.js";
+import { createButton } from "../../components/menu-button.js";
 
 // Links the endings to the display text
 const endingDisplayText = {

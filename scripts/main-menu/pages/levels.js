@@ -5,7 +5,7 @@ import { MainMenuScenes } from "../main-menu-scenes.js";
 import { ChapterId } from "../../chapter/chapter-configs.js";
 import { playerContext, resetScores } from "../../context/player-context.js";
 import { appContext } from "../../context/ApplicationContext.js";
-import { createButton, MENU_BUTTON_HEIGHT } from "../../shared-elements/menu-button.js";
+import { createButton, MENU_BUTTON_HEIGHT } from "../../components/menu-button.js";
 
 // Links the levels to the display text 
 

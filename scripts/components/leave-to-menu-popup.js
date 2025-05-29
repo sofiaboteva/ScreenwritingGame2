@@ -1,5 +1,5 @@
 import { MainMenuScenes } from "../main-menu/main-menu-scenes.js";
-import { createButton } from "../shared-elements/menu-button.js";
+import { createButton } from "./menu-button.js";
 
 let visible = false;
 

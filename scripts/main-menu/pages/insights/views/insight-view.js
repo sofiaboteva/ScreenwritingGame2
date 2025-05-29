@@ -1,7 +1,7 @@
 import { insightList } from "../constants.js";
 import { calculateTitlePosition, createBackButton } from "../utils.js";
 import { playerContext, clearInsightSource } from "../../../../context/player-context.js";
-import { createButton } from "../../../../shared-elements/menu-button.js";
+import { createButton } from "../../../../components/menu-button.js";
 
 export const createInsights = () => {
   Object.entries(insightList).forEach(([insightId, insightConfig]) => {

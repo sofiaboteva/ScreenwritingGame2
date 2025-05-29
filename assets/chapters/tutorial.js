@@ -11,7 +11,7 @@ export const tutorial = {
     },
     "rightAnswer": {
         "text": "Okay, easy.",
-        "outcome": "Even for text cards without choices like this one, you still need to swipe to move forward.",
+        "outcome": "Even for text cards without choices like this one, you still need to drag and drop to move forward.",
         "nextQuestion": "tutorialstart"
     }
 },

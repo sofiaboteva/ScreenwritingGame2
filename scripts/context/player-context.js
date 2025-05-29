@@ -4,6 +4,8 @@ import { insightList } from "../main-menu/pages/insights/constants.js";
 export const playerContext = {
   currentChapter: null,
   currentQuestion: null,
+  currentAnswer: null,
+  isInOutcomeMode: false,
   rewardText: null,
   finishedTutorial: true,
   unlockedInsights: [],
@@ -76,4 +78,30 @@ export function setInsightSource(source) {
 
 export function clearInsightSource() {
   playerContext.insightOpenedFrom = null;
+}
+
+export function resetSave() {
+  playerContext.currentChapter = null;
+  playerContext.currentQuestion = null;
+  playerContext.currentAnswer = null;
+  playerContext.isInOutcomeMode = false;
+}
+
+export function saveProgress(currentChapter, currentQuestion) {
+  playerContext.currentChapter = currentChapter;
+  playerContext.currentQuestion = currentQuestion;
+}
+
+export function saveOutcomeInfotmation(answer) {
+  playerContext.isInOutcomeMode = true;
+  playerContext.currentAnswer = answer;
+}
+
+export function resetOutcomeInfotmation() {
+    playerContext.isInOutcomeMode = false;
+  playerContext.currentAnswer = null;
+}
+
+export function hasOutcomeInformation() {
+  return playerContext.isInOutcomeMode && playerContext.currentAnswer;
 }

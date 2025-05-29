@@ -3,7 +3,7 @@
 import { createBackground } from "../utils.js";
 import { MainMenuScenes } from "../main-menu-scenes.js";
 import { ChapterId } from "../../chapter/chapter-configs.js";
-import { playerContext, resetScores } from "../../context/player-context.js";
+import { playerContext, resetSave, resetScores } from "../../context/player-context.js";
 import { appContext } from "../../context/ApplicationContext.js";
 import { createButton, MENU_BUTTON_HEIGHT } from "../../components/menu-button.js";
 
@@ -17,8 +17,7 @@ const levelConfigList = {
 }
 
 function startChapter(chapterId) {
-  playerContext.currentChapter = null;
-  playerContext.currentQuestion = null;
+  resetSave();
   resetScores();
   go(chapterId);
 }

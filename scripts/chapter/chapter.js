@@ -2,7 +2,7 @@
 // processing of questions, tracks player choices and scores, and manages transitions between questions and chapters.
 // and triggers different endings.
 
-import { addPerk, playerContext, removePerk, unlockInsight } from "../context/player-context.js";
+import { addPerk, hasOutcomeInformation, playerContext, removePerk, resetOutcomeInfotmation, saveOutcomeInfotmation, saveProgress, unlockInsight } from "../context/player-context.js";
 import { createIndicators, createSkillIndicator } from "../indicators/indicator.js";
 import { eventBus, EVENTS } from "./event-bus.js";
 import { Card, CardAnswer } from "./card.js";
@@ -97,7 +97,7 @@ export class Chapter {
         question: sceneConfig.questions[playerContext.currentQuestion]
       };
       this.#setNextQuestionIfFound(nextQuestion);
-      return
+      return;
     }
 
     // Check if the first question exists
@@ -133,9 +133,13 @@ export class Chapter {
 
   // Function to move to the next question.
   #setNextQuestionIfFound(nextQuestion) {
-    playerContext.currentQuestion = nextQuestion.id;
-    playerContext.currentChapter = nextQuestion.question.chapterId;
+    const currentChapter = nextQuestion.question.chapterId;
+    const currentQuestion = nextQuestion.id;
+    saveProgress(currentChapter, currentQuestion);
     this.#loadNextQuestion(nextQuestion.question);
+    if (hasOutcomeInformation()) {
+      this.#displayOutcome(playerContext.currentAnswer);
+    }
   }
 
   // Loads the next question
@@ -164,16 +168,22 @@ export class Chapter {
       this.#checkCharacteristicThresholds();
     }
 
+    resetOutcomeInfotmation();
     if (this.#shouldDisplayOutcome(answer)) {
-      // hack : set both answers to the same object so that the answer of the outcome (LEFT / RIGHT) will not omit the choice
-      // made before the outcome
-      this.#currentQuestion.leftAnswer = answer;
-      this.#currentQuestion.rightAnswer = answer;
-      this.#answerCard.showOutcome(answer.outcome);
-      this.#questionObj.text = '';
+      this.#displayOutcome(answer);
+      saveOutcomeInfotmation(answer);
       return;
     }
     this.#gotoNextQuestion(answer);
+  }
+
+  #displayOutcome(answer) {
+    // hack : set both answers to the same object so that the answer of the outcome (LEFT / RIGHT) will not omit the choice
+    // made before the outcome
+    this.#currentQuestion.leftAnswer = answer;
+    this.#currentQuestion.rightAnswer = answer;
+    this.#answerCard.showOutcome(answer.outcome);
+    this.#questionObj.text = '';
   }
 
   // Navigates to next question or chapter based on answer

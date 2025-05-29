@@ -1,6 +1,6 @@
 import { SoundId } from "../../assets/sounds/sounds.js";
 import { appContext } from "../context/ApplicationContext.js";
-import { playerContext } from "../context/player-context.js";
+import { playerContext, resetSave } from "../context/player-context.js";
 
 export const ExpandedEndingId = {
   RELATIONSHIPS: 'relationshipsEgoExpanded',
@@ -67,8 +67,7 @@ export const createExpandedEnding = (endingId) => {
   scene(endingId, () => {
 
     // reset save after ending
-    playerContext.currentChapter = null;
-    playerContext.currentQuestion = null;
+    resetSave();
 
     add([
       sprite("screenwriter", { width: width(), anchor: "bottom" }),

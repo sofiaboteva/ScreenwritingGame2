@@ -1,6 +1,6 @@
 import { appContext } from "../context/ApplicationContext.js";
 import { eventBus, EVENTS } from "../chapter/event-bus.js";
-import { playerContext } from "../context/player-context.js";
+import { playerContext, resetSave } from "../context/player-context.js";
 import { createBackground } from "../main-menu/utils.js";
 import { Card, CardAnswer } from "../chapter/card.js";
 
@@ -108,8 +108,7 @@ export function createCharacteristicOutboundEnding(endingId) {
   scene(endingConfig.key, () => {
     createBackground();
 
-    playerContext.currentChapter = null;
-    playerContext.currentQuestion = null;
+    resetSave();
 
     if (!playerContext.unlockedEndings[endingConfig.key]) {
       playerContext.unlockedEndings[endingConfig.key] = true;

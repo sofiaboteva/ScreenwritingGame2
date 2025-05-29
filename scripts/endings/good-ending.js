@@ -1,7 +1,7 @@
 import { MainMenuScenes } from "../main-menu/main-menu-scenes.js";
 import { createBackground } from "../main-menu/utils.js";
 import { eventBus, EVENTS } from "../chapter/event-bus.js";
-import { playerContext } from "../context/player-context.js";
+import { playerContext, resetSave } from "../context/player-context.js";
 import { Card } from "../chapter/card.js";
 
 // Defines the configurations for each good ending
@@ -43,8 +43,7 @@ export function craeteGoodEnding() {
   scene("win", () => {
     createBackground();
 
-    playerContext.currentChapter = null;
-    playerContext.currentQuestion = null;
+    resetSave();
 
     // Determines which ending to show based on the skill score
     const answerCard = new Card();

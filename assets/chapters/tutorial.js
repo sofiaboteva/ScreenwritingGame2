@@ -3,7 +3,7 @@ export const tutorial = {
     "swipeintro": {
     "chapterId": "tutorial",
     "character": "HollywoodGatekeeper",
-    "text": "To make choices in this game, swipe left or right.",
+    "text": "To make choices in this game, drag and drop the card left or right with your mouse.",
     "leftAnswer": {
         "text": "Got it!",
         "outcome": "Even for text cards without choices like this one, you still need to swipe to move forward.",

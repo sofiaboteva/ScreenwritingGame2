@@ -90,7 +90,7 @@ export const pachapter = {
         "text": "The director refuses to shoot the scene as written. Everyone agrees the scene's great – even our assistant. Riiight?",
         "aspect": "hierarchisation, collaboration, balance",
         "leftAnswer": {
-            "text": "Right, boss",
+            "text": "Right, boss.",
             "outcome": "The execs call the scene offensive and a little racist. The producer gets fired the next day, and so do you.",
             "effect": {
                 "money": -10,

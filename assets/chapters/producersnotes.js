@@ -20,7 +20,7 @@ export const producersnotes = {
         "text": "The script’s good, but it needs more tension.",
         "aspect": "balance, collaboration",
         "leftAnswer": {
-            "text": "You’re right",
+            "text": "You’re right.",
             "outcome": "You nod enthusiastically, but in fact, you're clueless about what they meant. Now you’re stuck.",
             "effect": {
                 "relationships": 10,
@@ -64,7 +64,7 @@ export const producersnotes = {
         "text": "The ending is too intense. Audiences prefer happy endings, you know?",
         "aspect": "balance, collaboration",
         "leftAnswer": {
-            "text": "Sure, I agree (you don't)",
+            "text": "Sure, I agree (you don't).",
             "effect": {
                 "relationships": 10,
                 "ego": -10
@@ -72,7 +72,7 @@ export const producersnotes = {
             "nextQuestion": "christmascomedy"
         },
         "rightAnswer": {
-            "text": "But I don't",
+            "text": "But I don't.",
             "outcome": "Producer: \"I see, you're not open to new ideas. Well...\"",
             "effect": {
                 "relationships": -10,
@@ -148,7 +148,7 @@ export const producersnotes = {
         "text": "Should you ask for the producer’s notes in writing?",
         "aspect": "balance, collaboration",
         "leftAnswer": {
-            "text": "Yes",
+            "text": "Yes.",
             "nextQuestion": "courtcase"
         },
         "rightAnswer": {

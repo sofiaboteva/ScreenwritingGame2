@@ -60,7 +60,7 @@ export const buzzChapter = {
         "text": "A prestigious screenwriting competition is open for submissions, but the entry fee isn't cheap. Do you take the risk?",
         "aspect": "freelance",
         "leftAnswer": {
-            "text": "Submit",
+            "text": "Submit.",
             "outcome": "Your script makes the shortlist! Suddenly, everyone wants to grab a coffee with you\n",
             "effect": {
                 "money": -10,
@@ -71,7 +71,7 @@ export const buzzChapter = {
             "nextQuestion": "partycrash"
         },
         "rightAnswer": {
-            "text": "I'm not paying to be judged",
+            "text": "I'm not paying to be judged.",
             "outcome": "Your wallet's happy, but watching others win feels like getting left off the group chat.",
             "effect": {
                 "money": 0,

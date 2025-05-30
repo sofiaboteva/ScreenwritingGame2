@@ -80,7 +80,7 @@ export const dj8 = {
         "character": "InnerVoice",
         "text": "Your partner invites you to move in so you won’t have to pay rent anymore. You were about to break up with them, but now…\n",
         "leftAnswer": {
-            "text": "Move in",
+            "text": "Move in.",
             "outcome": "Who knew living with someone you don’t love is so unbearable? You pay the rent with your self-esteem.",
             "effect": {
                 "money": 5,

@@ -47,7 +47,7 @@ export const firstdraft = {
         "text": "How?",
         "aspect": "portfolio",
         "leftAnswer": {
-            "text": "Throw a big party",
+            "text": "Throw a big party.",
             "outcome": "The party was a blast. But were those connections really worth all the broken furniture?",
             "effect": {
                 "money": -15,
@@ -56,8 +56,8 @@ export const firstdraft = {
             "nextQuestion": "timetowrite"
         },
         "rightAnswer": {
-            "text": "Spa day",
-            "outcome": "You emerge refreshed and glowing",
+            "text": "Spa day.",
+            "outcome": "You emerge refreshed and glowing.",
             "effect": {
                 "money": -10,
                 "ego": 10
@@ -167,7 +167,7 @@ export const firstdraft = {
             "nextQuestion": "week"
         },
         "rightAnswer": {
-            "text": "Move forward",
+            "text": "Move forward.",
             "outcome": "The scene might not be perfect, but better mediocre progress than polished procrastination.",
             "effect": {
                 "ego": 10,
@@ -182,7 +182,7 @@ export const firstdraft = {
         "text": "A week has passed. You've written 5 pages out of 120. What's the plan for today?",
         "aspect": "balance, collaboration",
         "leftAnswer": {
-            "text": "Just type words",
+            "text": "Just type words.",
             "outcome": "You write two pages of not-so-great text. But hey, at least it's something, right? Right?..",
             "effect": {
                 "ego": 5,
@@ -191,7 +191,7 @@ export const firstdraft = {
             "nextQuestion": "tenpages"
         },
         "rightAnswer": {
-            "text": "Seek inspiration",
+            "text": "Seek inspiration.",
             "nextQuestion": "inspiration"
         }
     },
@@ -275,7 +275,7 @@ export const firstdraft = {
         "text": "Two weeks in, and you've managed a grand total of 10 pages. What's the plan for today?",
         "aspect": "balance, collaboration, innovation",
         "leftAnswer": {
-            "text": "Just type words",
+            "text": "Just type words.",
             "outcome": "It's one of those days. You manage to hammer out half a page, but it's clunky and uninspired. You hope tomorrow will be better.",
             "effect": {
                 "ego": -10,
@@ -284,7 +284,7 @@ export const firstdraft = {
             "nextQuestion": "deadline"
         },
         "rightAnswer": {
-            "text": "Seek inspiration from movies",
+            "text": "Seek inspiration from movies.",
             "outcome": "You dive into a movie marathon and feel electrified by the artistry. But wait—how did it get to 2 a.m. already? Not a single new word written.",
             "effect": {
                 "ego": 10,

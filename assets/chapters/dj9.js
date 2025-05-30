@@ -17,7 +17,7 @@ export const dj9 = {
         },
         "rightAnswer": {
             "text": "No.",
-            "outcome": "You've got no electricity, but at least you’re free and independent",
+            "outcome": "You've got no electricity, but at least you’re free and independent.",
             "effect": {
                 "money": -5,
                 "ego": 10
@@ -42,7 +42,7 @@ export const dj9 = {
         },
         "rightAnswer": {
             "text": "Who am I to teach anybody?",
-            "outcome": "The job went to your mate, who hasn’t written anything since their questionable short film in school",
+            "outcome": "The job went to your mate, who hasn’t written anything since their questionable short film in school.",
             "effect": {
                 "money": -5,
                 "ego": 10

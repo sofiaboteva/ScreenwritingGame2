@@ -319,7 +319,7 @@ export const breakingIn1 = {
             "nextChapter": "dj2"
         },
         "rightAnswer": {
-            "text": "Call up a friend who’s a receptionist at one of the studios",
+            "text": "Call up a friend who’s a receptionist at one of the studios.",
             "effect": {
                 "money": 0,
                 "relationships": 0,
@@ -335,7 +335,7 @@ export const breakingIn1 = {
         "text": "You didn't answer my messages for three months, and now you need my help?",
         "aspect": "freelance",
         "leftAnswer": {
-            "text": "Go with emails",
+            "text": "Go with emails.",
             "outcome": "You get zero responses, but a year and a half later, you see a trailer for a film with a suspiciously similar storyline.",
             "effect": {
                 "money": 0,

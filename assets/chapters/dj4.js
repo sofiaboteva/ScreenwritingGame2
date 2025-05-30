@@ -5,7 +5,7 @@ export const dj4 = {
         "text": "A toothpaste brand is looking for a copywriter to whip up some catchy slogans. Will you give it a shot?",
         "aspect": "hierarchisation",
         "leftAnswer": {
-            "text": "Absolutely ",
+            "text": "Absolutely.",
             "outcome": "The client loves you so much they double your pay 'to support your artistic dream.' Who knew toothpaste could fund the next Aaron Sorkin?",
             "effect": {
                 "money": 20,

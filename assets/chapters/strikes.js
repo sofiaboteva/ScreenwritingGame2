@@ -24,7 +24,7 @@ export const strikes = {
             "nextScene": "blacklisted"
         },
         "rightAnswer": {
-            "text": "I'm not a scab",
+            "text": "I'm not a scab.",
             "effect": {
                 "relationships": 10,
                 "unlockInsight": "wga"

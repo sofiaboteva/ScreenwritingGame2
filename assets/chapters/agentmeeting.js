@@ -34,7 +34,7 @@ export const agentmeeting = {
         "text": "What's the best way to nail this meeting?",
         "aspect": "freelance",
         "leftAnswer": {
-            "text": "Perfect your pitch",
+            "text": "Perfect your pitch.",
             "effect": {
                 "money": 0,
                 "relationships": 0,
@@ -44,7 +44,7 @@ export const agentmeeting = {
             "nextQuestion": "looks"
         },
         "rightAnswer": {
-            "text": "Research everything about the agent",
+            "text": "Research everything about the agent.",
             "effect": {
                 "money": 0,
                 "relationships": 10,
@@ -304,7 +304,7 @@ export const agentmeeting = {
         "aspect": "freelance",
         "leftAnswer": {
             "text": "It's an honor to meet you.",
-            "outcome": "Nice opening. Now, let's get down to business.",
+            "outcome": "Agent: \"Nice opening. Now, let's get down to business.\"",
             "effect": {
                 "money": 0,
                 "relationships": 10,
@@ -331,7 +331,7 @@ export const agentmeeting = {
         "text": "I loved your script. It would make a perfect romcom.",
         "aspect": "freelance, collaboration, standardisation",
         "leftAnswer": {
-            "text": "Play along and pitch your horror movie as a romcom",
+            "text": "Play along and pitch your horror movie as a romcom.",
             "outcome": "Agent: \"Okay, I can see pitching isn't your strong suit.'",
             "effect": {
                 "money": 0,
@@ -343,7 +343,7 @@ export const agentmeeting = {
         },
         "rightAnswer": {
             "text": "It's actually a horror movie.",
-            "outcome": "Ah, my mistake",
+            "outcome": "Agent: \"Ah, my mistake\"",
             "effect": {
                 "money": 0,
                 "relationships": 10,

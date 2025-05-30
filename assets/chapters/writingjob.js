@@ -40,7 +40,7 @@ export const writingjob = {
         "aspect": "freelance",
         "comment": "No real choice",
         "leftAnswer": {
-            "text": "I'm intrigued",
+            "text": "I'm intrigued.",
             "nextQuestion": "twoprojectsintro2"
         },
         "rightAnswer": {

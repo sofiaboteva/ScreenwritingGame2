@@ -27,7 +27,7 @@ export const thepitch = {
         "aspect": "portfolio, collaboration",
         "leftAnswer": {
             "text": "Yes",
-            "outcome": "Wait, who's actually going to watch this movie?",
+            "outcome": "Parents: \"Wait, who's actually going to watch this movie?\"",
             "effect": {
                 "relationships": -10,
                 "ego": -10,
@@ -115,7 +115,7 @@ export const thepitch = {
             "nextQuestion": "tuningout"
         },
         "rightAnswer": {
-            "text": "\"The story starts with the protagonist waking up in the morning\"",
+            "text": "\"The story starts with the protagonist waking up in the morning\"...",
             "outcome": "Producer: \"Do I look like I have time to hear an audiobook?\"",
             "effect": {
                 "relationships": -10,

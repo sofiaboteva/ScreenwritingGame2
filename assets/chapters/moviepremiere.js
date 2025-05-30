@@ -20,7 +20,7 @@ export const moviepremiere = {
         "text": "But that's all in the past. Now, it's time to enjoy the moment.",
         "aspect": "hierarchisation",
         "leftAnswer": {
-            "text": "I'll try",
+            "text": "I'll try.",
             "nextQuestion": "premieredate"
         },
         "rightAnswer": {
@@ -156,7 +156,7 @@ export const moviepremiere = {
     "symbol": {
         "chapterId": "moviepremiere",
         "character": "Journalist",
-        "text": "\"The use of fog in the film seems to symbolize the veil of ignorance that shrouds society. Would you agree?\"\n(You'd never thought of it this way)",
+        "text": "\"The use of fog in the film seems to symbolize the veil of ignorance that shrouds society. Would you agree?\"\n(You don't)",
         "leftAnswer": {
             "text": "Absolutely.",
             "outcome": "The Journalist nods, satisfied. You smile, though you think this analysis is cheap.",

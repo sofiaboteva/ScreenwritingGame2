@@ -77,7 +77,7 @@ export const tutorial = {
                 "nextQuestion": "makechoices"
             },
             "rightAnswer": {
-                "text": "I hope they're good people",
+                "text": "I hope they're good people.",
                 "nextQuestion": "makechoices"
             }
         },
@@ -138,7 +138,6 @@ export const tutorial = {
             "chapterId": "tutorial",
             "character": "HollywoodGatekeeper",
             "text": "The next one is Money",
-            "comment": "Как-то подсветить Отношения (можно задействовать мигающий эффект, использованный при смене скоров)",
             "leftAnswer": {
                 "text": "Okay.",
                 "effect": {
@@ -147,7 +146,7 @@ export const tutorial = {
                 "nextQuestion": "moneyscore"
             },
             "rightAnswer": {
-                "text": "How do you measure that?",
+                "text": "Money is important.",
                 "effect": {
                     "relationships": 10
                 },
@@ -160,11 +159,11 @@ export const tutorial = {
             "text": "The third one is Relationships",
           
             "leftAnswer": {
-                "text": "Money is important.",
+                "text": "How do you measure that?",
                 "nextQuestion": "toolow"
             },
             "rightAnswer": {
-                "text": "Nice",
+                "text": "Nice.",
                 "nextQuestion": "toolow"
             }
         },
@@ -338,7 +337,7 @@ export const tutorial = {
         "insightcategory": {
             "chapterId": "tutorial",
             "character": "HollywoodGatekeeper",
-            "text": "Each Insight belongs to one of four categories: Marginalised Author, Working Alone and Together, Between Uniqueness and Formula, Freelance",
+            "text": "Each Insight belongs to one of four categories: Marginalised Author, Working Alone and Together, Between Uniqueness and Formula, Freelance.",
             "leftAnswer": {
                 "text": "Let's collect them all!",
                 "nextQuestion": "insightcatefory2"

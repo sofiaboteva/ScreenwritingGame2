@@ -2,7 +2,7 @@ export const firstdraft = {
     "advancepaymentintro": {
         "chapterId": "firstdraft",
         "character": "Producer",
-        "text": "Congrats! You just received an advance payment for your script",
+        "text": "Congrats! You just received an advance payment for your script.",
         "aspect": "portfolio",
         "comment": "No real choice",
         "leftAnswer": {

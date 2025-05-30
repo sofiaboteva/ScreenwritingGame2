@@ -17,7 +17,7 @@ export const directorsnotes = {
     "dialoguecut": {
         "chapterId": "directorsnotes",
         "character": "Director",
-        "text": "Let's cut this dialogue – you know, the one you love – and replace it with a long, silent panoramic shot",
+        "text": "Let's cut this dialogue – you know, the one you love – and replace it with a long, silent panoramic shot.",
         "aspect": "balance, collaboration",
         "comment": "Reconsider scores",
         "leftAnswer": {

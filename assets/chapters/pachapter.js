@@ -87,7 +87,7 @@ export const pachapter = {
     "shooting": {
         "chapterId": "pachapter",
         "character": "Producer",
-        "text": "The director refuses to shoot the scene as written. Everyone agrees the scene's great—even our PA. Riiight?",
+        "text": "The director refuses to shoot the scene as written. Everyone agrees the scene's great – even our assistant. Riiight?",
         "aspect": "hierarchisation, collaboration, balance",
         "leftAnswer": {
             "text": "Right, boss",
@@ -101,7 +101,7 @@ export const pachapter = {
             "nextChapter": "dj4"
         },
         "rightAnswer": {
-            "text": "It’s actually a pretty stupid scene",
+            "text": "It’s actually a pretty stupid scene.",
             "outcome": "Director triumphs, the producer is mad.",
             "effect": {
                 "relationships": -10,
@@ -117,7 +117,7 @@ export const pachapter = {
         "text": "Okay, genius. Got a better idea?",
         "aspect": "hierarchisation, collaboration, balance",
         "leftAnswer": {
-            "text": "I'm just a PA here",
+            "text": "I'm just an assistant.",
             "outcome": "The producer : 'Exactly. So why are you even talking?'\nThe Director despises you, but at least you kept your job.\"",
             "effect": {
                 "money": 10,

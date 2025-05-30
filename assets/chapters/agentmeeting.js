@@ -179,7 +179,7 @@ export const agentmeeting = {
             "nextQuestion": "suit, jeans"
         },
         "rightAnswer": {
-            "text": "Well, that's reassuring",
+            "text": "Well, that's reassuring.",
             "effect": {
                 "money": 0,
                 "relationships": 10,
@@ -218,7 +218,7 @@ export const agentmeeting = {
     "suit": {
         "chapterId": "agentmeeting",
         "character": "Assistant",
-        "text": "Wow, a suit! I see you're taking this seriously",
+        "text": "Wow, a suit! I see you're taking this seriously.",
         "aspect": "freelance",
         "requiresPerk": "suit",
         "comment": "No real choice",
@@ -246,7 +246,7 @@ export const agentmeeting = {
     "jeans": {
         "chapterId": "agentmeeting",
         "character": "Assistant",
-        "text": "Jeans and a t-shirt? You must really want your script to do all the talking",
+        "text": "Jeans and a t-shirt? You must really want your script to do all the talking.",
         "aspect": "freelance",
         "comment": "No real choice",
         "leftAnswer": {
@@ -273,7 +273,7 @@ export const agentmeeting = {
     "agentsoffice": {
         "chapterId": "agentmeeting",
         "character": "InnerVoice",
-        "text": "You're finally ushered into the agent's office",
+        "text": "You're finally ushered into the agent's office.",
         "aspect": "freelance",
         "comment": "No real choice",
         "leftAnswer": {

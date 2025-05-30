@@ -13,7 +13,7 @@ export const breakingIn1 = {
                 "skills": 0,
                 "unlockInsight": "goldenageend"
             },
-            "nextQuestion": "pitchspec"
+            "nextQuestion": "pitchspecintro"
         },
         "rightAnswer": {
             "text": "Ok...",
@@ -24,16 +24,71 @@ export const breakingIn1 = {
                 "skills": 0,
                 "unlockInsight": "goldenageend"
             },
+            "nextQuestion": "pitchspecintro"
+        }
+    },
+
+    "pitchspecintro": {
+        "chapterId": "breakingin1",
+        "character": "InnerVoice",
+        "text": "Do you already know the difference between pitching and writing a spec?",
+        "aspect": "freelance",
+        "leftAnswer": {
+            "text": "Totally!",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": -10,
+                "skills": 0
+            },
+            "nextQuestion": "pitchspec"
+        },
+        "rightAnswer": {
+            "text": "Not really...",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": 0
+            },
+            "nextQuestion": "pitchspecexplained"
+        }
+    },
+
+    "pitchspecexplained": {
+        "chapterId": "breakingin1",
+        "character": "InnerVoice",
+        "text": "A pitch is when you try to sell an idea before writing it. A spec script means writing the full script first and hoping someone will buy it.",
+        "aspect": "freelance",
+        "leftAnswer": {
+            "text": "Makes sense.",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": -10,
+                "skills": 0
+            },
+            "nextQuestion": "pitchspec"
+        },
+        "rightAnswer": {
+            "text": "Still confused, but okay.",
+            "effect": {
+                "money": 0,
+                "relationships": 0,
+                "ego": 0
+            },
             "nextQuestion": "pitchspec"
         }
     },
+
+
+
     "pitchspec": {
         "chapterId": "breakingin1",
         "character": "InnerVoice",
-        "text": "Will you pitch or spec your first movie?",
+        "text": "So will you pitch or spec your first movie?",
         "aspect": "freelance",
         "leftAnswer": {
-            "text": "Pitch",
+            "text": "Pitch.",
             "outcome": "Nobody’s listening to a newbie like you. After countless rejections, you just write a spec script anyway.",
             "effect": {
                 "money": 0,
@@ -44,7 +99,7 @@ export const breakingIn1 = {
             "nextQuestion": "firstmovietheme"
         },
         "rightAnswer": {
-            "text": "Spec",
+            "text": "Spec.",
             "effect": {
                 "money": 0,
                 "relationships": 0,

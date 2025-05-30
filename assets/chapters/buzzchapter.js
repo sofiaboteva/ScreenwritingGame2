@@ -2,7 +2,7 @@ export const buzzChapter = {
     "buzzintro": {
         "chapterId": "buzzchapter",
         "character": "InnerVoice",
-        "text": "After a while it becomes clear that nothing is possible without an agent in this world",
+        "text": "After a while it becomes clear that nothing is possible without an agent in this world.",
         "aspect": "hierarchisation, freelance",
         "comment": "No real choice",
         "leftAnswer": {

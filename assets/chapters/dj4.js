@@ -17,7 +17,7 @@ export const dj4 = {
             "nextQuestion": "toothpaste2"
         },
         "rightAnswer": {
-            "text": "I'm not a sell out",
+            "text": "I'm not a sell out.",
             "outcome": "You tell yourself true artists don’t compromise, but the instant noodles are starting to taste like regret.",
             "effect": {
                 "money": 0,

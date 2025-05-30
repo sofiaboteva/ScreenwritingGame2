@@ -6,7 +6,7 @@ export const tutorial = {
     "text": "To make choices in this game, drag and drop the card left or right with your mouse.",
     "leftAnswer": {
         "text": "Got it!",
-        "outcome": "Even for text cards without choices like this one, you still need to swipe to move forward.",
+        "outcome": "Even for text cards without choices like this one, you still need to drag and drop to move forward.",
         "nextQuestion": "tutorialstart"
     },
     "rightAnswer": {
@@ -84,20 +84,7 @@ export const tutorial = {
         "makechoices": {
             "chapterId": "tutorial",
             "character": "HollywoodGatekeeper",
-            "text": "And you'll have to make a lot of choices.",
-            "leftAnswer": {
-                "text": "Great!",
-                "nextQuestion": "decision"
-            },
-            "rightAnswer": {
-                "text": "Oh, I'm not sure.",
-                "nextQuestion": "decision"
-            }
-        },
-        "decision": {
-            "chapterId": "tutorial",
-            "character": "HollywoodGatekeeper",
-            "text": "Every decision you make will shape your career.",
+            "text": "And you'll have to make a lot of choices. Right now, it doesn't matter what you choose, but later every decision you make will shape your career.",
             "leftAnswer": {
                 "text": "I'm ready to choose!",
                 "nextQuestion": "hollywoodsurvival"

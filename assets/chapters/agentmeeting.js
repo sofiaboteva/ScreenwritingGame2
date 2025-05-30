@@ -342,7 +342,7 @@ export const agentmeeting = {
             "nextQuestion": "whattodo"
         },
         "rightAnswer": {
-            "text": "It's actually a drama",
+            "text": "It's actually a horror movie.",
             "outcome": "Ah, my mistake",
             "effect": {
                 "money": 0,

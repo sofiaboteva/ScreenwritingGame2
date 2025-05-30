@@ -285,7 +285,7 @@ export const breakingIn1 = {
             "effect": {
                 "money": -10,
                 "relationships": 0,
-                "ego": -5,
+                "ego": 10,
                 "skills": 20
             },
             "nextQuestion": "getnoticed"

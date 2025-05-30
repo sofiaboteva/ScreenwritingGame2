@@ -201,6 +201,7 @@ export class Chapter {
 
         if (questionWithPerk) {
           this.#setNextQuestionIfFound(questionWithPerk);
+          return; // Stop here, don't continue to fallback
         }
 
         // Fall back to questions without perk requirements
@@ -210,6 +211,7 @@ export class Chapter {
 
         if (questionWithoutPerk) {
           this.#setNextQuestionIfFound(questionWithoutPerk);
+          return;
         }
 
         console.error("Failed to find valid next question");

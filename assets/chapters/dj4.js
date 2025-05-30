@@ -48,7 +48,7 @@ export const dj4 = {
             "text": "No",
             "outcome": "Finally, you can focus on your screenplay. No teeth, just the good old existential dread.",
             "effect": {
-                "money": -10,
+                "money": 0,
                 "relationships": 0,
                 "ego": 10,
                 "skills": 10,

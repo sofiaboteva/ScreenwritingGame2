@@ -144,7 +144,7 @@ export const firstdraft = {
             "nextQuestion": "firstscene"
         },
         "rightAnswer": {
-            "text": "Ignore it and push forward",
+            "text": "Ignore it and push forward.",
             "outcome": "You hammer out some ideas. They're rough. They're ugly. But  at least you're moving somewhere.",
             "effect": {
                 "ego": 10,
